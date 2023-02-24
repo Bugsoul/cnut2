@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	<title>Form Flash</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+	<script src="txa.js"></script>
+	<script src="form.js"></script>
+</head>
+<body>
+	<div class="form-row">
+		<label for="text1">Hasta adı:</label>
+		<input type="text" id="text1">
+		<label for="text2">Yaşı:</label>
+		<input type="text" id="text2">
+		<label for="text3">Özgeçmiş:</label>
+		<input type="checkbox" id="ch_ozg" onchange="tog_ozg()">
+		<input type="text" id="tx_ozg">
+		<label for="checkbox2">İlaçları:</label>
+		<input type="checkbox" id="ch_ilac" onchange="tog_ilac()">
+		<input type="text" id="tx_ilac">
+	</div>
+
+	<div class="form-row">
+			<label for="checkbox23" id="lb_ates">TA:</label>
+<input type="text" id="tx_TA">
+<label for="checkbox23" id="lb_ates">Nb:</label>
+		<input type="text" id="tx_NB">
+		<label for="checkbox23" id="lb_ates">Ss:</label>
+		<input type="text" id="tx_SS">
+		<label for="checkbox23" id="lb_ates">Ateş:</label>
+		<input type="text" id="tx_ates">
+		<label for="checkbox23" id="lb_ates">SatO2:</label>
+		<input type="text" id="tx_SAT">
+		
+	<label for="ch_ame">Ameliyat ?</label>
+	<input type="checkbox" id="ch_ame" onchange="tog_ame()">
+	<input type="text" id="tx_ame">
+		<label for="checkbox4">EKG :</label>
+		<input type="checkbox" id="ch_ekg" onchange="tog_ekg()">
+		<input type="text" id="tx_ekg">
+	</div>
+	<div class="form-row">
+		<label for="checkbox6">GKS, Bilinç, IR :</label>
+		<input type="checkbox" id="ch_gks" onchange="tog_gks()">
+		<input type="text" id="tx_gks">
+		<label for="checkbox7">Solunum :</label>
+		<input type="checkbox" id="ch_sol" onchange="tog_sol()">
+		<input type="text" id="tx_sol">
+		<label for="checkbox20">Nörolojik :</label>
+		<input type="checkbox" id="ch_nor" onchange="tog_nor()">
+		<input type="text" id="tx_nor">
+		
+	</div>
+	<div class="form-row">
+		<label for="checkbox8">Batın :</label>
+		<input type="checkbox" id="ch_bat" onchange="tog_bat()">
+		<input type="text" id="tx_bat">
+				<label for="checkbox5">RT :</label>
+		<input type="checkbox" id="ch_rt" onchange="tog_rt()">
+		<input type="text" id="tx_rt">
+		<label for="checkbox9"  id="lb_dig">Diğer :</label>
+		<input type="checkbox" id="ch_dig" onchange="tog_dig()">
+		<input type="text" id="tx_dig">
+				<label for="ch_adli" id="lb_adli">Adli mi?:</label>
+		<input type="checkbox" id="ch_adli">
+	</div>
+	<div class="form-row">
+		<label for="checkbox10">Kardiyoloji:</label>
+		<input type="checkbox" id="checkbox10">
+		<label for="checkbox11">Nöroloji:</label>
+		<input type="checkbox" id="checkbox11">
+		<label for="checkbox12">Göğüs hst:</label>
+		<input type="checkbox" id="checkbox12">
+		<label for="checkbox13">Dahiliye:</label>
+		<input type="checkbox" id="checkbox13">
+		<label for="checkbox14">NRŞ:</label>
+		<input type="checkbox" id="checkbox14">
+		<label for="checkbox15">Göğ.Cerr:</label>
+		<input type="checkbox" id="checkbox15">
+		<label for="checkbox16">Nefroloji:</label>
+		<input type="checkbox" id="checkbox16">
+		<label for="checkbox17">Ortopedi:</label>
+		<input type="checkbox" id="checkbox17">
+		<label for="checkbox18">KVC:</label>
+		<input type="checkbox" id="checkbox18">
+		<label for="checkbox19">Anestezi:</label>
+		<input type="checkbox" id="checkbox19">
+	</div>
+	<div class="form-row">
+		<label for="text6">Şikayet & Hikaye :</label>
+		<textarea id="txa1" name="message"></textarea>
+		<label for="text15">Sonuç :</label>
+		<textarea id="txa2" name="mess"></textarea>
+	</div>
+	<div class="form-row">
+		<button type="kons">Konsultasyon</button>
+		<button type="end" onclick="submitForm()">Karar</button>
+	</div>
+</body>
+</html>

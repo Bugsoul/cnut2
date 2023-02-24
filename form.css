@@ -1,0 +1,81 @@
+.form-row {
+	flex-wrap: wrap;
+	align-items: center; /* dikey hizalama */
+	justify-content: flex-start; /* yatay hizalama */
+	margin-bottom: 20px;
+}
+
+.form-row label {
+	flex-basis: 150px;
+	margin-right: 5px;
+}
+
+.form-row input[type="text"] {
+	width: 250px;
+	margin-right: 5px;
+}
+
+.form-row textarea {
+  height: 150px;
+  width: 450px;
+  margin-right: 5px;
+}
+
+.form-row input[type="checkbox"] {
+	flex-basis: 50px;
+	margin-right: 5px;
+	transform: scale(2);
+}
+
+#ch_ame,#ch_ekg, #ch_ilac,#ch_rt,#ch_gks,#ch_sol,#ch_nor,#ch_bat, #ch_dig, #ch_ozg{
+  accent-color: #2ffa2f;
+}
+
+#ch_adli {
+  accent-color: #e74c3c;
+}
+
+#lb_adli {
+  color: brown;
+    font-weight: bold;
+  text-decoration: underline;
+}
+
+#lb_ates {
+  color: blue;
+    font-weight: bold;
+}
+
+.form-row button[type="kons"] {
+	margin-top: 10px;
+	padding: 5px 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.form-row button[type="end"] {
+	margin-top: 10px;
+	padding: 5px 10px;
+	background-color: #f44336;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+body {
+  background-color: #8dc9e9;
+}
+
+#text2, #tx_TA, #tx_NB, #tx_SS, #tx_ates, #tx_SAT {
+  width: 30px;
+}
+
+#txa {
+	height: 100%;
+  width: 100%;
+  resize: vertical;
+  overflow-y: hidden;
+}
+
