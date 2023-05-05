@@ -154,6 +154,7 @@
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>
 		<select id="gistList"></select>
+		<button id="bt_list" onclick="subList()"></button>
 	</div>
 		<label for="textp" id="lb_pan"></label>
 		<label for="textc" id="lb_cunt">Test</label>
@@ -171,14 +172,25 @@
 </div>
 <label id="lb_gist"></label>
 
-    <div id="popup">
-      <textarea id="popup_textarea"></textarea>
+<div id="popup">
+    <textarea id="popup_textarea"></textarea>
       <br>
-<button id="popup_save">Save</button>
-<button id="popup_pano">Clipboard</button>
-<button id="popup_cancel">Cancel</button>
-    </div>
+		<button id="popup_save">Save</button>
+		<button id="popup_pano">Clipboard</button>
+		<button id="popup_cancel">Cancel</button>
+</div>
 <script src="popup.js"></script>
+
+<div id="popGist" style="display:none;">
+  <div id="divGist" style="overflow-y: scroll;">
+    <table id="tblGist" style="border-collapse: collapse;"></table>
+    <div style="position: absolute; top: 0; right: 0; margin-top: 2%; margin-right: 20%;">
+      <input type="checkbox" id="chk_tum" onchange="tog_tum()">
+      <label for="chk_tum">Tümünü Göster</label>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
 
