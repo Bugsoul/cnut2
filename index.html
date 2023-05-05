@@ -151,6 +151,7 @@
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
 		<button type="button" id="sYukle" onclick="sYukle()"></input>		
 		<button type="end" id="bt_del" onclick="subDel()">Del</button>
+		<button type="end" id="bt_new" onclick="subNew()">New</button>
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>
 		<select id="gistList"></select>
@@ -183,6 +184,7 @@
 
 <div id="popGist" style="display:none;">
   <div id="divGist" style="overflow-y: auto;">
+    <button id="bt_cik" style="position: absolute; top: 0; right: 0;" onclick="subCik()">X</button>
     <table id="tblGist" style="border-collapse: collapse;"></table>
     <div style="position: absolute; top: 0; right: 0; margin-top: 1%; margin-right: 5%;">
       <div style="display: flex; flex-direction: column;">
