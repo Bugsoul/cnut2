@@ -182,11 +182,19 @@
 <script src="popup.js"></script>
 
 <div id="popGist" style="display:none;">
-  <div id="divGist" style="overflow-y: scroll;">
+  <div id="divGist" style="overflow-y: auto;">
     <table id="tblGist" style="border-collapse: collapse;"></table>
-    <div style="position: absolute; top: 0; right: 0; margin-top: 2%; margin-right: 20%;">
-      <input type="checkbox" id="chk_tum" onchange="tog_tum()">
-      <label for="chk_tum">Tümünü Göster</label>
+    <div style="position: absolute; top: 0; right: 0; margin-top: 1%; margin-right: 5%;">
+      <div style="display: flex; flex-direction: column;">
+    <label style="margin-bottom: 5px;">
+      <input type="checkbox" id="ch_exi" onchange="tog_exi()">
+      Externe
+    </label>
+    <label>
+      <input type="checkbox" id="ch_tum" onchange="tog_tum()">
+      Whole Time
+    </label>
+      </div>
     </div>
   </div>
 </div>
