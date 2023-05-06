@@ -146,16 +146,19 @@
 		<label for="text15" id="lb_son"></label>
   <textarea id="ta_son" name="mess" class="textbox"></textarea>
 	</div>
-	
+	<div class="div_pcDen" >
+	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
+	</div>
 	<div class="form_buton">
+		<input type="checkbox" id="ch_pc" onchange="tog_pc()">
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
-		<button type="button" id="sYukle" onclick="sYukle()"></input>		
+		<button type="button" id="sYukle" onclick="sYukle()"></input>	
 		<button type="end" id="bt_del" onclick="subDel()">Del</button>
 		<button type="end" id="bt_new" onclick="subNew()">New</button>
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>
 		<select id="gistList"></select>
-		<button id="bt_list" onclick="subList()"></button>
+		<button id="bt_list" onclick="subList()"></button>	
 	</div>
 		<label for="textp" id="lb_pan"></label>
 		<label for="textc" id="lb_cunt">Test</label>
