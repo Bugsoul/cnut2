@@ -1,0 +1,16 @@
+— Tanı kısmının sonuna "x" eklersen, taburcu olacak. ve listede silik görünecek.
+— Muayene alanları sen değişiklik yapınca standart renge döner.
+— UYARI : Muayene alanları sonuna "x", sonraki açtığında kırmızı olur
+— Hasta ismi girilmezse uyarı verir. Unutulursa "isimsiz.." diye kaydolur.
+— RESET : isimsiz hastaya girip, "gist id" ve yeni isim ile kaydet. sonra isimsizi silersin
+— NEW : Şifre sayfasına geri döner.
+— backup yaptığında buton adı "saat:dakika" olur.
+— kons/not almak istediğinde önce gizli kilidi* açman gerekiyor.
+— her kons/not aldığında belli yazı ve şablonlar random değişir.
+— Öykü : chbx TIKLI ise, txb içini alır. Değilse sonuna ekleme yapar.
+— Kons/Copy butonu son txa yazı çıkarır, son paragraf değişir.
+— Taburcu chbx'u ayrı bir txa açar. Ve txa'ya da ekler.
+
+chbx : checkbox
+txa : textarea
+txb : textbox
