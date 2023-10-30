@@ -7,6 +7,7 @@
 	<script src="main.js"></script>
 	<script src="json.js"></script>
 	<script src="load.js"></script>
+	<script src="steam.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
@@ -32,8 +33,11 @@
 		<input type="checkbox" id="ch_ame" onchange="tog_ame()">
 		<input type="text" id="tx_ame" class="gru_tbox" oninput="handleChange(this)">
 		<img src="iko/im_112.png" id="im_112">
-		<label for="checkbox22" id="lb_112"></label>
-		<input type="checkbox" id="ch_112" onchange="tog_112()">
+		<select id="slc_112" onchange="selec_112()">
+			<option value="0"> Outpatient</option>
+			<option value="1"> AMB</option>
+			<option value="2"> Shelling</option>
+		</select>
 		<label for="ch_adli" id="lb_adli"></label>
 		<input type="checkbox" id="ch_adli" onchange="tog_adli()">
 </div>
