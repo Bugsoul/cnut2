@@ -38,8 +38,11 @@
 			<option value="1"> AMB</option>
 			<option value="2"> Shelling</option>
 		</select>
-		<label for="ch_adli" id="lb_adli"></label>
-		<input type="checkbox" id="ch_adli" onchange="tog_adli()">
+		<select id="slc_trj" onchange="selecTrj()">
+			<option value="0"> Flat</option>
+			<option value="1"> Yellow</option>
+			<option value="2"> Red</option>
+		</select>
 </div>
 	<div class="form-row">
 			<label for="checkbox23" id="lb_ta"></label>
@@ -57,6 +60,7 @@
 		<label for="checkbox6" id="lb_gks"></label>
 		<input type="checkbox" id="ch_gks" onchange="tog_gks()">
 		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">
+		<label id="lb_saat"onclick="tik_saat()"></label>	
 	</div>
 	
 	<div class="form-row">
@@ -70,7 +74,8 @@
 		<img src="iko/im_trv.png" id="im_trv" alt="x">
 		<label id="lb_trv"></label>
 		<input type="checkbox" id="ch_trv" onchange="tog_trv()">
-		<label id="lb_saat"onclick="tik_saat()"></label>
+		<label for="ch_adli" id="lb_adli"></label>
+		<input type="checkbox" id="ch_adli" onchange="tog_adli()">
 
 	</div>	
 		
@@ -123,7 +128,6 @@
 			<input type="text" id="tx_plan" class="gru_tbox">
 			<img src="iko/bt.png" id="im_bt" style="cursor: pointer;" onclick="toggleBt()">
 			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">	
-			<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
 			<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
 			<input type="checkbox" id="ch_xr" onchange="tog_xr()">
 			<label for="check224" id="lb_knsb"></label>
@@ -141,6 +145,7 @@
 			<textarea id="ta_izl" class="son_tbox"></textarea>			
 			<label for="checkbox24" id="lb_ext"></label>
 			<input type="checkbox" id="ch_ext" onchange="tog_ext()">
+			<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
 			<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
 		</div>
 	</div>
