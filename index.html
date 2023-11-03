@@ -10,9 +10,10 @@
 	<script src="steam_text.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+	<link rel="icon" type="image/png" href="iko/favicon.png">
 </head>
 <body>
-<div id="main" style="display:none;">
+<div id="main">
 	<div class="form-row">
 		<label for="text1" id="lb_has"></label>
 		<input type="text" id="tx_name">
@@ -34,9 +35,10 @@
 		<input type="text" id="tx_ame" class="gru_tbox" oninput="handleChange(this)">
 		<img src="iko/im_112.png" id="im_112">
 		<select id="slc_112" onchange="selec_112()">
-			<option value="0"> Outpatient</option>
-			<option value="1"> AMB</option>
-			<option value="2"> Shelling</option>
+			<option value="0"> Flat</option>
+			<option value="1"> Outpatient</option>
+			<option value="2"> AMB</option>
+			<option value="3"> Shelling</option>
 		</select>
 		<select id="slc_trj" onchange="selecTrj()">
 			<option value="0"> Flat</option>
@@ -136,6 +138,8 @@
 
 	<div class="form-row">
 		<label for="checkbox25" id="lb_ted"></label>
+		<input type="checkbox" id="ch_gor" onchange="togGor()" checked>
+		<input type="checkbox" id="ch_iv" onchange="togIv()" checked>
 		<input type="checkbox" id="ch_ted" onchange="tog_ted()">
 		<textarea type="text" id="ta_ted" class="son_tbox"></textarea>
 		<label for="text15" id="lb_son"></label>
@@ -179,7 +183,7 @@
 	</div>
 
 </div>
-
+	<input type="password" id="ps_flu">
 
 
 <div id="gi-container">
