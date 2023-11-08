@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="main">
-	<div class="form-row2">
+	<div class="form_row">
 		<label for="text1" id="lb_has"></label>
 		<input type="text" id="tx_name">
 		<label for="text3" id="lb_ozg"></label>
@@ -26,7 +26,7 @@
 		<label for="text1" id="lb_i" onclick="subTik()">(i)</label>
 	</div>
 	
-<div class="form-row2">
+<div class="form_row">
 	   <label for="checkbox4" id="lb_alj"></label>
 		<input type="checkbox" id="ch_alj" onchange="tog_alj()">
 		<input type="text" id="tx_alj" class="gru_tbox" oninput="handleChange(this)">
@@ -46,40 +46,45 @@
 			<option value="2"> Red</option>
 		</select>
 </div>
-	<div class="form-row2">
+	<div class="form_row">
 		<label for="checkbox23" id="lb_ta"></label>
-		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="gru_tbox">
+		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box">
 		<label for="checkbox23" id="lb_NB"></label>
-		<input type="text" id="tx_NB" onClick="this.select()" class="gru_tbox" oninput="handleChange(this)">
+		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
 		<label for="checkbox23" id="lb_SS"></label>
-		<input type="text" id="tx_SS" onClick="this.select()" class="gru_tbox" oninput="handleChange(this)">
+		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
 		<label for="checkbox23" id="lb_ates"></label>
-		<input type="text" id="tx_ates" onfocus="this.select()" oninput="addComm(this)" class="gru_tbox">
+		<input type="text" id="tx_ates" onfocus="this.select()" oninput="addComm(this)" class="vit_box">
 		<label for="checkbox23" id="lb_SAT"></label>
-		<input type="text" id="tx_SAT" onClick="this.select()" class="gru_tbox" oninput="handleChange(this)">
+		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
 		<label for="text2" id="lb_ks"></label>
-		<input type="text" id="tx_ks" class="gru_tbox" oninput="handleChange(this)">
+		<input type="text" id="tx_ks" class="vit_box" oninput="handleChange(this)">
 		<label for="checkbox6" id="lb_gks"></label>
 		<input type="checkbox" id="ch_gks" onchange="tog_gks()">
 		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">
 		
 	</div>
 	
-	<div class="form-row">
+	<div class="form_row">
 		<label for="text6" id="lb_sik"></label>
-		<textarea id="ta_sik" name="message" class="gru_tbox"></textarea>
-		<img src="iko/im_xry.png" id="im_xry" alt="x">
-		<label for="checkbox27"  id="lb_akc"></label>
-		<input type="checkbox" id="ch_akc" onchange="tog_akc()">
-		<label for="checkbox25" id="lb_plus"></label>
-		<input type="checkbox" id="ch_plus" onchange="tog_plus()">
+		<textarea id="ta_sik" name="message" class="gru_tbox"></textarea>		
+	<div class="form_dik">	
+		<div class="form_duz">
 		<img src="iko/im_trv.png" id="im_trv" alt="x">
 		<label id="lb_trv"></label>
 		<input type="checkbox" id="ch_trv" onchange="tog_trv()">
 		<label for="ch_adli" id="lb_adli"></label>
 		<input type="checkbox" id="ch_adli" onchange="tog_adli()">
+		</div>
+		<div class="form_duz">
+		<img src="iko/im_xry.png" id="im_xry" alt="x">
+		<label for="checkbox27"  id="lb_akc"></label>
+		<input type="checkbox" id="ch_akc" onchange="tog_akc()">
+		<label for="checkbox25" id="lb_plus"></label>
+		<input type="checkbox" id="ch_plus" onchange="tog_plus()">
+		</div>
+	</div>	
 		<label id="lb_saat"onclick="tik_saat()"></label>	
-
 	</div>	
 		
 		<div class="cls_trv" style="display:none;">
@@ -92,7 +97,7 @@
 			<input type="text" id="tx_akc" class="gru_tbox">
 		</div>
 		
-	<div class="form-row2">
+	<div class="form_row">
 		<label for="checkbox7" id="lb_sol"></label>
 		<input type="checkbox" id="ch_sol" onchange="tog_sol()">
 		<input type="text" id="tx_sol" class="gru_tbox" oninput="handleChange(this)">
@@ -103,7 +108,7 @@
 		<input type="checkbox" id="ch_nor" onchange="tog_nor()">
 		<input type="text" id="tx_nor" class="gru_tbox" oninput="handleChange(this)">
 	</div>
-	<div class="form-row2">
+	<div class="form_row">
 		<label for="checkbox8" id="lb_bat"></label>
 		<input type="checkbox" id="ch_bat" onchange="tog_bat()">
 		<input type="text" id="tx_bat" class="gru_tbox" oninput="handleChange(this)">
@@ -114,7 +119,7 @@
 		<input type="checkbox" id="ch_rt" onchange="tog_rt()">
 		<input type="text" id="tx_rt" class="gru_tbox" oninput="handleChange(this)">
 	</div>
-	<div class="form-row2">
+	<div class="form_row">
 		<img src="iko/im_ekg.png" id="im_ekg">
 		<label for="checkbox4" id="lb_ekg"></label>
 		<input type="checkbox" id="ch_ekg" onchange="tog_ekg()">
@@ -124,9 +129,9 @@
 		<input type="checkbox" id="ch_akg" onchange="tog_akg()">
 		<input type="text" id="tx_akg" class="gru_tbox" oninput="handleChange(this)">
 	</div>
-	<div class="form-row2">
+	<div class="form_row">
 			<label for="lb_icd" id="lb_icd"></label>
-			<input type="text" id="tx_icd" class="son_tbox">
+			<input type="text" id="tx_icd" class="gru_tbox">
 			<label for="lb_tre" id="lb_tre"></label>
 			<input type="text" id="tx_plan" class="gru_tbox">
 			<img src="iko/bt.png" id="im_bt" style="cursor: pointer;" onclick="toggleBt()">
@@ -134,20 +139,22 @@
 			<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
 	</div>
 
-	<div class="form-row2">
+	<div class="form_row">
 		<div>
 		<label for="checkbox25" id="lb_ted"></label>
 		<input type="checkbox" id="ch_gor" onchange="togGor()" checked>
 		<input type="checkbox" id="ch_iv" onchange="togIv()" checked>
 		<input type="checkbox" id="ch_ted" onchange="tog_ted()">
 		</div>
-		<textarea type="text" id="ta_ted" class="son_tbox"></textarea>
+		<div>
+		<textarea type="text" id="ta_ted"></textarea>
 		<label id="lb_son"></label>
-		<textarea id="ta_son" name="mess" class="son_tbox"></textarea>
+		</div>
+		<textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
 	</div>
-	<div class="form-row2">
+	<div class="form_row">
 			<label for="text223" id="lb_izl"></label>
-			<textarea id="ta_izl" class="son_tbox"></textarea>			
+			<textarea id="ta_izl" class="vit_box"></textarea>			
 			<label for="checkbox24" id="lb_ext"></label>
 			<input type="checkbox" id="ch_ext" onchange="tog_ext()">
 			<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
@@ -165,7 +172,7 @@
 	<div class="div_pcDen" >
 	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
 	</div>
-	<div class="form-row2">
+	<div class="form_row">
 		<input type="checkbox" id="ch_pc" onchange="tog_pc()">
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
 		<button type="button" id="sYukle" onclick="sYukle()"></input>
