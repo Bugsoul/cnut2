@@ -19,7 +19,7 @@
 		<input type="text" id="tx_name">
 		<label for="text3" id="lb_ozg"></label>
 		<input type="checkbox" id="ch_ozg" onchange="tog_ozg()">
-		<input type="text" id="tx_ozg" class="gru_tbox" oninput="handleChange(this)">
+		<input type="text" id="tx_ozg" class="gru_tbox" oninput="handleChange(this)" onkeyup="myFunction()">
 		<label for="checkbox2" id="lb_ilac"></label>
 		<input type="checkbox" id="ch_ilac" onchange="tog_ilac()">
 		<input type="text" id="tx_ilac" class="gru_tbox" oninput="handleChange(this)">
@@ -139,26 +139,33 @@
 			<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
 	</div>
 
-	<div class="form_row">
-		<div>
-		<label for="checkbox25" id="lb_ted"></label>
-		<input type="checkbox" id="ch_gor" onchange="togGor()" checked>
-		<input type="checkbox" id="ch_iv" onchange="togIv()" checked>
-		<input type="checkbox" id="ch_ted" onchange="tog_ted()">
-		</div>
-		<div>
-		<textarea type="text" id="ta_ted"></textarea>
-		<label id="lb_son"></label>
-		</div>
-		<textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
-	</div>
+<div class="form_row">
+    <div class="form_dik">
+        <div>
+            <label for="checkbox25" id="lb_ted"></label>
+            <input type="checkbox" id="ch_ted" onchange="tog_ted()">
+        </div>
+		<label>View :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+        <label>Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
+        <label for="checkbox25" id="lb_pro"></label>
+    </div>
+    <div class="form_dik">
+        <textarea id="ta_ted"></textarea>
+        <textarea id="ta_pro" ondblclick="addProg()"></textarea>
+    </div>
+    <label id="lb_son"></label>
+    <textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
+</div>
+
 	<div class="form_row">
 			<label for="text223" id="lb_izl"></label>
-			<textarea id="ta_izl" class="vit_box"></textarea>			
-			<label for="checkbox24" id="lb_ext"></label>
-			<input type="checkbox" id="ch_ext" onchange="tog_ext()">
-			<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
-			<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
+			<textarea id="ta_izl" class="vit_box"></textarea>
+			<div class="form_duz">
+				<label for="checkbox24" id="lb_ext"></label>
+				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
+				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
+				<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
+			</div>
 	</div>
 
 	<div class="cls_ext" style="display:none;">
@@ -219,9 +226,9 @@
 
 <div id="popGist" class="pop-up">
   <button id="bt_cik" class="close-btn" onclick="subCik()">X</button>
-  <div id="ch_pop" class="options">
+  <div id="ch_pop" class="form_row">
     <label><input type="checkbox" id="ch_exi" onchange="tog_exi()"> Externe</label>
-    <label><input type="checkbox" id="ch_tum" onchange="tog_tum()"> Whole Time</label>
+    <label><input type="checkbox" id="ch_tum" onchange="tog_tum()"> Whole</label>
   </div>
   <table id="tblGist"></table>
 </div>
