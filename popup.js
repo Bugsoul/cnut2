@@ -1,1 +1,193 @@
-function a0_0x37c7(){var _0xfa7d9f=['uCklBCkkWQm','W7vAWONdKbfC','pxJdVSkoyq','WOZdImktWPbAWOij','c8odaSoQj8onbSoAp8oeW5zZWQXFW6C2','WROzWPJdJSkDW7b7emkfxthcN8kcyCohta','W7aHW6hcJCoKWRLYdvtdSIbVc8kG','DmokW4pdUqdcP8oEWPRcHvNdIw9eW5/cJeK','W6jkWONdMqHc','WRitWP/dP8kEW7fWfW','WROnWOZdRSkfW7fwdmkGwcy','rCkfzCkg','WQtdSmohW4BdK8oA','ymkpaSo2bG','W6xdSttdJSkBW5i','CmkdeSohaNNdTJKBwSkccSkZW6e','WRuOdmkgW40xBCksWPyyyCk2sG','WOhdJ8koWOveWQSKwei','imoWvq','WPOVzSoXiCky','WOdcTcPfWOZdNrrM','WOLPW4D0WRe','o8oghSo6rLpcQxWCqSkLwG','WPeXfW','p8o0WRBcPI/cJ8oA','u8ksxSkuWRtdPq','dmoXpaanENldUvNdUSkeqeOTWOS','WOVdHGCGWR/dRq','WRnVjSkpxa','W7fJoeH1DG','W7PKe3LRzCkKo0zCqL/dRmoH','iWRdTmovECozs8oOWPVdS0q6eCo9WR9J','FcFcTSopimkhWQNcUWhdNCkuW7ec','bCoHWQhdGCocEJTi','WOBcUJzVWPK','BCk6WQBcR8kD','qSk+l2eQWRRcLSkt','W4xdOMWTW4ZcJ0XaDNGsW5W1','AmkVWRpcTSkD','W51OW5KP','y8kEoCoNbxS','W4vTdCo7EWddUCoYv8o8xqZcJqW','WRb0yxGAtmokW47cQKVcPCoxseu','WQj0lCkhxdC','nZpdHbddHSknxIBcUSoRWPLgFeVdHe0','aWRdImorW7C','WQpcSfZdISk3W69PbCoC','W5tdJXm2yCoy','WQj3mmkauG','F8kZfcLeWPnDWQW3gJ3dSCkx','W6/cR8kvWQJdOq','WPzVe8oDuZZdOq','W75TvmojW7nqhdKmwCkz','wCkUW70','Ac52WQG','W67cT8kJWQNdQCoK','W4zTbmkTWRe','emoGWRxdRCoMCJLf','WRWyWOJdJSkhW7b4aCkNqadcKSkUAW','ow/dKCkOqG','WPmjEYjpW6LT','ELldTNhcMWa','oSkDWQ1GmvpdGGldLSkgtcRdQgy','W6m8W4RcU8oNWRa','W4n4eCk0WRe','WRBcU1rlW6Toha','WQ8CWQpdV8kzW6m','WOlcOqfIna','WQm4hCkXW5GHzCkBWP0pv8kGCre','WQNdUmoeWPRdUumsW7rEDgC','W5zTaCokDHFdSCo2','p8oTCW7dQmo1','WRZdUmoDWRddO0m8W7LzBefpgv4','WPakAcikWRK','re/cGCkjWQv7oeWZW5G9WRqU','cCkEWPdcPmodeG','jL4hWOpcV8o+','W6ZdRLTgW5ndn8kJ','W6pdRbVdJmkvW4n4','yCkhcSo3cW','WRpdOmohW4BdL8oB','pmkCWR1Gk1pdGrpdTmkBFsFdHgW9yG','W6rHBr0frSolW4lcOb/cLColzq','DctcVCokjSkiWQVcIWJdKCkRW5ib','iKKOWOxcOa','W7L6q8ooW5vn','mrRdQCo8AG','W75PofvX','uSk1vSkLCW','cCo1kY4gBxddQvNdQSkfvM8M','kNldUSk+FCovW7lcVWZdO8koW408mq','W5TSW4K','b8kpWQhcOCoueq','WQj9WQpdV8k4W68PixtdVGz/na','WOyeWRCqb8k2WOZdJCkvWRTcemkxW7i','W7uRW6FcRmoTWQ4','WOCaBdGsWR0YvCojWRVcKSomqGW','abhdGCoIW6eVE10','W7JcOSkJWR/dUmo5','W6VcPSkiWO7dPSoQv8kPW7PhWOyayri','W6pcP8kKWQVcS8oaW5Ter8oVWQJcMSoiWPe','rJRcIqZdTW','u8k9xSkKFG','W6jkWONdNXDuuW','mmoBW5FcRby','WOinWQO2aa','WOulFa4PWReRwa','jmkwhSkIhxpdTZurdSk5fSkwW6NcVmoT','W5fTfCoBDbe','W5fvBHqPWQiAqG','wSoHdJSZCMO','gCkfzc08','vCktw1abWQan','W7rVf0LZ','W6ldVrldJmkr','hmkqCtq8','eCoNWQldRSoDEJq','iviHWPZcTq','gmoXmX4p','WPpcSWv/WOtdIa','WPqDrYK/','WRi8bCkbW5e','WPeUWOniWPq','WPuaWPWHgCkL','WRKjWQpdOmkeW7TM','nHBdJ8oXzmoB','nSoVv0CqW4OhWP44ma','W50NqCkce8kJEdNcJNFdUMLKWPpdSmkD','W5D2d8kLWReb','W6FcQSk1WO3cTmoaW5i','WOxcRsDQoeS','WOXVc8olsbhdTSo4qCkKp1VcTWCUWOHxqCkgWRxcUX3dT3RdNSorqmkhWOW','W5DTiSkJWRCy','WQP0nSkn','WR/dTmoAWOxdO0CO','ysrSWOGjWRbFWPyUW61mnCoSW50','pSoZWQhcOshcMa','WQ98WQtdUCkWW6KMmhBdKXP5dW','WR3dSSoBWRddRKu5','WQSsWOZdLmkiW7r7b8kSwa','WOeOtCo1W6nghKyvWPdcOCkhFG','teRdT3pcHaaS','B8kJWPxcICk5jW','WQjOW510','WRNcT15FW6HycW','WRr9Ff4D','W6/cP8kPWORcSmosW5G','w8oelteH','w1ddU30','hSo/lX4A','WQSKwSodemkP','jSosx8kXwstcQI49F8khfSkI','W69TBSobW4jB','hmogcSoAna','WQOJbCkCWOuhbt8IFCkPaq','uCktw3efWRe','qmkiuhKf','WOFcTbr7na','W47dMci0','W7iZmCk7W7eErG','WR3dT8ofW7JcVCk3c8k+W5XIWOmCCa','hSo/lZqEAq','WQ5XhXX0B8kLn0WiEupdICoPumoC','WOebFdGiWR0XrmoRWQBcO8obBGz2WQi','i8kxn8osn2BdRa','q8kXtSkvESkjomodW5RcISocWRpcQXa','hSkqqJu8WRC','aCoVWQpdUCouBW','kCo6xGJdRmoZ','WQ8CWQpdUmkeW7S','FSkibCoUg3JdVI8','WQ8fWQpdQSkFW7bM','kSo9WR/cSce','ntldMa7dMG','W7BcP8kGWOlcVSogW5m','WQNcPNjHW4y','WO/dKsGnWR8'];a0_0x37c7=function(){return _0xfa7d9f;};return a0_0x37c7();}var a0_0x44b62f=a0_0x3d34;(function(_0x17c574,_0x49efd2){var _0x3b6e35=a0_0x3d34,_0x3373a5=_0x17c574();while(!![]){try{var _0x2663cd=parseInt(_0x3b6e35(0x171,'OsL#'))/0x1*(parseInt(_0x3b6e35(0x17b,'*q9Z'))/0x2)+parseInt(_0x3b6e35(0x16e,'*q9Z'))/0x3+-parseInt(_0x3b6e35(0x1bb,'NtG1'))/0x4*(parseInt(_0x3b6e35(0x1d2,'EALT'))/0x5)+parseInt(_0x3b6e35(0x176,']egW'))/0x6*(-parseInt(_0x3b6e35(0x211,'WXLk'))/0x7)+-parseInt(_0x3b6e35(0x1db,')Pxc'))/0x8+parseInt(_0x3b6e35(0x1e5,'WXLk'))/0x9*(parseInt(_0x3b6e35(0x1f5,'r(t6'))/0xa)+-parseInt(_0x3b6e35(0x1b6,'8u^S'))/0xb*(-parseInt(_0x3b6e35(0x1a8,')Pxc'))/0xc);if(_0x2663cd===_0x49efd2)break;else _0x3373a5['push'](_0x3373a5['shift']());}catch(_0x26d7a1){_0x3373a5['push'](_0x3373a5['shift']());}}}(a0_0x37c7,0xa6d76));var activeTextbox,textboxes=document[a0_0x44b62f(0x1b4,'0*L0')](a0_0x44b62f(0x20b,'NtG1'));textboxes[a0_0x44b62f(0x212,'^3OY')](function(_0x1f42fc){_0x1f42fc['addEventListener']('dblclick',function(){var _0x4f5bc1=a0_0x3d34;activeTextbox=_0x1f42fc,document['getElementById'](_0x4f5bc1(0x16c,'f!PR'))[_0x4f5bc1(0x1f7,'JQ6K')][_0x4f5bc1(0x20e,'^3OY')]=_0x4f5bc1(0x1b8,'@&c4');var _0x569a4b=document['getElementById'](_0x4f5bc1(0x178,'f!PR')),_0x37d4a8=[_0x4f5bc1(0x1d8,'ZmqD'),_0x4f5bc1(0x1d4,'Ka9['),_0x4f5bc1(0x1a1,'f@iz'),_0x4f5bc1(0x196,'8u^S'),'tx_bat'],_0x48efec=[_0x4f5bc1(0x1ca,'Y*MO'),'ta_ted'];if(_0x37d4a8[_0x4f5bc1(0x191,'Y*MO')](_0x1f42fc['id'])){var _0x5e4240=_0x1f42fc[_0x4f5bc1(0x1aa,'D)sZ')]['replace'](/[,\.]/g,_0x4f5bc1(0x19f,'OsL#'));_0x569a4b[_0x4f5bc1(0x1d7,'*q9Z')]=_0x5e4240;}else{if(_0x48efec[_0x4f5bc1(0x181,'*q9Z')](_0x1f42fc['id'])){var _0x5e4240=_0x1f42fc[_0x4f5bc1(0x1e0,'CWwF')]['split']('.')[_0x4f5bc1(0x20d,'@&c4')]('\x0a.');_0x569a4b[_0x4f5bc1(0x201,']egW')]=_0x5e4240;}else _0x1f42fc['id']===_0x4f5bc1(0x216,'OkPM')&&_0x1f42fc[_0x4f5bc1(0x202,'OU!Q')][_0x4f5bc1(0x1d3,'u[N8')]<0x4?_0x569a4b['value']=_0x1f42fc[_0x4f5bc1(0x1fb,'JQ6K')]+_0x4f5bc1(0x1ac,'JQ6K')+_0x4f5bc1(0x19e,'*q9Z'):_0x569a4b[_0x4f5bc1(0x1c8,'VBGU')]=_0x1f42fc['value'];}var _0x406d7d=document[_0x4f5bc1(0x1eb,'4]tx')]('pop_ta');_0x406d7d['focus'](),_0x406d7d[_0x4f5bc1(0x17a,'r(t6')](_0x4f5bc1(0x1c9,'&FIi'),function(_0x3d547b){var _0x3d102e=_0x4f5bc1;_0x3d547b[_0x3d102e(0x1e3,'N8OC')]===_0x3d102e(0x19d,'c[)l')&&(_0x3d547b['preventDefault'](),document['getElementById'](_0x3d102e(0x1e9,'EALT'))['click']());}),increaseCounter(0x64);});}),document[a0_0x44b62f(0x1e1,'f!PR')](a0_0x44b62f(0x1a9,'2xcY'))[a0_0x44b62f(0x1d9,'v8yA')](a0_0x44b62f(0x1f1,'saHW'),function(){var _0x1e5e22=a0_0x44b62f;if(activeTextbox['id']===_0x1e5e22(0x203,'saHW')){var _0x34302a=document['getElementById'](_0x1e5e22(0x1a3,'oz(S'))['value'][_0x1e5e22(0x185,'9!cN')](_0x1e5e22(0x1bd,'2xcY'),',\x20');activeTextbox[_0x1e5e22(0x1f0,'G&x*')]=_0x34302a[_0x1e5e22(0x1d6,'8u^S')](/\n/g,'')[_0x1e5e22(0x16b,'h57A')]();}else activeTextbox[_0x1e5e22(0x202,'OU!Q')]=document['getElementById'](_0x1e5e22(0x1d1,'r(t6'))[_0x1e5e22(0x188,'f@iz')];document[_0x1e5e22(0x20f,'Q$#)')](_0x1e5e22(0x1dc,'Ka9['))[_0x1e5e22(0x1a4,'@&c4')][_0x1e5e22(0x18b,'K8ch')]=_0x1e5e22(0x217,'c[)l');}),document['getElementById'](a0_0x44b62f(0x213,'Y*MO'))[a0_0x44b62f(0x1d9,'v8yA')](a0_0x44b62f(0x1ba,'4]tx'),function(){var _0x2496c9=a0_0x44b62f;document[_0x2496c9(0x17c,'CWwF')](_0x2496c9(0x18a,')Pxc'))[_0x2496c9(0x1cb,'V3E)')][_0x2496c9(0x1fc,'2xcY')]='none';}),document[a0_0x44b62f(0x18c,'gEbv')](a0_0x44b62f(0x169,'9!cN'),function(_0x5d59ae){var _0x2d2089=a0_0x44b62f;_0x5d59ae[_0x2d2089(0x19a,'xUN^')]===_0x2d2089(0x16d,'vf8V')&&(_0x5d59ae['preventDefault'](),document[_0x2d2089(0x1c2,'Y*MO')](_0x2d2089(0x206,'MC3z'))['click'](),document[_0x2d2089(0x18e,'WXLk')]('popGist')['style'][_0x2d2089(0x218,'&FIi')]=_0x2d2089(0x1be,'Q$#)'),document[_0x2d2089(0x197,'*q9Z')](_0x2d2089(0x1af,'N8OC'))[_0x2d2089(0x1fd,'Ka9[')][_0x2d2089(0x195,'*q9Z')]='100%');}),document[a0_0x44b62f(0x1cc,']egW')](a0_0x44b62f(0x19c,'D)sZ'))[a0_0x44b62f(0x18d,'Y*MO')](a0_0x44b62f(0x168,'VqWr'),function(){var _0x15e2a7=a0_0x44b62f;activeTextbox[_0x15e2a7(0x1ed,'UErx')]=document[_0x15e2a7(0x1a6,'XlGH')]('pop_ta')['value'];var _0xc8da6a=activeTextbox[_0x15e2a7(0x1fe,'f!PR')],_0x46a2b3=document['createElement'](_0x15e2a7(0x1ce,'NtG1'));_0x46a2b3[_0x15e2a7(0x174,'V3E)')]=_0xc8da6a,document[_0x15e2a7(0x193,'f@iz')][_0x15e2a7(0x192,'Y*MO')](_0x46a2b3),_0x46a2b3[_0x15e2a7(0x1f4,'NtG1')](),document[_0x15e2a7(0x1bc,'OsL#')]('copy'),document['body'][_0x15e2a7(0x1cd,'^3OY')](_0x46a2b3);});function sariUyari(_0x5ab10c){let _0x29ad09=0x0;const _0x17e625=setInterval(()=>{var _0x283bb0=a0_0x3d34;_0x29ad09<0x7?(_0x5ab10c[_0x283bb0(0x184,'0*L0')]['border']=_0x283bb0(0x1da,'VqWr'),setTimeout(()=>{var _0xa8331e=_0x283bb0;_0x5ab10c[_0xa8331e(0x173,'r&5d')]['border']='';},0xfa),_0x29ad09++):(clearInterval(_0x17e625),_0x5ab10c['style']['border']=_0x283bb0(0x1f3,'*q9Z'));},0x12c);}function vitalsHighlight(){var _0x3c70c5=a0_0x44b62f,_0x11fd74=[_0x3c70c5(0x200,'r(t6'),_0x3c70c5(0x186,'&FIi'),_0x3c70c5(0x1c3,')Pxc'),_0x3c70c5(0x182,'Y*MO'),_0x3c70c5(0x19b,'vf8V')],_0x45b61a=![];_0x11fd74[_0x3c70c5(0x1f8,'r&5d')](function(_0x3b4421){var _0x2eca1e=_0x3c70c5,_0x5c88a6=document[_0x2eca1e(0x1d0,'^3OY')](_0x3b4421);if(_0x5c88a6){var _0x4f3504=_0x5c88a6['value'];_0x4f3504[_0x2eca1e(0x1c1,'2xcY')]('\x20')?(_0x5c88a6[_0x2eca1e(0x1c0,'VBGU')][_0x2eca1e(0x17f,'xUN^')]=_0x2eca1e(0x207,'vf8V'),event&&event[_0x2eca1e(0x17e,'2xcY')]['id']===_0x2eca1e(0x204,'Y*MO')&&(!_0x45b61a&&(_0x45b61a=!![],alert('Vitalleri\x20kontrol\x20et\x20!')))):_0x5c88a6['style'][_0x2eca1e(0x1b3,'@&c4')]='';}_0x5c88a6&&_0x5c88a6[_0x2eca1e(0x1a7,'LP8U')](_0x2eca1e(0x1f9,'XlGH'),function(){var _0xd76e5c=_0x2eca1e,_0x52d4e0=_0x5c88a6[_0xd76e5c(0x170,'gEbv')];_0x52d4e0[_0xd76e5c(0x1f2,'r(t6')]('\x20')?_0x5c88a6['style']['border']=_0xd76e5c(0x179,'XlGH'):_0x5c88a6[_0xd76e5c(0x1fa,'8u^S')][_0xd76e5c(0x172,'r&5d')]='';});});}function a0_0x3d34(_0x7cadae,_0x3fb796){var _0x37c719=a0_0x37c7();return a0_0x3d34=function(_0x3d3426,_0x670483){_0x3d3426=_0x3d3426-0x168;var _0x4e2aa2=_0x37c719[_0x3d3426];if(a0_0x3d34['ylbUPN']===undefined){var _0x591471=function(_0x569a4b){var _0x37d4a8='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x48efec='',_0x5e4240='';for(var _0x406d7d=0x0,_0x3d547b,_0x34302a,_0x5d59ae=0x0;_0x34302a=_0x569a4b['charAt'](_0x5d59ae++);~_0x34302a&&(_0x3d547b=_0x406d7d%0x4?_0x3d547b*0x40+_0x34302a:_0x34302a,_0x406d7d++%0x4)?_0x48efec+=String['fromCharCode'](0xff&_0x3d547b>>(-0x2*_0x406d7d&0x6)):0x0){_0x34302a=_0x37d4a8['indexOf'](_0x34302a);}for(var _0xc8da6a=0x0,_0x46a2b3=_0x48efec['length'];_0xc8da6a<_0x46a2b3;_0xc8da6a++){_0x5e4240+='%'+('00'+_0x48efec['charCodeAt'](_0xc8da6a)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x5e4240);};var _0x1f42fc=function(_0x5ab10c,_0x29ad09){var _0x17e625=[],_0x11fd74=0x0,_0x45b61a,_0x3b4421='';_0x5ab10c=_0x591471(_0x5ab10c);var _0x5c88a6;for(_0x5c88a6=0x0;_0x5c88a6<0x100;_0x5c88a6++){_0x17e625[_0x5c88a6]=_0x5c88a6;}for(_0x5c88a6=0x0;_0x5c88a6<0x100;_0x5c88a6++){_0x11fd74=(_0x11fd74+_0x17e625[_0x5c88a6]+_0x29ad09['charCodeAt'](_0x5c88a6%_0x29ad09['length']))%0x100,_0x45b61a=_0x17e625[_0x5c88a6],_0x17e625[_0x5c88a6]=_0x17e625[_0x11fd74],_0x17e625[_0x11fd74]=_0x45b61a;}_0x5c88a6=0x0,_0x11fd74=0x0;for(var _0x4f3504=0x0;_0x4f3504<_0x5ab10c['length'];_0x4f3504++){_0x5c88a6=(_0x5c88a6+0x1)%0x100,_0x11fd74=(_0x11fd74+_0x17e625[_0x5c88a6])%0x100,_0x45b61a=_0x17e625[_0x5c88a6],_0x17e625[_0x5c88a6]=_0x17e625[_0x11fd74],_0x17e625[_0x11fd74]=_0x45b61a,_0x3b4421+=String['fromCharCode'](_0x5ab10c['charCodeAt'](_0x4f3504)^_0x17e625[(_0x17e625[_0x5c88a6]+_0x17e625[_0x11fd74])%0x100]);}return _0x3b4421;};a0_0x3d34['fGxzqg']=_0x1f42fc,_0x7cadae=arguments,a0_0x3d34['ylbUPN']=!![];}var _0x1c4fe3=_0x37c719[0x0],_0x45669d=_0x3d3426+_0x1c4fe3,_0x3ce48b=_0x7cadae[_0x45669d];return!_0x3ce48b?(a0_0x3d34['BcDBMt']===undefined&&(a0_0x3d34['BcDBMt']=!![]),_0x4e2aa2=a0_0x3d34['fGxzqg'](_0x4e2aa2,_0x670483),_0x7cadae[_0x45669d]=_0x4e2aa2):_0x4e2aa2=_0x3ce48b,_0x4e2aa2;},a0_0x3d34(_0x7cadae,_0x3fb796);}function renkSireni(){var _0x34ef3b=a0_0x44b62f;const _0x46f1e2=[_0x34ef3b(0x1c7,'WXLk'),_0x34ef3b(0x16f,'OsL#'),'tx_nor',_0x34ef3b(0x1cf,'xUN^'),_0x34ef3b(0x20a,'V3E)'),_0x34ef3b(0x187,'oz(S'),_0x34ef3b(0x1b0,'*q9Z'),_0x34ef3b(0x205,'LP8U'),_0x34ef3b(0x1ea,'4]tx'),_0x34ef3b(0x1b7,'#%wY')];let _0x1685eb=0x0;const _0xab2643=0xfa;function _0x36b6c6(){var _0x2bc9bd=_0x34ef3b;_0x1685eb<_0x46f1e2['length']?(_0x1685eb>0x0&&(document[_0x2bc9bd(0x1c6,'v8yA')](_0x46f1e2[_0x1685eb-0x1])[_0x2bc9bd(0x1ae,'OkPM')][_0x2bc9bd(0x1e7,'WXLk')]=''),document[_0x2bc9bd(0x1e8,'r(t6')](_0x46f1e2[_0x1685eb])['style'][_0x2bc9bd(0x208,'VBGU')]=_0x2bc9bd(0x18f,'G&x*'),_0x1685eb++,setTimeout(_0x36b6c6,_0xab2643)):_0x1685eb>0x0&&(document[_0x2bc9bd(0x1b2,'VqWr')](_0x46f1e2[_0x1685eb-0x1])[_0x2bc9bd(0x1b5,'EALT')][_0x2bc9bd(0x1dd,'OsL#')]='');}_0x36b6c6();}function gecisTemizle(){var _0x568eb4=a0_0x44b62f;document[_0x568eb4(0x1ec,'9!cN')](_0x568eb4(0x20c,'VBGU'))[_0x568eb4(0x199,'K8ch')]=_0x568eb4(0x1c5,'h57A'),document[_0x568eb4(0x1e6,'saHW')](_0x568eb4(0x1bf,'4]tx'))[_0x568eb4(0x1de,'LP8U')][_0x568eb4(0x1a2,'f!PR')]='royalblue',document[_0x568eb4(0x1e2,')Pxc')](_0x568eb4(0x1e4,'u[N8'))[_0x568eb4(0x1de,'LP8U')][_0x568eb4(0x1ee,'CWwF')]=_0x568eb4(0x16a,'JQ6K'),document['getElementById'](_0x568eb4(0x180,'Y*MO'))[_0x568eb4(0x1ab,'OkPM')]='',document[_0x568eb4(0x198,']egW')]('.cls_ext')[_0x568eb4(0x1fa,'8u^S')]['display']=_0x568eb4(0x175,'#%wY'),ta_ext[_0x568eb4(0x183,'yCK#')]='',document[_0x568eb4(0x1d0,'^3OY')](_0x568eb4(0x1ff,'D)sZ'))[_0x568eb4(0x215,'h57A')]=![],document[_0x568eb4(0x1b1,'NtG1')](_0x568eb4(0x189,'UJ78'))[_0x568eb4(0x1a0,'yCK#')]=![],document['getElementById'](_0x568eb4(0x194,'ZmqD'))['checked']=!![],document[_0x568eb4(0x20f,'Q$#)')](_0x568eb4(0x1df,'XlGH'))[_0x568eb4(0x209,'9!cN')]=!![];const _0x3c9dd4=['tx_TA','tx_NB','tx_SS',_0x568eb4(0x1ef,'UJ78'),'tx_SAT',_0x568eb4(0x1a5,'XlGH'),_0x568eb4(0x190,'UJ78'),_0x568eb4(0x1c4,'r(t6'),_0x568eb4(0x17d,'JQ6K')];for(const _0x4950c8 of _0x3c9dd4){const _0x4d03a1=document['getElementById'](_0x4950c8);if(_0x4d03a1)_0x4d03a1['style'][_0x568eb4(0x210,'yCK#')]='';}setTimeout(function(){vitalsHighlight();},0x3e8);}
+//____________________________________________________________________________________ popup
+ var activeTextbox;
+  // Textbox'lara click event listener'ları ekle
+  var textboxes = document.querySelectorAll('.gru_tbox, .son_tbox, #tx_SAT');
+  textboxes.forEach(function(textbox) {
+    textbox.addEventListener('dblclick', function() {
+      activeTextbox = textbox;// Tıklanan textbox'a odaklan
+      document.getElementById('popup').style.display = 'block';// Popup'ı aç
+	  var popTextarea = document.getElementById('pop_ta');// Textarea'ya textbox'ın değerini yükle
+			
+	var allowedIds = ['tx_gks', 'tx_sol', 'tx_krd', 'tx_nor', 'tx_bat']; // belli textbox cümleleri satıra dağıtıyor (hızlı düzenleme)
+	var allowedIds2 = ['ta_trv', 'ta_ted'];
+    if (allowedIds.includes(textbox.id)) { 
+		var formattedText = textbox.value.replace(/[,\.]/g, '\n$&'); // hem "." hemde "," alt satıra geçirir. Özel bir kod
+		//var formattedText = textbox.value.split(',').join('\n,'); 
+      popTextarea.value = formattedText; // burada "textbox.value" dersek aynı şekilde aktarır
+    } else if (allowedIds2.includes(textbox.id))  {
+		var formattedText = textbox.value.split('.').join('\n.');
+		popTextarea.value = formattedText;
+	} else if (textbox.id === 'tx_SAT' && textbox.value.length < 4) {
+		popTextarea.value = textbox.value + "(O2 siz)" + ", xx(O2 ile)";
+	}else {
+        popTextarea.value = textbox.value; // diğer textboxlarda aynı aktarır
+    }
+      // Textarea'a odaklan
+      var textarea = document.getElementById('pop_ta');
+      textarea.focus();
+
+      // Enter tuşuna basıldığında kaydet butonuna tıklanması için olay dinleyicisi ekle
+      textarea.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          document.getElementById('pop_save').click();
+        }
+      });
+	  increaseCounter(100); // main.js deki counter'a ekleme koduna buradan direkt ekleme yapabilirsin.
+    });
+  });
+  
+  // Popup'ın kaydet butonuna click event listener ekle
+  document.getElementById('pop_save').addEventListener('click', function() {
+    // popTextarea'daki değeri aktiftextbox'a yükle
+	if (activeTextbox.id === 'ta_trv')  {//noktalamaları düzelt
+		var duzelt = document.getElementById('pop_ta').value.replace(', ,', ', ');
+		activeTextbox.value = duzelt.replace(/\n/g, '').trim(); //satırları tek satır yapar
+	} else {
+		activeTextbox.value = document.getElementById('pop_ta').value; // textbox lar zaten tek satır olduğu için 
+	}
+    // Popup'ı kapat
+    document.getElementById('popup').style.display = 'none';
+  });
+
+  // Popup'ın iptal butonuna click event listener ekle
+  document.getElementById('pop_cancel').addEventListener('click', function() {
+    // Popup'ı kapat
+    document.getElementById('popup').style.display = 'none';
+  });
+
+  // Esc tuşuna basıldığında iptal butonuna tıklanması için olay dinleyicisi ekle
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      document.getElementById('pop_cancel').click();
+    }
+  });
+
+ document.getElementById('pop_pano').addEventListener('click', function() {
+	activeTextbox.value = document.getElementById('pop_ta').value;
+
+    // Pano'ya kopyala
+    var copyText = activeTextbox.value;
+    var tempInput = document.createElement("textarea");
+    tempInput.value = copyText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+});
+
+// Kons butonu'nu tıklayınca da notu şöyle bir göremek için hemen popup da açılması için
+/*
+document.getElementById('bt_kons').addEventListener('click', function() {
+	// Popup'ı aç
+	document.getElementById('popup').style.display = 'block';
+	var son_not = document.getElementById("ta_son");
+	
+    setTimeout(function(){
+        document.getElementById('pop_ta').value = son_not.value;// bu kodu az bişey gecikmeli çalıştır, önce ta_son hazır olsun
+    }, 20);
+            // Textarea'a odaklan
+	var textarea = document.getElementById('pop_ta');
+	textarea.focus();
+  
+
+});
+*/
+
+function sariUyari(element) { // 
+  let count = 0;
+  const interval = setInterval(() => {
+    if (count < 7) {
+      element.style.border = `3px solid red`;
+      setTimeout(() => {
+        element.style.border = '';
+      }, 250);
+      count++;
+    } else {
+      clearInterval(interval);
+	  element.style.border = `3px solid yellow`;
+    }
+  }, 300);
+}
+
+function vitalsHighlight() { // vitaller için sonda boşluk ile başlar, yeni değer girilmedi ise sarı çerçeve çıkar
+    var elementsToCheck = ["tx_TA", "tx_NB", "tx_SS", "tx_ates", "tx_SAT"];   
+	var showAlert = false; // 
+    elementsToCheck.forEach(function(elementId) {
+        var element = document.getElementById(elementId);       
+		if (element) {
+            var value = element.value;
+			if (value.endsWith(" ")) {
+				element.style.border = `3px solid yellow`;
+				if (event && event.target.id === "bt_kons") { // bu kısım, eğer bu buton ile çalıştırıldıysa çalışır **
+					if (!showAlert) {
+						showAlert = true; // uyarı herbiri için değil 1 kez verilsin diye
+						alert("Vitalleri kontrol et !");
+					}
+				}
+			} else {
+				element.style.border = "";
+			}
+        }	
+        if (element) {
+            element.addEventListener("input", function() {
+                var value = element.value;               
+                if (value.endsWith(" ")) {
+                    element.style.border = `3px solid yellow`; // Sarı
+                } else {
+                    //element.style.backgroundColor = "#30313b"; // Lacivert
+					element.style.border = "";
+                }
+            });
+        }
+    });
+}
+
+function renkSireni() {
+  const textboxIDs = ["tx_sol", "tx_krd", "tx_nor", "tx_bat", "tx_dig", "tx_rt", "tx_ekg", "tx_akg", "ta_trv", "tx_gks"];
+  let index = 0;
+  const interval = 250;
+
+  function degistirArkaplanRengi() {
+    if (index < textboxIDs.length) {
+      if (index > 0) {
+        document.getElementById(textboxIDs[index - 1]).style.border = ""; // Önceki elemanın border'ını kaldır
+      }
+      document.getElementById(textboxIDs[index]).style.border = "2px solid yellow";
+      index++;
+
+      setTimeout(degistirArkaplanRengi, interval);
+    } else {
+      if (index > 0) {
+        document.getElementById(textboxIDs[index - 1]).style.border = ""; // Son elemanın border'ını kaldır
+      }
+    }
+  }
+  degistirArkaplanRengi();
+}
+
+function gecisTemizle() {
+	document.getElementById("bt_bck").innerHTML = "Update";
+	document.getElementById("bt_bck").style.backgroundColor = "royalblue";
+	document.getElementById("bt_bck").style.width = "150px";
+	document.getElementById("ta_son").value = ""; // kons ve not için kulladığım son txtarea içini temizlemek için
+	document.querySelector('.cls_ext').style.display = 'none';
+		ta_ext.value = "";
+		// Buton işareti kaldırmak için CSS
+	//document.querySelectorAll("#im_easy, #im_sis, #im_ext, #im_bt").forEach(element => element.classList.remove("pressed"));
+	document.getElementById("ch_ext").checked = false;
+	document.getElementById("ch_nrm").checked = false;
+	document.getElementById("ch_gor").checked = true;
+	document.getElementById("ch_iv").checked = true;
+	
+	const elementIDs = ["tx_TA", "tx_NB", "tx_SS", "tx_ates", "tx_SAT", "lb_trv", "tx_gks", "slc_112", "ta_ted"];
+	for (const id of elementIDs) {
+		const element = document.getElementById(id);
+		if (element) element.style.border = "";
+	}
+	
+	setTimeout(function(){         // şukadar süre sonra şunu yap 
+		vitalsHighlight();
+	}, 1000);
+}
