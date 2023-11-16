@@ -71,14 +71,14 @@
 		</div>
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik">	
-		<div class="form_duz">
+		<div class="form_row">
 		<img src="iko/im_trv.png" id="im_trv" alt="x">
 		<label id="lb_trv"></label>
 		<input type="checkbox" id="ch_trv" onchange="tog_trv()">
 		<label for="ch_adli" id="lb_adli"></label>
 		<input type="checkbox" id="ch_adli" onchange="tog_adli()">
 		</div>
-		<div class="form_duz">
+		<div class="form_row">
 		<img src="iko/im_xry.png" id="im_xry" alt="x">
 		<label for="checkbox27"  id="lb_akc"></label>
 		<input type="checkbox" id="ch_akc" onchange="tog_akc()">
@@ -152,7 +152,7 @@
         <label for="checkbox25" id="lb_pro"></label>
     </div>
     <div class="form_dik">
-        <textarea id="ta_ted"></textarea>
+        <textarea id="ta_ted" class="gru_tbox"></textarea>
 		<div>
 			<textarea id="ta_pro" ondblclick="addProg()"></textarea>
 			<button id="bt_cpy" onclick="subCopy2()">Copy</button>
@@ -165,17 +165,15 @@
 	<div class="form_row">
 			<label for="text223" id="lb_izl"></label>
 			<textarea id="ta_izl" class="vit_box"></textarea>
-			<div class="form_duz">
 				<label for="checkbox24" id="lb_ext"></label>
 				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
 				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
 				<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
-			</div>
 	</div>
 
 	<div class="cls_ext" style="display:none;">
-		<label id="lb_ext2"></label>
-		<label id="lb_ext3">Report</label>
+		<label id="lb_ext3"></label>
+		<label id="lb_ext2">Report</label>
 		<input type="checkbox" id="ch_nrm" onchange="togNrml()">
 		<textarea id="ta_ext" class="gru_tbox"></textarea>
 		<button id="bt_ext" onclick="subCopy()">Copy</button>
