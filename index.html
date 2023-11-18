@@ -2,7 +2,7 @@
 <html>
 <head><!--   -->
  <meta charset="UTF-8">
-	<title>Cnut the Great</title>
+	<title>Login Cnut the Great</title>
 	<link rel="stylesheet" type="text/css" href="form_dark.css">
 	<script src="main.js"></script>
 	<script src="load.js"></script>
@@ -223,12 +223,12 @@
       <br>
 		<button id="pop_save">Save</button>
 		<button id="pop_pano">Clipboard</button>
-		<button id="pop_cancel">Cancel</button>
+		<button id="pop_cancel">esc</button>
 </div>
 <script src="popup.js"></script>
 
 <div id="popGist" class="pop-up">
-  <button id="bt_cik" class="close-btn" onclick="subCik()">X</button>
+  <button id="bt_cik" class="close-btn" onclick="subCik()">x</button>
   <div id="ch_pop" class="form_row">
     <label><input type="checkbox" id="ch_exi" onchange="tog_exi()"> Externe</label>
     <label><input type="checkbox" id="ch_tum" onchange="tog_tum()"> Whole</label>
@@ -263,6 +263,12 @@
 <button id="bt_yaz" onclick="subYaz()">Write</button>
 </div>
 
+<button id="bt_sils" onclick="subSils()">ALERT</button>
+  <div id="alert_pop">
+    <p id="alr_pop">x</p>
+    <div id="selectIcerik"></div>
+  </div>
+  
 </body>
 </html>
 
