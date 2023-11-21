@@ -58,8 +58,7 @@
 		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
 		<label for="text2" id="lb_ks"></label>
 		<input type="text" id="tx_ks" class="vit_box" oninput="handleChange(this)">
-		<label for="checkbox6" id="lb_gks"></label>
-		<input type="checkbox" id="ch_gks" onchange="tog_gks()">
+		<select id="slc_gks" onchange="selecGKS()"></select>
 		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">
 		
 	</div>
@@ -89,9 +88,10 @@
 		<label id="lb_saat"onclick="tik_saat()"></label>	
 	</div>	
 		
-		<div class="cls_trv" style="display:none;">
+		<div class="form_top" style="display:none;">
 			<label id="lb_trm"></label>
 			<textarea type="text" id="ta_trv" class="gru_tbox"></textarea>
+			<label id="lb_med">Body :  <input type="checkbox" id="ch_bod" onchange="togBod()" checked></label>
 		</div>
 		
 		<div class="cls_akc" style="display:none;">
@@ -147,18 +147,18 @@
             <label for="checkbox25" id="lb_ted"></label>
             <input type="checkbox" id="ch_ted" onchange="tog_ted()">
         </div>
-		<label id="lb_vie">View :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+		<label id="lb_vie">Lab-Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+		<div>
         <label id="lb_med">Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
-        <label for="checkbox25" id="lb_pro"></label>
+		<label id="lb_med">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
+		</div>
+		<button id="bt_cpy" onclick="subCopy2()"></button>
     </div>
     <div class="form_dik">
         <textarea type="text" id="ta_ted" class="gru_tbox"></textarea>
-		<div>
-			<textarea id="ta_pro" ondblclick="addProg()"></textarea>
-			<button id="bt_cpy" onclick="subCopy2()">Copy</button>
-		</div>
-    </div>
-    <label id="lb_son"></label>
+		<textarea id="ta_pro" ondblclick="addProg()"></textarea>
+    </div>	
+	<label id="lb_son"></label>
     <textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
 </div>
 
@@ -218,7 +218,7 @@
 
 
 <div id="popup">
-    <textarea id="pop_ta" spellcheck="false"></textarea>
+    <textarea id="ta_pop" spellcheck="false"></textarea>
       <br>
 		<button id="pop_save">Save</button>
 		<button id="pop_pano">Clipboard</button>
