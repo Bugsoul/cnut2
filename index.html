@@ -137,8 +137,8 @@
 			<label for="lb_tre" id="lb_tre"></label>
 			<input type="text" id="tx_plan" class="gru_tbox">
 			<img src="iko/bt.png" id="im_bt" style="cursor: pointer;" onclick="toggleBt()">
-			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">	
-			<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
+			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
+			<select id="slc_wtc" onchange="selecWtc()"></select>
 	</div>
 
 <div class="form_row">
@@ -168,6 +168,7 @@
 				<label for="checkbox24" id="lb_ext"></label>
 				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
 				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
+				<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
 				<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
 	</div>
 
@@ -189,9 +190,9 @@
 		<button type="end" id="bt_new" onclick="subNew()"></button>
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
-		<button id="bt_list" onclick="subList()"></button>	
-		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
+		<button id="bt_list" onclick="subList()"></button>			
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>
+		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 	</div>
 	
