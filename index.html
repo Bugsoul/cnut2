@@ -139,7 +139,7 @@
 			<img src="iko/bt.png" id="im_bt" style="cursor: pointer;" onclick="toggleBt()">
 			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
 			<select id="slc_wtc" onchange="selecWtc()"></select>
-			<img src="iko/normal.png" id="im_norm" style="cursor: pointer;" onclick="toggleNorm()">
+			<img src="iko/normal.png" id="im_norm" style="cursor: pointer;" onclick="togSonuc()">
 	</div>
 
 <div class="form_row">
@@ -148,15 +148,18 @@
             <label for="checkbox25" id="lb_ted"></label>
             <input type="checkbox" id="ch_ted" onchange="tog_ted()">
         </div>
-		<label id="lb_vie">Lab-Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+		<div>
+		<label id="lb_lab">Lab :  <input type="checkbox" id="ch_lab" onchange="togLab()" checked></label>
+		<label id="lb_vie">Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+		</div>
 		<div>
         <label id="lb_med">Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
-		<label id="lb_med">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
+		<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
 		</div>
 		<button id="bt_cpy" onclick="subCopy2()"></button>
 		<div>
 			<label id="lb_ext2">Report</label>
-			<input type="checkbox" id="ch_nrm" onchange="togNrml()">
+			<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
 		</div>
     </div>
     <div class="form_dik">
