@@ -58,9 +58,9 @@
 		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
 		<label for="text2" id="lb_ks"></label>
 		<input type="text" id="tx_ks" class="vit_box" oninput="handleChange(this)">
+		<img src="iko/twist.png" id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
 		<select id="slc_gks" onchange="selecGKS()"></select>
-		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">
-		
+		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">		
 	</div>
 	
 	<div class="form_row">
@@ -168,8 +168,14 @@
     <div class="form_dik">
         <textarea type="text" id="ta_ted" class="gru_tbox"></textarea>
 		<textarea id="ta_pro" ondblclick="addProg()" class="gru_tbox"></textarea>
-    </div>	
-	<label id="lb_son"></label>
+    </div>
+	<div class="form_dik">
+		<label id="lb_son"></label>
+			<div>
+				<label id="lb_bast">Bstr:</label>
+				<input type="checkbox" id="ch_bast">
+			</div>
+		</div>
     <textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
 </div>
 
