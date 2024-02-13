@@ -4,6 +4,7 @@
  <meta charset="UTF-8">
 	<title>Login Cnut the Great</title>
 	<link rel="stylesheet" type="text/css" href="form_dark.css">
+	<link rel="stylesheet" type="text/css" href="form_elem.css">
 	<script src="main.js"></script>
 	<script src="load.js"></script>
 	<script src="steam_text.js"></script>
@@ -26,12 +27,15 @@
 	</div>
 	
 <div class="form_row">
-	   <label for="checkbox4" id="lb_alj"></label>
-		<input type="checkbox" id="ch_alj" onchange="tog_alj()">
-		<input type="text" id="tx_alj" class="gru_tbox" oninput="handleChange(this)">
 		<label for="ch_ame" id="lb_ame"></label>
 		<input type="checkbox" id="ch_ame" onchange="tog_ame()">
 		<input type="text" id="tx_ame" class="gru_tbox" oninput="handleChange(this)">
+		<label for="checkbox4" id="lb_alj"></label>
+		<input type="checkbox" id="ch_alj" onchange="tog_alj()">
+		<input type="text" id="tx_alj" class="gru_tbox" oninput="handleChange(this)">		
+		<input type="checkbox" id="ch_bok" class="iphone-switch" onchange="tog_bok()">
+		<label for="ch_bok" class="switch"></label>
+
 		<img src="iko/im_112.png" id="im_112">
 		<select id="slc_112" onchange="selec_112()">
 			<option value="0"> Flat</option>
@@ -142,7 +146,6 @@
 			<img src="iko/bt.png" id="im_bt" style="cursor: pointer;" onclick="toggleBt()">			
 			<input type="text" id="tx_kons" class="gru_tbox">
 			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
-			<img src="iko/normal.png" id="im_norm" style="cursor: pointer;" onclick="togSonuc()">
 	</div>
 
 <div class="form_row">
@@ -160,10 +163,6 @@
 		<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
 		</div>
 		<button id="bt_cpy" onclick="subCopy2()"></button>
-		<div>
-			<label id="lb_ext2">Report</label>
-			<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
-		</div>
     </div>
     <div class="form_dik">
         <textarea type="text" id="ta_ted" class="gru_tbox"></textarea>
@@ -182,11 +181,21 @@
 	<div class="form_row">
 			<label for="text223" id="lb_izl"></label>
 			<textarea id="ta_izl" class="vit_box"></textarea>
-				<label for="checkbox24" id="lb_ext"></label>
-				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
+			<div class="form_dik">
+				<div class="form_row">
+					<label for="checkbox24" id="lb_ext"></label>
+					<input type="checkbox" id="ch_ext" onchange="tog_ext()">
+				</div>	
+				<div id="div_res" class="form_row">
+					<label id="lb_ext2">Results :</label>
+					<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
+				</div>
+			</div>	
+			<div class="form_row">
+				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
 				<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
-				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">	
 				<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
+			</div>
 	</div>
 
 	<div class="cls_ext" style="display:none;">
@@ -280,7 +289,10 @@
 
 <div id="alert_pop" style>
     <p id="alr_pop">x</p>
-    <div id="selectIcerik"></div>
+</div>
+<div id="alert_pop2" style>
+    <p id="alr_pop2">x</p>
+    <div id="yapay_buton"></div>
 </div>
   
 </body>
