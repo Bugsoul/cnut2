@@ -33,8 +33,8 @@
 		<label for="checkbox4" id="lb_alj"></label>
 		<input type="checkbox" id="ch_alj" onchange="tog_alj()">
 		<input type="text" id="tx_alj" class="gru_tbox" oninput="handleChange(this)">		
-		<input type="checkbox" id="ch_bok" class="iphone-switch" onchange="tog_bok()">
-		<label for="ch_bok" class="switch"></label>
+		<input type="checkbox" id="ch_bok" class="iphone_switch" onchange="tog_bok()">
+		<label for="ch_bok" class="swtc_bok"></label>
 
 		<img src="iko/im_112.png" id="im_112">
 		<select id="slc_112" onchange="selec_112()">
@@ -75,27 +75,30 @@
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik">	
 		<div class="form_row">
-		<img src="iko/im_trv.png" id="im_trv" alt="x">
-		<label id="lb_trv"></label>
-		<input type="checkbox" id="ch_trv" onchange="tog_trv()">
-		<label for="ch_adli" id="lb_adli"></label>
-		<input type="checkbox" id="ch_adli" onchange="tog_adli()">
+			<img src="iko/im_trv.png" id="im_trv" alt="x">
+			<label id="lb_trv"></label>
+			<input type="checkbox" id="ch_trv" onchange="tog_trv()">
+			<label for="ch_adli" id="lb_adli"></label>
+			<input type="checkbox" id="ch_adli" onchange="tog_adli()">
 		</div>
 		<div class="form_row">
-		<img src="iko/im_xry.png" id="im_xry" alt="x">
-		<label for="checkbox27"  id="lb_akc"></label>
-		<input type="checkbox" id="ch_akc" onchange="tog_akc()">
-		<label for="checkbox25" id="lb_plus"></label>
-		<input type="checkbox" id="ch_plus" onchange="tog_plus()">
+			<img src="iko/im_xry.png" id="im_xry" alt="x">
+			<label for="checkbox27"  id="lb_akc"></label>
+			<input type="checkbox" id="ch_akc" onchange="tog_akc()">
+			<label for="checkbox25" id="lb_plus"></label>
+			<input type="checkbox" id="ch_plus" class="iphone_switch" onchange="tog_plus()">
+			<label for="ch_plus" class="swtc_pls"></label>
 		</div>
 	</div>	
 		<label id="lb_saat"onclick="tik_saat()"></label>	
 	</div>	
 		
 		<div class="form_top" style="display:none;">
-			<label id="lb_trm"></label>
+			<div class="form_dik">
+				<label id="lb_trm"></label>
+				<label id="lb_med">Body :  <input type="checkbox" id="ch_bod" onchange="togBod()" checked></label>
+			</div>
 			<textarea type="text" id="ta_trv" class="gru_tbox"></textarea>
-			<label id="lb_med">Body :  <input type="checkbox" id="ch_bod" onchange="togBod()" checked></label>
 		</div>
 		
 		<div class="cls_akc" style="display:none;">
