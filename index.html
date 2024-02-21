@@ -51,17 +51,17 @@
 </div>
 	<div class="form_row">
 		<label for="checkbox23" id="lb_ta"></label>
-		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box">
+		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" maxlength="6">
 		<label for="checkbox23" id="lb_NB"></label>
-		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
+		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" oninput="Nb_Change(this)" maxlength="2">
 		<label for="checkbox23" id="lb_SS"></label>
-		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
+		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" oninput="Ss_Change(this)" maxlength="2">
 		<label for="checkbox23" id="lb_ates"></label>
-		<input type="text" id="tx_ates" onfocus="this.select()" oninput="addComm(this)" class="vit_box">
+		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" oninput="Ates_Change(this)" maxlength="4">
 		<label for="checkbox23" id="lb_SAT"></label>
-		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="handleChange(this)">
+		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="Sat_Change(this)" maxlength="2">
 		<label for="text2" id="lb_ks"></label>
-		<input type="text" id="tx_ks" class="vit_box" oninput="handleChange(this)">
+		<input type="text" id="tx_ks" class="vit_box" oninput="handleChange(this)" maxlength="3">
 		<img src="iko/twist.png" id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
 		<select id="slc_gks" onchange="selecGKS()"></select>
 		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">		
@@ -166,6 +166,10 @@
 		<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
 		</div>
 		<button id="bt_cpy" onclick="subCopy2()"></button>
+		<div id="div_res" class="form_row">
+			<label id="lb_ext2">Results :</label>
+			<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
+		</div>
     </div>
     <div class="form_dik">
         <textarea type="text" id="ta_ted" class="gru_tbox"></textarea>
@@ -173,39 +177,29 @@
     </div>
 	<div class="form_dik">
 		<label id="lb_son"></label>
-			<div>
-				<label id="lb_bast">Bstr:</label>
-				<input type="checkbox" id="ch_bast">
-			</div>
 		</div>
     <textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
 </div>
 
 	<div class="form_row">
 			<label for="text223" id="lb_izl"></label>
-			<textarea id="ta_izl" class="vit_box"></textarea>
+			<textarea id="ta_izl"></textarea>
 			<div class="form_dik">
-				<div id="div_res" class="form_row">
-					<label id="lb_ext2">Results :</label>
-					<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
-				</div>			
-				<div class="form_row">
-					<label for="checkbox24" id="lb_ext"></label>
-					<input type="checkbox" id="ch_ext" onchange="tog_ext()">
-				</div>	
-			</div>	
+			<div class="form_row">
+				<label for="checkbox24" id="lb_ext"></label>
+				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
+			</div>
+			<div class="form_row">
+				<label id="lb_bast">Bstr</label>
+				<input type="checkbox" id="ch_bast">
+			</div>			
+			</div>			
 			<div class="form_row">
 				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
 				<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
 				<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
 			</div>
 	</div>
-
-	<div class="cls_ext" style="display:none;">
-		<label id="lb_ext3"></label>
-		<textarea id="ta_ext" class="gru_tbox"></textarea>
-		<button id="bt_ext" onclick="subCopy()">Copy</button>
-	</div>	
 		
 	<div class="div_pcDen" >
 	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
@@ -217,20 +211,23 @@
 		<button type="end" id="bt_new" onclick="subNew()"></button>
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
-		<button id="bt_list" onclick="subList()"></button>			
-		<button type="end"  id="bt_kons" onclick="subKons()"></button>
+		<button id="bt_list" onclick="subList()"></button>	
+		<button type="end"  id="bt_kons" onclick="subKons()"></button>	
 		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 	</div>
-	
+
+	<div class="cls_ext" style="display:none;">
+		<label id="lb_ext3"></label>
+		<textarea id="ta_ext" class="gru_tbox"></textarea>
+		<button id="bt_ext" onclick="subCopy()">Copy</button>
+	</div>	
 	<div class="endi">
 		<label for="textc" id="lb_cunt">Test</label>
 		<label id="lb_gist"></label>
-	</div>
-
+	</div>	
 </div>
 	<input type="password" id="ps_flu">
-
 
 <div id="gi-container">
 <img src="iko/cnut.png" id="im_cnut">
@@ -240,7 +237,6 @@
   <button type="end" id="bt_fk" onclick="subFk()"></button>
   <label id="lb_cap"></label>
 </div>
-
 
 <div id="popup">
     <textarea id="ta_pop" spellcheck="false"></textarea>
@@ -264,19 +260,19 @@
 
 <div class="cons_box">
 <div class="sat1">
-<label>K: <input type="checkbox"></label>
-<label>N: <input type="checkbox"></label>
-<label>G: <input type="checkbox"></label>
-<label>D: <input type="checkbox"></label>
-<label>Gt: <input type="checkbox"></label>
-<label>A: <input type="checkbox"></label>
-<label>İ: <input type="checkbox"></label>
+<label><span style="color: lime;">K: </span><input type="checkbox" data-key="k"></label>
+<label><span style="color: lime;">N: </span><input type="checkbox" data-key="n"></label>
+<label><span style="color: lime;">G: </span><input type="checkbox" data-key="g"></label>
+<label><span style="color: lime;">D: </span><input type="checkbox" data-key="d"></label>
+<label>G<span style="color: lime; font-weight: bold;">t</span>: <input type="checkbox" data-key="t"></label>
+<label><span style="color: lime;">A: </span><input type="checkbox" data-key="a"></label>
+<label><span style="color: lime;">İ: </span><input type="checkbox" data-key="i"></label>
 </div>
 <div class="sat2">
-<label>Gc: <input type="checkbox"></label>
-<label>Ğc: <input type="checkbox"></label>
-<label>Bc: <input type="checkbox"></label>
-<label>O: <input type="checkbox"></label>
+<label>G<span style="color: lime; font-weight: bold;">c</span>: <input type="checkbox" data-key="c"></label>
+<label><span style="color: lime; font-weight: bold;">Ğ</span>c: <input type="checkbox" data-key="ğ"></label>
+<label><span style="color: lime;">Bc: </span><input type="checkbox" data-key="b"></label>
+<label><span style="color: lime;">O: </span><input type="checkbox" data-key="o"></label>
 <label>Çc: <input type="checkbox"></label>
 </div>
 <div class="sat3">
@@ -287,7 +283,7 @@
 <label>Kh: <input type="checkbox"></label>
 </div>
 
-<button id="bt_yaz" onclick="subYaz()">Write</button>
+<button id="bt_yaz" onclick="subYaz()">Write[⏎]</button>
 </div>
 
 <div id="alert_pop" style>
