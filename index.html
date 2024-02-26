@@ -53,13 +53,13 @@
 		<label for="checkbox23" id="lb_ta"></label>
 		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" maxlength="6">
 		<label for="checkbox23" id="lb_NB"></label>
-		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" oninput="Nb_Change(this)" maxlength="2">
+		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" oninput="Nb_Change(this)" maxlength="3">
 		<label for="checkbox23" id="lb_SS"></label>
 		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" oninput="Ss_Change(this)" maxlength="2">
 		<label for="checkbox23" id="lb_ates"></label>
 		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" oninput="Ates_Change(this)" maxlength="4">
 		<label for="checkbox23" id="lb_SAT"></label>
-		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="Sat_Change(this)" maxlength="2">
+		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" oninput="Sat_Change(this)" maxlength="3">
 		<label for="text2" id="lb_ks"></label>
 		<input type="text" id="tx_ks" class="vit_box" oninput="handleChange(this)" maxlength="3">
 		<img src="iko/twist.png" id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
@@ -252,10 +252,10 @@
 <div id="popGist" class="pop-up">
   <button id="bt_cik" class="close-btn" onclick="subCik()">x</button>
   <div id="ch_pop" class="form_row">
-    <label><input type="checkbox" id="ch_exi" onchange="tog_exi()"> Externe</label>
-    <label><input type="checkbox" id="ch_tum" onchange="tog_tum()"> Whole</label>
-	  <input type="text" id="tx_src" onkeydown="handleKeyPress(event)">
-  <button id="bt_src" onclick="subSearch()"></button>
+		<label><input type="checkbox" id="ch_exi" onchange="tog_exi()"> Externe</label>
+		<label><input type="checkbox" id="ch_tum" onchange="tog_tum()"> Whole</label>
+		<input type="text" id="tx_src" onkeydown="handleKeyPress(event)">
+		<button id="bt_src" onclick="subSearch()"></button>
   </div>
   <table id="tblGist"></table>
 </div>
