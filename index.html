@@ -33,7 +33,7 @@
 		<label for="checkbox4" id="lb_alj"></label>
 		<input type="checkbox" id="ch_alj" onchange="tog_alj()">
 		<input type="text" id="tx_alj" class="gru_tbox" oninput="handleChange(this)">		
-		<input type="checkbox" id="ch_bok" class="iphone_switch" onchange="tog_bok()">
+		<input type="checkbox" id="ch_bok" class="iphone_switch" onchange="tog_bok()"> <!-- iphone_switch & allta label     -->
 		<label for="ch_bok" class="swtc_bok"></label>
 
 		<img src="iko/im_112.png" id="im_112">
@@ -167,7 +167,7 @@
 		</div>
 		<button id="bt_cpy" onclick="subCopy2()"></button>
 		<div id="div_res" class="form_row">
-			<label id="lb_ext2">Results :</label>
+			<label id="lb_ext2">Results ✓</label>
 			<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
 		</div>
     </div>
@@ -182,18 +182,16 @@
 </div>
 
 	<div class="form_row">
-			<label for="text223" id="lb_izl"></label>
-			<textarea id="ta_izl"></textarea>
+			<div class="form_dik">
+				<label for="text223" id="lb_izl"></label>
+			</div>
+			<textarea id="ta_izl" class="gru_tbox"></textarea>
 			<div class="form_dik">
 			<div class="form_row">
 				<label for="checkbox24" id="lb_ext"></label>
 				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
 			</div>
-			<div class="form_row">
-				<label id="lb_bast">Bstr</label>
-				<input type="checkbox" id="ch_bast">
-				<label for="text1" id="lb_s" onclick="subTiks()" style="font-size: 20px;">(s)</label>
-			</div>			
+				<label for="text1" id="lb_s" onclick="subTiks()" style="font-size: 20px;">(s)</label>		
 			</div>			
 			<div class="form_row">
 				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
@@ -212,9 +210,13 @@
 		<button type="end" id="bt_new" onclick="subNew()"></button>
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
-		<button id="bt_list" onclick="subList()"></button>	
+		<button id="bt_list" onclick="subList()"></button>
+				<input type="checkbox" id="ch_bast" class="iphone_switch" >
+				<label for="ch_bast" class="swtc_bast"></label>				
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>	
 		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
+				<input type="checkbox" id="ch_sta" class="iphone_switch" >
+				<label for="ch_sta" class="swtc_sta"></label>
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 	</div>
 
