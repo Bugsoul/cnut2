@@ -49,7 +49,7 @@
 			<option value="2"> Red</option>
 		</select>
 </div>
-	<div class="form_row">
+	<div class="form_row">                                                                                 <!--  Vitaller      -->
 		<label for="checkbox23" id="lb_ta"></label>
 		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" maxlength="6">
 		<label for="checkbox23" id="lb_NB"></label>
@@ -67,7 +67,7 @@
 		<input type="text" id="tx_gks" class="gru_tbox" oninput="handleChange(this)">		
 	</div>
 	
-	<div class="form_row">
+	<div class="form_row">                                                                                 <!--  Travma - Adli - Saat      -->
 		<div class="form_dik">
 			<label for="text6" id="lb_sik"></label>
 			<select id="slc_gaz" onchange="selecGaz()"></select>
@@ -106,7 +106,7 @@
 			<input type="text" id="tx_akc" class="gru_tbox">
 		</div>
 		
-	<div class="form_row">
+	<div class="form_row">                                                                                 <!--  Muayeneler      -->
 		<label for="checkbox7" id="lb_sol"></label>
 		<input type="checkbox" id="ch_sol" onchange="tog_sol()">
 		<input type="text" id="tx_sol" class="gru_tbox" oninput="handleChange(this)">
@@ -138,7 +138,7 @@
 		<input type="checkbox" id="ch_akg" onchange="tog_akg()">
 		<input type="text" id="tx_akg" class="gru_tbox" oninput="handleChange(this)">
 	</div>
-	<div class="form_row">
+	<div class="form_row">                                                                                 <!--  ICD - Lab - BT - Kons      -->
 			<label for="lb_icd" id="lb_icd"></label>
 			<input type="text" id="tx_icd" class="gru_tbox">
 			<label for="lb_tre" id="lb_tre"></label>
@@ -151,19 +151,19 @@
 			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
 	</div>
 
-<div class="form_row">
+<div class="form_row">                                                                                 <!--   Progres     -->
     <div class="form_dik">
         <div>
             <label for="checkbox25" id="lb_ted"></label>
             <input type="checkbox" id="ch_ted" onchange="tog_ted()">
         </div>
 		<div>
-		<label id="lb_lab">Lab :  <input type="checkbox" id="ch_lab" onchange="togLab()" checked></label>
-		<label id="lb_vie">Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+			<label id="lb_lab">Lab :  <input type="checkbox" id="ch_lab" onchange="togLab()" checked></label>
+			<label id="lb_vie">Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
 		</div>
 		<div>
-        <label id="lb_med">Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
-		<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
+			<label id="lb_med">Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
+			<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
 		</div>
 		<button id="bt_cpy" onclick="subCopy2()"></button>
 		<div id="div_res" class="form_row">
@@ -181,7 +181,7 @@
     <textarea id="ta_son" name="mess" class="gru_tbox"></textarea>
 </div>
 
-	<div class="form_row">
+	<div class="form_row">                                                                                 <!--  Taburcu      -->
 			<div class="form_dik">
 				<label for="text223" id="lb_izl"></label>
 			</div>
@@ -200,7 +200,7 @@
 			</div>
 	</div>
 		
-	<div class="div_pcDen" >
+	<div class="div_pcDen" >                                                                                 <!--  Backup - Kons - Not      -->
 	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
 	</div>
 	<div class="form_row">
@@ -226,7 +226,6 @@
 		<button id="bt_ext" onclick="subCopy()">Copy</button>
 	</div>	
 	<div class="endi">
-		<label for="textc" id="lb_cunt">Test</label>
 		<label id="lb_gist"></label>
 	</div>	
 </div>
