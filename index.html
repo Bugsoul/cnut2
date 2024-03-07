@@ -186,7 +186,10 @@
 				<label for="checkbox24" id="lb_ext"></label>
 				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
 			</div>
-				<label for="text1" id="lb_s" onclick="subTiks()" style="font-size: 20px;">(s)</label>		
+			<div class="form_row">
+				<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>	
+				<label for="text1" id="lb_s" onclick="subTik_alg()" style="font-size: 20px;">(alg)</label>				
+			</div>
 			</div>			
 			<div class="form_row">
 				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
@@ -246,6 +249,11 @@
 	<button id="pop_save">Save</button>
 	<button id="pop_pano">Clipboard</button>
 	<button id="pop_cancel">esc</button>
+</div>
+<div id="popup_alg">
+    <input type="text" id="tx_find" placeholder="Search...">
+    <table id="tb_titles"></table>
+    <div id="x_contain"></div>    
 </div>
 <script src="popup.js"></script>
 
