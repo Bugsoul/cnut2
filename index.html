@@ -153,17 +153,21 @@
 
                                                                                 <!--   Progres     -->
 <div class="form_dik">
-        <div class="form_row"> 
-            <label for="checkbox25" id="lb_ted"></label>
-            <input type="checkbox" id="ch_ted" onchange="tog_ted()">
-			<label id="lb_lab">Lab :  <input type="checkbox" id="ch_lab" onchange="togLab()" checked></label>
-			<label id="lb_vie">Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
-			<label id="lb_med">Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
-			<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
-			<textarea type="text" id="ta_ted" class="gru_tbox" spellcheck="false"></textarea>
+	<div class="form_row"> 
+		<div class="form_dik">
+			<div class="form_row"> 
+				<label for="checkbox25" id="lb_ted"></label>
+				<input type="checkbox" id="ch_ted" onchange="tog_ted()">
+				<label id="lb_lab">Lab :  <input type="checkbox" id="ch_lab" onchange="togLab()" checked></label>
+				<label id="lb_vie">Img :  <input type="checkbox" id="ch_gor" onchange="togGor()" checked></label>
+			</div>
+			<div class="form_row"> 
+				<label id="lb_med">Med :  <input type="checkbox" id="ch_iv" onchange="togIv()" checked></label>
+				<label id="lb_ok">O2 :  <input type="checkbox" id="ch_o2" onchange="togO2()"></label>
+			</div>
 		</div>
-		
-		
+		<textarea type="text" id="ta_ted" class="gru_tbox" spellcheck="false"></textarea>
+	</div>	
 		<div class="form_row"> 
 			<div class="form_dik">
 				<button id="bt_cpy" onclick="subCopy2()"></button>
@@ -203,11 +207,9 @@
 		<textarea id="ta_son" name="mess" class="gru_tbox" spellcheck="false"></textarea>
 	</div>
 		
-	<div class="div_pcDen" >                                                                                 <!--  Backup - Kons - Not      -->
-	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
-	</div>
 	<div class="form_row">
-		<input type="checkbox" id="ch_pc" onchange="tog_pc()">
+		<input type="checkbox" id="ch_pc" onchange="tog_pc()" class="iphone_switch">
+		<label for="ch_pc" class="swtc_pc"></label>
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
 		<button type="button" id="sYukle" onclick="sYukle()"></input>
 		<button type="end" id="bt_new" onclick="subNew()"></button>
@@ -223,6 +225,10 @@
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 	</div>
 
+	<div class="div_pcDen" >                                                                                 <!--  Backup - Kons - Not      -->
+	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
+	</div>
+	
 	<div class="cls_ext" style="display:none;">
 		<label id="lb_ext3"></label>
 		<textarea id="ta_ext" class="gru_tbox" spellcheck="false"></textarea>
