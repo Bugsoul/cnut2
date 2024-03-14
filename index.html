@@ -226,7 +226,9 @@
 	</div>
 
 	<div class="div_pcDen" >                                                                                 <!--  Backup - Kons - Not      -->
-	<input type="file" id="pcDen" onchange="subYukle()" style="display: none;"></input>
+<!--  type="file" elementleri browser korumalıdır, şeklini şemalini değiştiremezsin. iphone_switch gibi label ile şekil veriliyor. -->
+		<input type="file" id="pcDen" onchange="subYukle()">
+		<label for="pcDen" id="custom_pcDen"></label>
 	</div>
 	
 	<div class="cls_ext" style="display:none;">
