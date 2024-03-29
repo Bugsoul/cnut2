@@ -5,20 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Data Extraction</title>
 <style>
-#yatay {
+#yatay, .button-container {
     display: flex;
     flex-direction: row;
 }
 
 #yatay > div {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-right: 10px; /* İstediğiniz boşlukları ayarlayabilirsiniz */
+}
+.button-container button {
+    margin-right: 10px;
 }
 </style>
 </head>
 <body>
 <textarea id="ta_girdi" style="width:90%; height:150px;">Metni buraya yapıştırın...</textarea><br>
-<button onclick="addDataToLabel()">Sonuçları Ayıkla</button><br>
+    <div class="button-container">
+		<button onclick="addDataToLabel()">Sonuçları Ayıkla</button><br>
+        <button onclick="copyText()">Copy</button>
+        <button onclick="clearText()">Clear</button>
+    </div>
 <div id="yatay">
 	<div id="hg_div" style="margin-top: 10px;"></div>
 	<div id="bk_div" style="margin-top: 10px;"></div>
@@ -299,6 +306,17 @@ function addDataToLabel() {
 	engine("ta_girdi"); // Dikkat: ana metinden verileri "epix" değişkenine çekiyoruz (Hg: 7, Hg: 8) şeklinde. renklendirme için
 	engine("epix"); // Burada da bunu düzenli hale (Hg: 7→8) geliyor. "ta_girdi" ya ve de renkli label'lara ekleniyor
 }
+
+function copyText() {
+    var copyText = document.getElementById("ta_girdi");
+    copyText.select();
+    document.execCommand("copy");
+}
+
+function clearText() {
+    document.getElementById("ta_girdi").value = "";
+}
+
 </script>
 </body>
 </html>
