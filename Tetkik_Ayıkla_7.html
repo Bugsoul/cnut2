@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Extraction</title>
+<style>
+#yatay {
+    display: flex;
+    flex-direction: row;
+}
+
+#yatay > div {
+    margin-top: 10px;
+    margin-right: 10px; /* İstediğiniz boşlukları ayarlayabilirsiniz */
+}
+</style>
+</head>
+<body>
+<textarea id="ta_girdi" style="width:90%; height:150px;">Metni buraya yapıştırın...</textarea><br>
+<button onclick="addDataToLabel()">Sonuçları Ayıkla</button><br>
+<div id="yatay">
+	<div id="hg_div" style="margin-top: 10px;"></div>
+	<div id="bk_div" style="margin-top: 10px;"></div>
+	<div id="ke_div" style="margin-top: 10px;"></div>
+	<div id="gaz_div" style="margin-top: 10px;"></div>
+	<div id="idrar_div" style="margin-top: 10px;"></div>
+</div>
+
+<script>
+function determineColor(key, value, limits) {
+    var lower = parseFloat(limits[key].lower); // Anahtarın sınırlarını kullan
+    var upper = parseFloat(limits[key].upper); // Anahtarın sınırlarını kullan
+    value = parseFloat(value);
+
+    if (value < lower) {
+        return "blue"; // Alt sınır altındaysa mavi
+    } else if (value > upper) {
+        return "red"; // Üst sınır üstündeyse kırmızı
+    } else {
+        return ""; // Diğer durumlar için boş renk (normal)
+    }
+}
+
+
+function applyColorToLabel(key, value, color, containerDiv) {
+    var label = document.createElement("label");
+    label.textContent = key + ": " + value;
+    if (color) {
+        label.style.color = color; // Renk uygula
+    }
+    containerDiv.appendChild(label); // Değişiklik yapıldı
+    containerDiv.appendChild(document.createElement("br")); // Değişiklik yapıldı
+}
+
+function applyAbbreviations(main) {
+    for (const [key, value] of Object.entries(abbreviations)) {
+        const regex = new RegExp("\\b" + key + "\\b", "g");
+        main = main.replace(regex, value);
+    }
+    return main;
+}
+
+var abbreviations = {
+    "Lökosit": "\nTİT➜ Lök.",
+    "Eritrosit": "Erit.",
+    "Demir": "Fe",
+    "Magnezyum": "Mg",
+    "Troponin I": "\nKardiyak Enzim➜ Trop.I",
+    "Albümin": "Alb.",
+    "Sedimantasyon": "Sedim.",
+    "Kreatinin": "Kr.",
+    "Sodyum": "Na",
+    "Potasyum": "K",
+    "Total Bilirubin": "T.Bil.",
+    "Direkt Bilirubin": "D.Bil.",
+    "ndirekt Bilirubin": ".Bil.",
+	"Klorür": "Cl",
+	"Kalsiyum": "Ca",
+	", Üre": "\nBK➜ Üre",
+	"pH": "\nKan gazı➜ pH"
+	
+};
+
+
+var epixi = "";
+function engine(tasec) {
+    var girdi_textarea = document.getElementById("ta_girdi").value;
+	if (tasec === "epix") {
+		girdi_textarea = epixi;
+	}
+	var text = girdi_textarea.replace(/Kreatin\s+Kinaz\s+\(CK\)/gi, "CK")
+					.replace(/Kan\s+Üre\s+Azotu\s+\(BUN\)/gi, "BUN")
+					.replace(/CRP\s+\(Nefolometrik\)/gi, "CRP")
+					.replace(/K\+/g, "K")
+					.replace(/İyonize\s+Kalsiyum/gi, "iCa");
+
+    // Veri ayıklama işlemi
+    var keyHG = ["HGB",  "HCT",  "WBC", "PLT", "MCV" , "LYM#", "NEU#", "CRP", "Sedimantasyon", "Prokalsitonin"];
+    var keyBK = ["Üre", "Kreatinin", "BUN", "Sodyum", "Potasyum", "Kalsiyum", "Klorür", "ALT", "AST", "LDH", "Amilaz", "Lipaz", "ALP", "GGT", "Total Bilirubin", "Direkt Bilirubin", "İndirekt Bilirubin", "Albümin", "Demir", "Magnezyum"];
+    var keyKE = ["Troponin I", "CK", "CK-MB", "D-Dimer", "PT", "INR", "APTT"];
+    var idrarKey = ["Lökosit", "Eritrosit", "Dansite", "Görünüm", "Nitrit", "Bakteri", "Kan"];
+	var gazKey = ["pH", "pO2", "pCO2", "K", "Glu", "HCO3-act", "Laktat", "tHb"];
+			
+		
+	var HG_Data = {};
+	for (var j = 0; j < keyHG.length; j++) {
+		var key = keyHG[j];
+		var regex = new RegExp(key + "\\s*[:\\s]\\s*([\\d\\.]+)", "g"); //(key + "\\s*:\\s*([\\d\\.]+)", "g");
+		var matches = [...text.matchAll(regex)]; // Tüm eşleşmeleri al
+		if (matches.length > 0) {
+			var values = matches.map(match => match[1]); // Tüm değerleri al
+			if (tasec === "ta_girdi") {
+				HG_Data[key] = values.join(", " + key + ":");
+			} else if (tasec === "epix") {
+				HG_Data[key] = values.join("→"); // Değerlerri araya "→" koyarak birleştirir
+			}
+		}
+	}
+	var BK_Data = {};
+	for (var j = 0; j < keyBK.length; j++) {
+		var key = keyBK[j];
+		var regex = new RegExp(key + "\\s*[:\\s]\\s*([\\d\\.]+)", "g");
+		var matches = [...text.matchAll(regex)]; // Tüm eşleşmeleri al
+		if (matches.length > 0) {
+			var values = matches.map(match => match[1]); // Tüm değerleri al
+			if (tasec === "ta_girdi") {
+				BK_Data[key] = values.join(", " + key + ":");
+			} else if (tasec === "epix") {
+				BK_Data[key] = values.join("→"); // Değerlerri araya "→" koyarak birleştirir
+			}			
+		}
+	}
+	var KE_Data = {};
+	for (var j = 0; j < keyKE.length; j++) {
+		var key = keyKE[j];
+		var regex = new RegExp(key + "\\s*[:\\s]\\s*([\\d\\.]+)", "g");
+		var matches = [...text.matchAll(regex)]; // Tüm eşleşmeleri al
+		if (matches.length > 0) {
+			var values = matches.map(match => match[1]); // Tüm değerleri al
+			if (tasec === "ta_girdi") {
+				KE_Data[key] = values.join(", " + key + ":");
+			} else if (tasec === "epix") {
+				KE_Data[key] = values.join("→"); // Değerlerri araya "→" koyarak birleştirir
+			}			
+		}
+	}
+
+    // İdrar tetkiki için ayırma
+	var idrarData = {};
+	var ititle = "";
+    if (text.includes("Dansite")) {
+		ititle = "\nTİT : ";
+        for (var k = 0; k < idrarKey.length; k++) {
+            var keyword = idrarKey[k];
+			//var regex = new RegExp(keyword + "\\s*:\\s*(\\S+)", "g");
+			//var regex = new RegExp(keyword + "\\s*:\\s*([^(\\s)]+)", "g"); // "(" veya ")" leri hariç tutar
+			var regex = new RegExp(keyword + "\\s*[:\\s]\\s*([\\d\\.]+)", "g");
+            var match = regex.exec(text);
+            if (match) {
+                idrarData[keyword] = match[1];
+            }
+        }
+    }
+	
+	var gazData = {};
+	var gtitle = "";
+	if (text.includes("pCO2")) {
+		gtitle = "\nAKG : ";
+		for (var k = 0; k < gazKey.length; k++) {
+			var keyword = gazKey[k];
+			var regex = new RegExp(keyword + "\\s*:\\s*([\\d\\.]+)", "g");
+			var match = regex.exec(text);
+			if (match) {
+				gazData[keyword] = match[1];
+			}
+		}
+	}
+
+    // Alınan değer textarea'ya yazdırma
+	var result = "";
+	for (var key in HG_Data) {
+		result += key + ": " + HG_Data[key] + ", ";
+	}	
+	for (var key in BK_Data) {
+		result += key + ": " + BK_Data[key] + ", ";
+	}
+	for (var key in KE_Data) {
+		result += key + ": " + KE_Data[key] + ", ";
+	}
+	var resultg = "";
+    for (var key in gazData) {
+        resultg += key + ": " + gazData[key] + ", ";
+    }	
+	var resulti = "";
+    for (var key in idrarData) {
+        resulti += key + ": " + idrarData[key] + ", ";
+    }
+
+	if (tasec === "ta_girdi") {
+		result = result.slice(0, -2);
+		son = result + ititle + resulti + gtitle + resultg;
+		//document.getElementById("epix").value = son.replace(/,→/g, "→").replace(/,,/g, ","); // DİKKAT: raplace ilk kısmı "" yerine // çalıştı !?
+		epixi = son.replace(/,→/g, "→").replace(/,,/g, ",");
+	}
+    // -------------------------------------------------- LABEL olarak aktarma
+	if (tasec === "epix") {
+		var limits = {
+			"HGB": { "lower": 13.5, "upper": 17.5 }, // Hemoglobin (g/dL)
+			"HCT": { "lower": 38.8, "upper": 50 }, // Hematokrit (%)
+			"WBC": { "lower": 4.5, "upper": 11 }, // White Blood Cell Count (10^9/L)
+			"PLT": { "lower": 150, "upper": 450 }, // Platelet Count (10^3/uL)
+			"MCV": { "lower": 80, "upper": 100 }, // Mean Corpuscular Volume (fL)
+			"LYM#": { "lower": 1.5, "upper": 3.5 }, // Lymphocyte Count (10^9/L)
+			"NEU#": { "lower": 2, "upper": 7 }, // Neutrophil Count (10^9/L)
+			"CRP": { "lower": 0, "upper": 0.5 }, // C-Reactive Protein (mg/dL)
+			"Sedimantasyon": { "lower": 0, "upper": 20 }, // Sedimentation Rate (mm/h)
+			"Prokalsitonin": { "lower": 0, "upper": 0.05 }, // Procalcitonin (ng/mL)
+			"Üre": { "lower": 7, "upper": 20 }, // Blood Urea Nitrogen (BUN) (mg/dL)
+			"Kreatinin": { "lower": 0.6, "upper": 1.3 }, // Creatinine (mg/dL)
+			"BUN": { "lower": 7, "upper": 20 }, // Blood Urea Nitrogen (mg/dL)
+			"Sodyum": { "lower": 135, "upper": 145 }, // Sodium (mmol/L)
+			"Potasyum": { "lower": 3.5, "upper": 5.1 }, // Potassium (mmol/L)
+			"Kalsiyum": { "lower": 8.5, "upper": 10.5 }, // Calcium (mg/dL)
+			"Klorür": { "lower": 96, "upper": 106 }, // Chloride (mmol/L)
+			"ALT": { "lower": 0, "upper": 44 }, // Alanine Aminotransferase (ALT) (U/L)
+			"AST": { "lower": 0, "upper": 40 }, // Aspartate Aminotransferase (AST) (U/L)
+			"LDH": { "lower": 140, "upper": 280 }, // Lactate Dehydrogenase (LDH) (U/L)
+			"Amilaz": { "lower": 25, "upper": 125 }, // Amylase (U/L)
+			"Lipaz": { "lower": 10, "upper": 140 }, // Lipase (U/L)
+			"ALP": { "lower": 44, "upper": 147 }, // Alkaline Phosphatase (ALP) (U/L)
+			"GGT": { "lower": 0, "upper": 51 }, // Gamma-Glutamyl Transferase (GGT) (U/L)
+			"Total Bilirubin": { "lower": 0.1, "upper": 1.2 }, // Total Bilirubin (mg/dL)
+			"Direkt Bilirubin": { "lower": 0, "upper": 0.3 }, // Direct Bilirubin (mg/dL)
+			"İndirekt Bilirubin": { "lower": 0.1, "upper": 1 }, // Indirect Bilirubin (mg/dL)
+			"Albümin": { "lower": 3.5, "upper": 5 }, // Albumin (g/dL)
+			"Demir": { "lower": 60, "upper": 160 }, // Iron (µg/dL)
+			"Magnezyum": { "lower": 1.7, "upper": 2.3 }, // Magnesium (mg/dL)
+			"Troponin I": { "lower": 0, "upper": 20 }, // Troponin I (ng/mL)
+			"CK": { "lower": 22, "upper": 198 }, // Creatine Kinase (U/L)
+			"CK-MB": { "lower": 0, "upper": 3.6 }, // Creatine Kinase-MB (U/L)
+			"D-Dimer": { "lower": 0, "upper": 0.5 }, // D-Dimer (µg/mL)
+			"PT": { "lower": 11, "upper": 13.5 }, // Prothrombin Time (s)
+			"INR": { "lower": 0.8, "upper": 1.2 }, // International Normalized Ratio
+			"APTT": { "lower": 30, "upper": 40 }, // Activated Partial Thromboplastin Time (s)
+			"Lökosit": { "lower": 0, "upper": 5 },
+			"Eritrosit": { "lower": 0, "upper": 3 },
+			"Dansite": { "lower": 1.005, "upper": 1.030 },
+			"Görünüm": { "lower": 0, "upper": 0 }, // Genellikle berrak olduğu için sınırlar belirtilmedi
+			"Nitrit": { "lower": 0, "upper": 0 }, // Negatif olduğu için sınırlar belirtilmedi
+			"Bakteri": { "lower": 0, "upper": 0 }, // Negatif olduğu için sınırlar belirtilmedi
+			"Kan": { "lower": 0, "upper": 0 }, // Negatif olduğu için sınırlar belirtilmedi
+			"pH": { "lower": 7.35, "upper": 7.45 },
+			"pO2": { "lower": 75, "upper": 100 },
+			"pCO2": { "lower": 35, "upper": 45 },
+			"K": { "lower": 3.5, "upper": 5.1 },
+			"Glu": { "lower": 70, "upper": 100 },
+			"HCO3-act": { "lower": 22, "upper": 26 },
+			"Laktat": { "lower": 0.5, "upper": 2.2 },
+			"tHb": { "lower": 12, "upper": 18 }	
+		};	
+		var hgDiv = document.getElementById("hg_div");
+		var bkDiv = document.getElementById("bk_div");
+		var keDiv = document.getElementById("ke_div");
+		var gazDiv = document.getElementById("gaz_div");
+		var idrDiv = document.getElementById("idrar_div");
+		hgDiv.innerHTML = "<h4>Hemogram</h4>";
+		bkDiv.innerHTML = "<h4>Biyokimya</h4>";
+		keDiv.innerHTML = "<h4>Kardiyak Enzim</h4>";
+		gazDiv.innerHTML = "<h4>Kan Gazı</h4>";
+		idrDiv.innerHTML = "<h4>İdrar Tetkik</h4>";
+		
+		var dataDivs = [hgDiv, bkDiv, keDiv, gazDiv, idrDiv];
+		var dataObjects = [HG_Data, BK_Data, KE_Data, gazData, idrarData];
+		var dataTitles = ["Hemogram", "Biyokimya", "Kardiyak Enzim", "Kan Gazı", "İdrar Tetkik"];
+
+		for (var i = 0; i < dataObjects.length; i++) {
+			var currentData = dataObjects[i];
+			var currentDiv = dataDivs[i];
+			var currentTitle = dataTitles[i];
+			currentDiv.innerHTML = "<h4>" + currentTitle + "</h4>";
+
+			for (var key in currentData) {
+				var label = document.createElement("label");
+				label.textContent = key + ": " + currentData[key];
+				var color = determineColor(key, currentData[key], limits);
+				applyColorToLabel(key, currentData[key], color, currentDiv); // labellarda kısaltma istersen = (applyAbbreviations(key)
+			}
+		}
+		// Limit rengi ayarlayabilmek için aynı veriler daha ayrı ayrı yazılmıştı. Bu onları ok ile ayırmak için
+		var taslak = dataObjects.map(obj => {
+			return Object.entries(obj).map(([key, value]) => `${key}:${value}`).join(", ");
+		}).join(", ");
+		document.getElementById("ta_girdi").value = applyAbbreviations(taslak);
+	}
+}
+
+function addDataToLabel() {
+	engine("ta_girdi"); // Dikkat: ana metinden verileri "epix" değişkenine çekiyoruz (Hg: 7, Hg: 8) şeklinde. renklendirme için
+	engine("epix"); // Burada da bunu düzenli hale (Hg: 7→8) geliyor. "ta_girdi" ya ve de renkli label'lara ekleniyor
+}
+</script>
+</body>
+</html>
