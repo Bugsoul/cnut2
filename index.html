@@ -36,7 +36,7 @@
 		<input type="checkbox" id="ch_bok" class="iphone_switch" onchange="tog_bok()"> <!-- iphone_switch & allta label     -->
 		<label for="ch_bok" class="swtc_bok"></label>
 
-		<img src="iko/im_112.png" id="im_112">
+		<img id="im_112">
 		<select id="slc_112" onchange="selec_112()">
 			<option value="0"> Flat</option>
 			<option value="1"> Outpatient</option>
@@ -62,7 +62,7 @@
 		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Sat_Change(this)" maxlength="3">
 		<label for="text2" id="lb_ks"></label>
 		<input type="text" id="tx_ks" class="vit_box" spellcheck="false" oninput="handleChange(this)" maxlength="3">
-		<img src="iko/twist.png" id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
+		<img id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
 		<select id="slc_gks" onchange="selecGKS()"></select>
 		<input type="text" id="tx_gks" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">		
 	</div>
@@ -75,14 +75,14 @@
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik">	
 		<div class="form_row">
-			<img src="iko/im_trv.png" id="im_trv" alt="x">
+			<img id="im_trv" alt="x">
 			<label id="lb_trv"></label>
 			<input type="checkbox" id="ch_trv" onchange="tog_trv()">
 			<label for="ch_adli" id="lb_adli"></label>
 			<input type="checkbox" id="ch_adli" onchange="tog_adli()">
 		</div>
 		<div class="form_row">
-			<img src="iko/im_xry.png" id="im_xry" alt="x">
+			<img id="im_xry" alt="x">
 			<label for="checkbox27"  id="lb_akc"></label>
 			<input type="checkbox" id="ch_akc" onchange="tog_akc()">
 			<label for="checkbox25" id="lb_plus"></label>
@@ -129,11 +129,11 @@
 		<input type="text" id="tx_rt" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
 	<div class="form_row">
-		<img src="iko/im_ekg.png" id="im_ekg">
+		<img id="im_ekg">
 		<label for="checkbox4" id="lb_ekg"></label>
 		<input type="checkbox" id="ch_ekg" onchange="tog_ekg()">
 		<input type="text" id="tx_ekg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
-		<img src="iko/im_akg.png" id="im_akg" style="cursor: pointer;" onclick="togAKG()">
+		<img id="im_akg" style="cursor: pointer;" onclick="togAKG()">
 		<label for="checkbox23"  id="lb_akg"></label>
 		<input type="checkbox" id="ch_akg" onchange="tog_akg()">
 		<input type="text" id="tx_akg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
@@ -143,13 +143,13 @@
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
 			<label for="lb_tre" id="lb_tre"></label>
 			<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
-			<img src="iko/im_blood.png" id="im_blood" style="cursor: pointer;" onclick="togBlood()">
-			<img src="iko/im_urine.png" id="im_urine" style="cursor: pointer;" onclick="togUre()">
-			<img src="iko/im_trx.png" id="im_trx" style="cursor: pointer;" onclick="togAkc()">
-			<img src="iko/bt.png" id="im_bt" style="cursor: pointer;" onclick="toggleBt()">			
+			<img id="im_blood" style="cursor: pointer;" onclick="togBlood()">
+			<img id="im_urine" style="cursor: pointer;" onclick="togUre()">
+			<img id="im_trx" style="cursor: pointer;" onclick="togAkc()">
+			<img id="im_bt" style="cursor: pointer;" onclick="toggleBt()">			
 			<input type="text" id="tx_kons" class="gru_tbox" spellcheck="false">
-			<img src="iko/cons_ok.png" id="im_cok" style="cursor: pointer;" onclick="togConsOk()">
-			<img src="iko/cons.png" id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
+			<img id="im_cok" style="cursor: pointer;" onclick="togConsOk()">
+			<img id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
 	</div>
 
                                                                                 <!--   Progres     -->
@@ -197,9 +197,9 @@
 			</div>
 			</div>			
 			<div class="form_row">
-				<img src="iko/sisi.png" id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
-				<img src="iko/easy.png" id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
-				<img src="iko/ext.png" id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
+				<img id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
+				<img id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
+				<img id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
 			</div>
 	</div>
 
@@ -245,7 +245,7 @@
 	<input type="password" id="ps_flu">
 
 <div id="gi-container">
-<img src="iko/cnut.png" id="im_cnut">
+<img id="im_cnut">
    <label for="tex5" id="lb_idm"></label>
  <input type="text" id="tx_fk">
  <input type="password" id="gi-input">
@@ -270,7 +270,7 @@
     <div id="x_contain"></div>    
 </div>
 <script src="popup.js"></script>
-
+<script src="labci.js"></script>
 <div id="popGist" class="pop-up">
   <button id="bt_cik" class="close-btn" onclick="subCik()">x</button>
   <div id="ch_pop" class="form_row">
@@ -322,7 +322,23 @@
 		<input type="text" id="tx_min" onfocus="this.select()">
 	</div>
 </div>
-  
+
+<div id="pop_labci">
+<textarea id="ta_girdi" style="width:99%; height:150px;"></textarea><br>
+    <div class="button-container">
+		<button id="bt_ayik" onclick="addDataToLabel()">Ayıkla</button><br>
+        <button onclick="copyText()">Copy</button>
+        <button id="bt_temiz" onclick="clearText()">Clear</button>
+		<button id="bt_add"  onclick="addText()">+Progres</button>
+    </div>
+<div id="yatay">
+	<div id="hg_div" style="margin-top: 10px;"></div>
+	<div id="bk_div" style="margin-top: 10px;"></div>
+	<div id="ke_div" style="margin-top: 10px;"></div>
+	<div id="gaz_div" style="margin-top: 10px;"></div>
+	<div id="idrar_div" style="margin-top: 10px;"></div>
+</div>
+</div>
 </body>
 </html>
 
