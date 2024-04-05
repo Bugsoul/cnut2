@@ -9,7 +9,7 @@
 	<script src="load.js"></script>
 	<script src="steam_text.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 	<link rel="icon" type="image/png" href="iko/favicon.png">
 </head>
 <body>
@@ -141,7 +141,7 @@
 	<div class="form_row">                                                                                 <!--  ICD - Lab - BT - Kons      -->
 			<label for="lb_icd" id="lb_icd"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
-			<label for="lb_tre" id="lb_tre"></label>
+			<img id="im_plan" style="cursor: pointer;" onclick="togPlan()">
 			<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
 			<img id="im_blood" style="cursor: pointer;" onclick="togBlood()">
 			<img id="im_urine" style="cursor: pointer;" onclick="togUre()">
@@ -270,7 +270,8 @@
     <div id="x_contain"></div>    
 </div>
 <script src="popup.js"></script>
-<script src="labci.js"></script>
+<script src="pop_lab.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <div id="popGist" class="pop-up">
   <button id="bt_cik" class="close-btn" onclick="subCik()">x</button>
   <div id="ch_pop" class="form_row">
@@ -324,12 +325,14 @@
 </div>
 
 <div id="pop_labci">
-<textarea id="ta_girdi" style="width:99%; height:150px;"></textarea><br>
+<textarea id="ta_girdi"></textarea><br>
     <div class="button-container">
 		<button id="bt_ayik" onclick="addDataToLabel()">Ayıkla</button><br>
-        <button onclick="copyText()">Copy</button>
+        <button id="bt_lcop" onclick="copyText()">Copy</button>
         <button id="bt_temiz" onclick="clearText()">Clear</button>
-		<button id="bt_add"  onclick="addText()">+Progres</button>
+		<button id="bt_epix"  onclick="epixText()">Epix Text</button>
+		<input type="file" id="bt_exl" accept=".xlsx" onchange="addExl(event)">
+		<label for="bt_exl" id="custom_exl">Excel</label>
     </div>
 <div id="yatay">
 	<div id="hg_div" style="margin-top: 10px;"></div>
