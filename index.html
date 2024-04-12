@@ -70,7 +70,6 @@
 	<div class="form_row">                                                                                 <!--  Travma - Adli - Saat      -->
 		<div class="form_dik">
 			<label for="text6" id="lb_sik"></label>
-			<select id="slc_gaz" onchange="selecGaz()"></select>
 		</div>
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik">	
@@ -217,9 +216,7 @@
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
 		<button id="bt_list" onclick="subList()"></button>
-		<button id="bt_blur" onclick="subBlur()"></button>
-				<input type="checkbox" id="ch_bast" class="iphone_switch" >
-				<label for="ch_bast" class="swtc_bast"></label>				
+		<button id="bt_blur" onclick="subBlur()"></button>		
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>	
 		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
 				<input type="checkbox" id="ch_sta" class="iphone_switch" >
@@ -262,6 +259,10 @@
 	<button id="pop_save">Save</button>
 	<button id="pop_pano">Clipboard</button>
 	<button id="pop_cancel">esc</button>
+	<div id="form_gizli">
+		<label class="lb_big"><input type="checkbox" id="chn_not" onchange="tog_not()"> (—)Sevk</label>
+		<label class="lb_big" id="lb_big2"><input type="checkbox" id="chn_not2" onchange="tog_not2()"> Bast</label>
+	</div>
 </div>
 <div id="popup_alg">
 	<div class="form_row">
