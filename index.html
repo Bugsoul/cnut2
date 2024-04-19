@@ -56,10 +56,10 @@
 		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Nb_Change(this)" maxlength="3">
 		<label for="checkbox23" id="lb_SS"></label>
 		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Ss_Change(this)" maxlength="2">
-		<label for="checkbox23" id="lb_ates"></label>
-		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4">
 		<label for="checkbox23" id="lb_SAT"></label>
 		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Sat_Change(this)" maxlength="3">
+		<label for="checkbox23" id="lb_ates"></label>
+		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4">		
 		<label for="text2" id="lb_ks"></label>
 		<input type="text" id="tx_ks" class="vit_box" spellcheck="false" oninput="handleChange(this)" maxlength="3">
 		<img id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
@@ -93,10 +93,7 @@
 	</div>	
 		
 		<div class="form_top" style="display:none;">
-			<div class="form_dik">
-				<label id="lb_trm"></label>
-				<label id="lb_med">Body :  <input type="checkbox" id="ch_bod" onchange="togBod()" checked></label>
-			</div>
+			<label id="lb_trm"></label>
 			<textarea type="text" id="ta_trv" class="gru_tbox" spellcheck="false"></textarea>
 		</div>
 		
@@ -251,11 +248,11 @@
 </div>
 
 <div id="popup">
+	<div id="textboxContainer"></div>
 	<div class="form_blob">
 		<div id="txCont_pat"></div>
 		<textarea id="ta_pop" spellcheck="false"></textarea>
 	</div>
-	<div id="textboxContainer"></div>
 	<button id="pop_save">Save</button>
 	<button id="pop_pano">Clipboard</button>
 	<button id="pop_cancel">esc</button>
