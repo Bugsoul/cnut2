@@ -19,7 +19,7 @@
 		<input type="text" id="tx_name" spellcheck="false">
 		<label for="text3" id="lb_ozg"></label>
 		<input type="checkbox" id="ch_ozg" onchange="tog_ozg()">
-		<input type="text" id="tx_ozg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)" onkeyup="myFunction()">
+		<input type="text" id="tx_ozg" class="gru_tbox" spellcheck="false">
 		<label for="checkbox2" id="lb_ilac"></label>
 		<input type="checkbox" id="ch_ilac" onchange="tog_ilac()">
 		<input type="text" id="tx_ilac" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
@@ -249,13 +249,17 @@
 
 <div id="popup">
 	<div id="textboxContainer"></div>
-	<div class="form_blob">
+	<input type="text" id="tx_ara" onkeyup="performSearch()" placeholder="Search...">
+	<ul id="medicineList"></ul>
+	<div class="form_blob" id="form_blob">
 		<div id="txCont_pat"></div>
 		<textarea id="ta_pop" spellcheck="false"></textarea>
 	</div>
+	<div id="form_duz">
 	<button id="pop_save">Save</button>
 	<button id="pop_pano">Clipboard</button>
 	<button id="pop_cancel">esc</button>
+	</div>
 	<div id="form_gizli">
 		<label class="lb_big"><input type="checkbox" id="chn_not3" onchange="tog_not3()"> <span style="color: limegreen; font-weight: bold;">(+)Taburcu</span></label>
 		<label class="lb_big"><input type="checkbox" id="chn_not" onchange="tog_not()"> <span style="color: lightblue; font-weight: bold;">(—)Sevk</span></label>
