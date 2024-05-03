@@ -249,16 +249,20 @@
 
 <div id="popup">
 	<div id="textboxContainer"></div>
-	<input type="text" id="tx_ara" onkeyup="performSearch()" placeholder="Search...">
+	<div class="form_duz">
+		<button id="pop_save">Save</button>
+		<button id="pop_pano">Clipboard</button>
+		<button id="pop_cancel">esc</button>
+		<div id="ara_cont">
+			<input type="text" id="tx_ara" placeholder="Search Medicine..."> <!--onkeyup="performSearch()" -->
+			<img id="im_clear" style="cursor: pointer;" onclick="togClear()">
+			<label><span style="color: lime;">Full: </span><input type="checkbox" id="ch_medF"></label>
+		</div>
+	</div>
 	<ul id="medicineList"></ul>
 	<div class="form_blob" id="form_blob">
 		<div id="txCont_pat"></div>
 		<textarea id="ta_pop" spellcheck="false"></textarea>
-	</div>
-	<div id="form_duz">
-	<button id="pop_save">Save</button>
-	<button id="pop_pano">Clipboard</button>
-	<button id="pop_cancel">esc</button>
 	</div>
 	<div id="form_gizli">
 		<label class="lb_big"><input type="checkbox" id="chn_not3" onchange="tog_not3()"> <span style="color: limegreen; font-weight: bold;">(+)Taburcu</span></label>
