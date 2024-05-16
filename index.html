@@ -89,7 +89,7 @@
 			<label for="ch_plus" class="swtc_pls"></label>
 		</div>
 	</div>	
-			<label id="lb_saat"onclick="tik_saat()"></label>	
+			<label id="lb_saat" onclick="tik_saat()"></label>	
 	</div>	
 		
 		<div class="form_top" style="display:none;">
@@ -97,7 +97,7 @@
 			<textarea type="text" id="ta_trv" class="gru_tbox" spellcheck="false"></textarea>
 		</div>
 		
-		<div class="cls_akc" style="display:none;">
+		<div class="cls_akc">
 			<label id="lb_cxr">Chest X-ray</label>
 			<input type="text" id="tx_akc" class="gru_tbox">
 		</div>
@@ -172,10 +172,13 @@
 </div>
 
 	<div class="form_row">                                                                                 <!--  Taburcu      -->
-			<div class="form_dik">
-				<label for="text223" id="lb_izl"></label>
-			</div>
+			<label for="text1" id="lb_izl"></label>
 			<textarea id="ta_izl" class="gru_tbox" spellcheck="false"></textarea>
+			<div class="cls_ext" style="display:none;">
+				<label id="lb_ext3"></label>
+				<textarea id="ta_ext" class="gru_tbox" spellcheck="false"></textarea>
+				<button id="bt_ext" onclick="subCopy()">Copy</button>
+			</div>
 			<div class="form_dik">
 			<div class="form_row">
 				<label for="checkbox24" id="lb_ext"></label>
@@ -220,12 +223,7 @@
 		<input type="file" id="pcDen" onchange="subYukle()">
 		<label for="pcDen" id="custom_pcDen"></label>
 	</div>
-	
-	<div class="cls_ext" style="display:none;">
-		<label id="lb_ext3"></label>
-		<textarea id="ta_ext" class="gru_tbox" spellcheck="false"></textarea>
-		<button id="bt_ext" onclick="subCopy()">Copy</button>
-	</div>	
+		
 	<div class="endi">
 		<label id="lb_gist"></label>
 	</div>	
@@ -248,7 +246,6 @@
 		<button id="pop_pano">Clipboard</button>
 		<button id="pop_cancel">esc</button>
 		<div id="ara_cont">
-			<label><span style="color: lime;">Full: </span><input type="checkbox" id="ch_medF"></label>
 			<input type="text" id="tx_ara" placeholder="Search Medicine..."> <!--onkeyup="performSearch()" -->
 			<img id="im_clear" style="cursor: pointer;" onclick="togClear()">
 		</div>
