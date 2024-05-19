@@ -328,10 +328,17 @@
 </div>
 
 <div id="pop_labci">
-<textarea id="ta_girdi"></textarea><br>
+	<div class="form_duz">
+		<button id="bt_lcop" onclick="copyText()"></button>
+		<textarea id="ta_girdi"></textarea><br>
+	</div>
+	<div class="form_duz">
+		<textarea id="ta_pato"></textarea><br>
+		<button id="bt_pcop" onclick="copypText()"></button>
+	</div>
     <div class="button-container">
 		<button id="bt_ayik" onclick="addDataToLabel()">Ayıkla</button><br>
-        <button id="bt_lcop" onclick="copyText()">Copy</button>
+
         <button id="bt_temiz" onclick="clearText()">Clear</button>
 		<button id="bt_epix"  onclick="epixText()">Epix Text</button>
 		<input type="file" id="bt_exl" accept=".xlsx" onchange="addExl(event)">
