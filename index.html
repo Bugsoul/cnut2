@@ -169,37 +169,39 @@
 				</div>
 			</div>
 			<textarea id="ta_pro" class="gru_tbox" spellcheck="false"></textarea><!--  ondblclick=      -->
+		<div class="form_dik">
+			<img id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
+			<img id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">		
+		</div>			
 		</div>
 </div>
 
 	<div class="form_row">                                                                                 <!--  Taburcu      -->
 			<label for="text1" id="lb_izl"></label>
 			<textarea id="ta_izl" class="gru_tbox" spellcheck="false"></textarea>
+			<textarea id="ta_pc" class="gru_tbox" spellcheck="false"></textarea>
+			<div class="form_dik">
+				<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>	
+				<label for="text1" id="lb_s2" onclick="subTik_alg()" style="font-size: 20px;">(alg)</label>				
+			</div>			
+	</div>
+
 			<div class="cls_ext" style="display:none;">
 				<label id="lb_ext3"></label>
 				<textarea id="ta_ext" class="gru_tbox" spellcheck="false"></textarea>
 				<button id="bt_ext" onclick="subCopy()">Copy</button>
 			</div>
-			<div class="form_dik">
-			<div class="form_row">
-				<label for="checkbox24" id="lb_ext"></label>
-				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
-			</div>
-			<div class="form_row">
-				<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>	
-				<label for="text1" id="lb_s" onclick="subTik_alg()" style="font-size: 20px;">(alg)</label>				
-			</div>
-			</div>			
-			<div class="form_row">
-				<img id="im_sis" style="cursor: pointer;" onclick="toggleSis()">
-				<img id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">
-				<img id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
-			</div>
-	</div>
-
+			
 	<div class="form_row">
 		<label id="lb_son"></label>
 		<textarea id="ta_son" name="mess" class="gru_tbox" spellcheck="false"></textarea>
+		<div class="form_dik">
+			<div class="form_row">
+				<label for="checkbox24" id="lb_ext"></label>
+				<input type="checkbox" id="ch_ext" onchange="tog_ext()">
+			</div>	
+			<img id="im_ext" style="cursor: pointer;" onclick="toggleExt()">
+		</div>			
 	</div>
 		
 	<div class="form_row">
@@ -214,8 +216,6 @@
 		<button id="bt_blur" onclick="subBlur()"></button>		
 		<button type="end"  id="bt_kons" onclick="subKons()"></button>	
 		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
-				<input type="checkbox" id="ch_sta" class="iphone_switch" >
-				<label for="ch_sta" class="swtc_sta"></label>
 		<button type="end"  id="bt_krr" onclick="subEnd()"></button>
 	</div>
 
