@@ -248,6 +248,7 @@
 		<div class="form_duz" id="div_srt">
 			<label id="lb_srt"><input type="checkbox" id="ch_srt" onchange="tog_Short()" checked> Short</label>
 			<img id="im_srt" style="cursor: pointer;" onclick="devir_notu()">
+			<img id="im_whap" style="cursor: pointer;" onclick="whatsapp()">
 		</div>
 		<div id="ara_cont">
 			<input type="text" id="tx_ara" placeholder="Search Medicine..."> <!--onkeyup="performSearch()" -->
@@ -261,10 +262,11 @@
 		<textarea id="ta_pop" spellcheck="false"></textarea>
 	</div>
 	<div id="form_gizli">
-		<label id="lb_say"></label>
+		<label id="lb_say" onclick="togStop()"></label>
 		<label class="lb_big"><input type="checkbox" id="chn_not3" onchange="tog_not3()"> <span style="color: limegreen; font-weight: bold;">(+)Taburcu</span></label>
 		<label class="lb_big"><input type="checkbox" id="chn_not" onchange="tog_not()" checked> <span style="color: lightblue; font-weight: bold;">(—)Sevk</span></label>
 		<label class="lb_big" id="lb_big2"><input type="checkbox" id="chn_not2" onchange="tog_not2()"> Bast</label>
+		<label class="lb_big" id="lb_big3"><input type="checkbox" id="chn_not4" onchange="tog_not4()"> Anestezi</label>
 	</div>
 </div>
 <div id="popup_alg">
