@@ -158,6 +158,7 @@
 			</div>
 		</div>
 		<textarea type="text" id="ta_ted" class="gru_tbox" spellcheck="false"></textarea>
+		<img id="im_hermes" style="cursor: pointer;" onclick="subDoc()">
 	</div>	
 		<div class="form_row"> 
 			<div class="form_dik">
@@ -179,10 +180,7 @@
 			<label for="text1" id="lb_izl"></label>
 			<textarea id="ta_izl" class="gru_tbox" spellcheck="false"></textarea>
 			<textarea id="ta_pc" class="gru_tbox" spellcheck="false"></textarea>
-			<div class="form_dik">
-				<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>	
-				<label for="text1" id="lb_s2" onclick="subTik_alg()" style="font-size: 20px;">(alg)</label>				
-			</div>			
+			<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>					
 	</div>
 
 			<div class="cls_ext" style="display:none;">
@@ -269,16 +267,13 @@
 		<label class="lb_big"><input type="checkbox" id="chn_not" onchange="tog_not()" checked> <span style="color: lightblue; font-weight: bold;">(—)Sevk</span></label>
 		<label class="lb_big" id="lb_big2"><input type="checkbox" id="chn_not2" onchange="tog_not2()"> Bast</label>
 		<label class="lb_big" id="lb_big3"><input type="checkbox" id="chn_not4" onchange="tog_not4()"> Anestezi</label>
+		<label class="lb_big" id="lb_big4"><input type="checkbox" id="chn_not5" onchange="tog_Short()"> Short</label>
 	</div>
 </div>
-<div id="popup_alg">
-	<div class="form_row">
-		<input type="text" id="tx_find" placeholder="Search...">
-		<button onclick="cho_algo('a')">Trk</button>
-		<button onclick="cho_algo('b')">Eng</button>
-	</div>
-    <table id="tb_titles"></table>
-    <div id="x_contain"></div>    
+<div id="algo_div">
+	<label id="lb_med" onclick="subDoc()" style="cursor: pointer;">Tedaviler</label>
+	<label id="lb_yak" onclick="subYak()" style="cursor: pointer;">Yaklaşımlar</label>
+    <iframe id="fr_ht"></iframe>
 </div>
 <script src="popup.js"></script>
 <script src="pop_lab.js"></script>
