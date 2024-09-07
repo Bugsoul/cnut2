@@ -271,8 +271,8 @@
 	</div>
 </div>
 <div id="algo_div">
-	<label id="lb_med" onclick="subDoc()" style="cursor: pointer;">Tedaviler</label>
-	<label id="lb_yak" onclick="subYak()" style="cursor: pointer;">Yaklaşımlar</label>
+	<label id="lb_med" onclick="subDoc()" style="cursor: pointer;">Medicament</label>
+	<label id="lb_yak" onclick="subYak()" style="cursor: pointer;">Approaches</label>
     <iframe id="fr_ht"></iframe>
 </div>
 <script src="popup.js"></script>
@@ -341,12 +341,11 @@
 		<button id="bt_pcop" onclick="copypText()"></button>
 	</div>
     <div class="button-container">
-		<button id="bt_ayik" onclick="addDataToLabel()">Ayıkla</button><br>
-
+		<button id="bt_ayik" onclick="addDataToLabel()">Sort out</button><br>
         <button id="bt_temiz" onclick="clearText()">Clear</button>
 		<button id="bt_epix"  onclick="epixText()">Epix Text</button>
-		<input type="file" id="bt_exl" accept=".xlsx" onchange="addExl(event)">
-		<label for="bt_exl" id="custom_exl">Excel</label>
+		<input id="bt_exl" type="file" accept=".xlsx" onchange="addExl(event)">
+		<label id="custom_exl" for="bt_exl">Excel</label>
     </div>
 <div id="yatay">
 	<div id="hg_div" style="margin-top: 10px;"></div>
