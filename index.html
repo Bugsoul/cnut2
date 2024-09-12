@@ -147,9 +147,7 @@
 			<img id="im_cok" style="cursor: pointer;" onclick="togConsOk()">
 			<img id="im_cons" style="cursor: pointer;" onclick="toggleCons()">
 	</div>
-
                                                                                 <!--   Progres     -->
-<div class="form_dik">
 	<div class="form_row"> 
 		<div class="form_dik">
 			<div class="form_row"> 
@@ -160,6 +158,14 @@
 		<textarea type="text" id="ta_ted" class="gru_tbox" spellcheck="false"></textarea>
 		<img id="im_hermes" style="cursor: pointer;" onclick="subDoc()">
 	</div>	
+
+	<div class="form_row">                                                                                 <!--  Taburcu      -->
+			<label for="text1" id="lb_izl"></label>
+			<textarea id="ta_izl" class="gru_tbox" spellcheck="false"></textarea>
+			<textarea id="ta_pc" class="gru_tbox" spellcheck="false"></textarea>
+			<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>					
+	</div>
+	
 		<div class="form_row"> 
 			<div class="form_dik">
 				<button id="bt_cpy" onclick="subCopy2()"></button>
@@ -174,14 +180,6 @@
 			<img id="im_easy" style="cursor: pointer;" onclick="toggleEsy()">		
 		</div>			
 		</div>
-</div>
-
-	<div class="form_row">                                                                                 <!--  Taburcu      -->
-			<label for="text1" id="lb_izl"></label>
-			<textarea id="ta_izl" class="gru_tbox" spellcheck="false"></textarea>
-			<textarea id="ta_pc" class="gru_tbox" spellcheck="false"></textarea>
-			<label for="text1" id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>					
-	</div>
 
 			<div class="cls_ext" style="display:none;">
 				<label id="lb_ext3"></label>
@@ -244,9 +242,8 @@
 		<button id="pop_save"></button>
 		<button id="pop_pano">Clipboard</button>
 		<button id="pop_cancel">esc</button>
-		<div class="form_duz" id="div_srt">
-			<label id="lb_name"></label>
-			<label id="lb_srt"><input type="checkbox" id="ch_srt" onchange="tog_Short()" checked> Short</label>
+		<label id="lb_name"></label>
+		<div class="form_duz" id="div_srt">		
 			<img id="im_srt" style="cursor: pointer;" onclick="devir_notu()">
 			<img id="im_whap" style="cursor: pointer;" onclick="whatsapp()">
 		</div>
@@ -267,7 +264,12 @@
 		<label class="lb_big"><input type="checkbox" id="chn_not" onchange="tog_not()" checked> <span style="color: lightblue; font-weight: bold;">(—)Sevk</span></label>
 		<label class="lb_big" id="lb_big2"><input type="checkbox" id="chn_not2" onchange="tog_not2()"> Bast</label>
 		<label class="lb_big" id="lb_big3"><input type="checkbox" id="chn_not4" onchange="tog_not4()"> Anestezi</label>
-		<label class="lb_big" id="lb_big4"><input type="checkbox" id="chn_not5" onchange="tog_Short()"> Short</label>
+		<div id="form_duz">
+		<img id="im_shrk">
+		<input type="checkbox" id="ch_srt" onchange="tog_Shrink()" checked>
+		<img id="im_shor">
+		<input type="checkbox" id="chn_not5" onchange="tog_delEmpLine()">
+		</div>
 	</div>
 </div>
 <div id="algo_div">
