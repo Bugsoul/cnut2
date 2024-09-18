@@ -17,6 +17,8 @@
 	<div class="form_row">
 		<label for="text1" id="lb_has"></label>
 		<input type="text" id="tx_name" spellcheck="false">
+		<img id="im_sevk" style="cursor: pointer;" onclick="document.getElementById('ch_sevk').click()">
+		<input type="checkbox" id="ch_sevk" onclick="togSevk()">
 		<label for="text3" id="lb_ozg"></label>
 		<input type="checkbox" id="ch_ozg" onchange="tog_ozg()">
 		<input type="text" id="tx_ozg" class="gru_tbox" spellcheck="false">
@@ -201,7 +203,7 @@
 		
 	<div class="form_row">
 		<input type="checkbox" id="ch_pc" onchange="tog_pc()" class="iphone_switch">
-		<label for="ch_pc" class="swtc_pc"></label>
+		<label id="lb_pc" for="ch_pc" class="swtc_pc"></label>
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
 		<button type="button" id="bt_rest" onclick="sYukle()"></input>
 		<button type="end" id="bt_new" onclick="subNew()"></button>
