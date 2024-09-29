@@ -136,7 +136,7 @@
 		<input type="checkbox" id="ch_akg" onchange="tog_akg()">
 		<input type="text" id="tx_akg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
-	<div class="form_row">                                                                                 <!--  ICD - Lab - BT - Kons      -->
+	<div class="form_row">                                                       <!--  ICD - Lab - BT - Kons      -->
 			<label for="tx_icd" id="lb_icd"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
 			<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
@@ -374,29 +374,29 @@
 <div class="form_dik">
 	<br><div id="yatay">
 	<label class="lb_sabit" for="hospInput">* Hastane:</label>
-	<input type="text" id="hospInput" class="gru_tbox" spellcheck="false" placeholder="* hast."/>
+	<input type="text" id="hospInput" class="tx_sevk" spellcheck="false" placeholder="* hast."/>
 	<label> ⏎</label></div>
 	<br>
 	<div id="yatay">
 	<label class="lb_sabit" for="complainInput">&nbsp;Şikayet:</label>
-	<input type="text" id="complainInput" class="gru_tbox" spellcheck="false" placeholder="şikayeti / ∅"/>
+	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti / ∅"/>
 	<label> ⏎</label></div>
 	<br>
 
 	<div id="yatay">
 	<label class="lb_sabit" for="taniInput">&nbsp;Ön TANI:</label>
-	<input type="text" id="taniInput" class="gru_tbox" spellcheck="false" placeholder="tanı_semptom / ∅"/>
+	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı_semptom / ∅"/>
 	<label> ⏎</label></div>
 	<br>
 	<div id="div_depo3"></div><br>
 	
 	<div id="yatay">
 	<label class="lb_sabit" for="verililac">&nbsp;İlaç verildimi:</label>
-	<input type="text" id="verililac" class="gru_tbox" spellcheck="false" placeholder="ilaç"/>
+	<input type="text" id="verililac" class="tx_sevk" spellcheck="false" placeholder="ilaç"/>
 	<label> ⏎</label></div>
 	<br>
         <div id="div_tetk" class="form_row">
-            <label for="ch_tetkik">Laboratuar</label>
+            <label id="lb_lab" for="ch_tetkik">Laboratuar</label>
             <input type="checkbox" id="ch_tetkik"/>
             <label id="lb_xr" for="ch_tetkik2">X-Ray</label>
             <input type="checkbox" id="ch_tetkik2"/>
@@ -406,18 +406,18 @@
 	<br>
 	<div id="yatay">
 	<label class="lb_sabit" for="gerekceInput">&nbsp;Gerekçe :</label>
-	<input type="text" id="gerekceInput" class="gru_tbox" spellcheck="false" placeholder="gerekçe, branş KOD / ∅"/>
+	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe, branş KOD / ∅"/>
 	<label class="lb_sabit" for="doktorInput">&nbsp;Gönderen Dr:</label>
-	<input type="text" id="doktorInput" class="gru_tbox" spellcheck="false" placeholder="acil hekimi"/>
+	<input type="text" id="doktorInput" class="tx_sevk" spellcheck="false" placeholder="acil hekimi"/>
 	<label> ⏎</label></div>
 	<br>	
 	<div id="yatay">
 	<label class="lb_sabit" for="bransInput">* Hangi Branşa:</label>
-	<input type="text" id="bransInput" class="gru_tbox" spellcheck="false" placeholder="* branş."/>
-	<div id="div_onay" class="form_row"><label class="lb_sabit" for="ch_onay">Sevk ONAYI</label>
+	<input type="text" id="bransInput" class="tx_sevk" spellcheck="false" placeholder="* branş."/>
+	<div id="div_onay" class="form_row"><label id="lb_onay" class="lb_sabit" for="ch_onay">Sevk ONAYI</label>
 	<input type="checkbox" id="ch_onay"/></div>	
 	</div><br>
-	<div id="div_tedD" class="form_row"><label class="lb_sabit" for="ch_tedSil">Takip/Tedavi Sil</label>
+	<div id="div_tedD" class="form_row"><label  id="lb_ted" class="lb_sabit" for="ch_tedSil">Takip/Tedavi Sil</label>
 	<input type="checkbox" id="ch_tedSil"/>
 	<button id="bt_sevk" onclick="sevkBilgileri()">Değişimi Uygula</button></div>
 </div>
