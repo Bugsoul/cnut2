@@ -21,7 +21,7 @@
 		<input type="checkbox" id="ch_sevk" onclick="tog_Sevk()">
 		<label for="ch_ozg" id="lb_ozg"></label>
 		<input type="checkbox" id="ch_ozg" onchange="tog_ozg()">
-		<input type="text" id="tx_ozg" class="gru_tbox" spellcheck="false">
+		<input type="text" id="tx_ozg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 		<label for="ch_ilac" id="lb_ilac"></label>
 		<input type="checkbox" id="ch_ilac" onchange="tog_ilac()">
 		<input type="text" id="tx_ilac" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
@@ -63,16 +63,14 @@
 		<label for="tx_ates" id="lb_ates"></label>
 		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4">		
 		<label for="tx_ks" id="lb_ks"></label>
-		<input type="text" id="tx_ks" class="vit_box" spellcheck="false" oninput="handleChange(this)" maxlength="3">
+		<input type="text" id="tx_ks" onfocus="this.select()" class="vit_box" spellcheck="false" maxlength="4">
 		<img id="im_vit" style="cursor: pointer;" onclick="tog_Vit()">
 		<select id="slc_gks" onchange="selecGKS()"></select>
 		<input type="text" id="tx_gks" class="gru_tbox" spellcheck="false">		
 	</div>
 	
 	<div class="form_row">                                                                                 <!--  Travma - Adli - Saat      -->
-		<div class="form_dik">
-			<label id="lb_sik"></label>
-		</div>
+		<label id="lb_sik" class="sol_fix"></label>
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik">	
 		<div class="form_row">
@@ -96,7 +94,7 @@
 		
 		<div class="form_top" style="display:none;">
 			<label id="lb_trm"></label>
-			<textarea type="text" id="ta_trv" class="gru_tbox" spellcheck="false"></textarea>
+			<textarea type="text" id="ta_trv" class="gru_tbox" spellcheck="false" oninput="handleChange(this)"></textarea>
 		</div>
 		
 		<div class="cls_akc">
@@ -104,9 +102,11 @@
 			<input type="text" id="tx_akc" class="gru_tbox">
 		</div>
 		
-	<div class="form_row">                                                                                 <!--  Muayeneler      -->
+	<div class="form_row">                                                                                <!--  Muayeneler      -->
+		<div class="sol_fix">
 		<label for="ch_sol" id="lb_sol"></label>
 		<input type="checkbox" id="ch_sol" onchange="tog_sol()">
+		</div>
 		<input type="text" id="tx_sol" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 		<label for="ch_krd" id="lb_krd"></label>
 		<input type="checkbox" id="ch_krd" onchange="tog_krd()">
@@ -116,8 +116,10 @@
 		<input type="text" id="tx_nor" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
 	<div class="form_row">
+		<div class="sol_fix">
 		<label for="ch_bat" id="lb_bat"></label>
 		<input type="checkbox" id="ch_bat" onchange="tog_bat()">
+		</div>
 		<input type="text" id="tx_bat" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 		<label for="ch_dig"  id="lb_dig"></label>
 		<input type="checkbox" id="ch_dig" onchange="tog_dig()">
@@ -127,9 +129,11 @@
 		<input type="text" id="tx_rt" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
 	<div class="form_row">
+		<div class="sol_fix">
 		<img id="im_ekg">
 		<label for="ch_ekg" id="lb_ekg"></label>
 		<input type="checkbox" id="ch_ekg" onchange="tog_ekg()">
+		</div>
 		<input type="text" id="tx_ekg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 		<img id="im_akg" style="cursor: pointer;" onclick="togAKG()">
 		<label for="ch_akg"  id="lb_akg"></label>
@@ -137,7 +141,7 @@
 		<input type="text" id="tx_akg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
 	<div class="form_row">                                                       <!--  ICD - Lab - BT - Kons      -->
-			<label for="tx_icd" id="lb_icd"></label>
+			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
 			<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
 			<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
@@ -151,30 +155,28 @@
 	</div>
                                                                                 <!--   Progres     -->
 	<div class="form_row"> 
-		<div class="form_dik">
-			<div class="form_row"> 
-				<label for="ch_ted" id="lb_ted"></label>
-				<input type="checkbox" id="ch_ted" onchange="tog_ted()">
-			</div>
+		<div class="sol_fix">
+		<label for="ch_ted" id="lb_ted"></label>
+		<input type="checkbox" id="ch_ted" onchange="tog_ted()">
 		</div>
 		<textarea type="text" id="ta_ted" class="gru_tbox" spellcheck="false"></textarea>
 		<img id="im_hermes" style="cursor: pointer;" onclick="subDoc()">
 	</div>	
 
 	<div class="form_row">                                                                                 <!--  Taburcu      -->
-			<label id="lb_izl"></label>
+			<label id="lb_izl" class="sol_fix"></label>
 			<textarea id="ta_izl" class="gru_tbox" spellcheck="false"></textarea>
 			<textarea id="ta_pc" class="gru_tbox" spellcheck="false"></textarea>
 			<label id="lb_s" onclick="subTik_spe()" style="font-size: 20px;">(spe)</label>					
 	</div>
 	
 		<div class="form_row"> 
-			<div class="form_dik">
-				<button id="bt_cpy" onclick="subCopy2()"></button>
+			<div class="form_dik" class="sol_fix">
 				<div id="div_res" class="form_row">
 					<label id="lb_ext2">Results ✓</label>
 					<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
 				</div>
+				<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
 			</div>
 			<textarea id="ta_pro" class="gru_tbox" spellcheck="false"></textarea><!--  ondblclick=      -->
 		<div class="form_dik">
@@ -184,13 +186,13 @@
 		</div>
 
 			<div class="cls_ext" style="display:none;">
-				<label id="lb_ext3"></label>
+				<label id="lb_ext3" class="sol_fix"></label>
 				<textarea id="ta_ext" class="gru_tbox" spellcheck="false"></textarea>
-				<button id="bt_ext" onclick="subCopy()">Copy</button>
+				<img id="im_copy2" style="cursor: pointer;" onclick="subCopy()">
 			</div>
 			
 	<div class="form_row">
-		<label id="lb_son"></label>
+		<label id="lb_son" class="sol_fix"></label>
 		<textarea id="ta_son" name="mess" class="gru_tbox" spellcheck="false"></textarea>
 		<div class="form_dik">
 			<div class="form_row">
@@ -347,12 +349,12 @@
 
 <div id="pop_labci">
 	<div class="form_duz">
-		<button id="bt_lcop" onclick="copyText()"></button>
+		<img id="im_lcop" style="cursor: pointer;" onclick="copyText()">
 		<textarea id="ta_girdi"></textarea><br>
 	</div>
 	<div class="form_duz">
 		<textarea id="ta_pato"></textarea><br>
-		<button id="bt_pcop" onclick="copypText()"></button>
+		<img id="im_pcop" style="cursor: pointer;" onclick="copypText()">
 	</div>
     <div class="button-container">
 		<button id="bt_ayik" onclick="addDataToLabel()">Sort out</button><br>
@@ -373,7 +375,7 @@
 <div id="pop_sevk">
 <div class="form_dik">
 	<br><div id="yatay">
-	<label class="lb_sabit" for="hospInput">* Hastane:</label>
+	<label class="lb_sabit" for="hospInput">Hastane:</label>
 	<input type="text" id="hospInput" class="tx_sevk" spellcheck="false" placeholder="* hast."/>
 	<label> ⏎</label></div>
 	<br>
@@ -382,10 +384,17 @@
 	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti / ∅"/>
 	<label> ⏎</label></div>
 	<br>
-
+	<div id="yatay">
+	<label class="lb_sabit" for="eventInput">&nbsp;Öykü:</label>
+	<textarea id="eventInput" class="tx_sevk" spellcheck="false" placeholder="olay / ∅" rows="1"></textarea>
+	<label> ⏎</label></div>
+	<br>
+	
 	<div id="yatay">
 	<label class="lb_sabit" for="taniInput">&nbsp;Ön TANI:</label>
 	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı_semptom / ∅"/>
+	<label class="lb_sabit2" for="gerekceInput">&nbsp;Gerekçe :</label>
+	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe, branş KOD / ∅"/>
 	<label> ⏎</label></div>
 	<br>
 	<div id="div_depo3"></div><br>
@@ -402,25 +411,24 @@
             <input type="checkbox" id="ch_tetkik2"/>
             <label id="lb_bt" for="ch_tetkik3">Tomografi</label>
             <input type="checkbox" id="ch_tetkik3"/>
+			<label> ⏎</label></div>
         </div>
 	<br>
 	<div id="yatay">
-	<label class="lb_sabit" for="gerekceInput">&nbsp;Gerekçe :</label>
-	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe, branş KOD / ∅"/>
 	<label class="lb_sabit" for="doktorInput">&nbsp;Gönderen Dr:</label>
 	<input type="text" id="doktorInput" class="tx_sevk" spellcheck="false" placeholder="acil hekimi"/>
+	<label class="lb_sabit2" for="bransInput">Teslimat:</label>
+	<input type="text" id="bransInput" class="tx_sevk" spellcheck="false" placeholder="* branş."/>	
 	<label> ⏎</label></div>
 	<br>	
 	<div id="yatay">
-	<label class="lb_sabit" for="bransInput">* Hangi Branşa:</label>
-	<input type="text" id="bransInput" class="tx_sevk" spellcheck="false" placeholder="* branş."/>
+	<label id="lb_fake">&nbsp;</label>
 	<div id="div_onay" class="form_row"><label id="lb_onay" class="lb_sabit" for="ch_onay">Sevk ONAYI</label>
-	<input type="checkbox" id="ch_onay"/></div>	
-	</div><br>
-	<div id="div_tedD" class="form_row"><label  id="lb_ted" class="lb_sabit" for="ch_tedSil">Takip/Tedavi Sil</label>
+	<input type="checkbox" id="ch_onay"/></div>	<br>
+	<div id="div_tedD" class="form_row"><label  id="lb_sted" class="lb_sabit" for="ch_tedSil">Takip/Ted. Sil</label>
 	<input type="checkbox" id="ch_tedSil"/>
 	<button id="bt_sevk" onclick="sevkBilgileri()">Değişimi Uygula</button></div>
-</div>
+	</div>
 </div>
 
 </body>
