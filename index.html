@@ -72,7 +72,7 @@
 	<div class="form_row">                                                                                 <!--  Travma - Adli - Saat      -->
 		<label id="lb_sik" class="sol_fix"></label>
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
-	<div class="form_dik">	
+	<div class="form_dik" id="sag_pad">	
 		<div class="form_row">
 			<img id="im_trv" alt="x">
 			<label id="lb_trv"></label>
@@ -88,12 +88,11 @@
 			<input type="checkbox" id="ch_plus" class="iphone_switch" onchange="tog_plus()">
 			<label for="ch_plus" class="swtc_pls"></label>
 		</div>
-	</div>	
-			<label id="lb_saat" onclick="tik_saat()"></label>	
+	</div>			
 	</div>	
 		
 		<div class="form_top" style="display:none;">
-			<label id="lb_trm"></label>
+			<label id="lb_trm" class="sol_fix"></label>
 			<textarea type="text" id="ta_trv" class="gru_tbox" spellcheck="false" oninput="handleChange(this)"></textarea>
 		</div>
 		
@@ -211,7 +210,7 @@
 		<button type="end" id="bt_new" onclick="subNew()"></button>
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
-		<button id="bt_list" onclick="subList()"></button>
+		
 		<button id="bt_blur" onclick="subBlur()"></button>		
 		<button type="end"  id="bt_kons" onclick="sub_Kons()"></button>	
 		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
@@ -225,6 +224,7 @@
 	</div>
 		
 	<div class="endi">   <!--                                                                      Son katman = Gist ID - Time  - Alert mgs     -->
+		<label id="lb_saat" onclick="tik_saat()"></label>
 		<label id="lb_gist"></label>
 		<label id="lb_upd"></label>
 		<div id="im_cont1" class="img_container" style="cursor: pointer;" onclick="tog_Issue_Alert()">
@@ -286,7 +286,7 @@
 	</div>
 </div>
 <div id="algo_div">
-	<button id="bt_esc" class="close-btn" onclick="subEsc()">X</button>
+	<button id="bt_esc" onclick="ext_Algo()">X</button>
 	<label id="lb_med" onclick="subDoc()" style="cursor: pointer;">Medicament</label>
 	<label id="lb_yak" onclick="subYak()" style="cursor: pointer;">Approaches</label>
     <iframe id="fr_ht"></iframe>
@@ -296,12 +296,15 @@
 <script src="pop_tik.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <div id="popGist" class="pop-up">
-  <button id="bt_cik" class="close-btn" onclick="subCik()">x</button>
   <div id="ch_pop" class="form_row">
-		<label><input type="checkbox" id="ch_exi" onchange="tog_exi()"> Externe</label>
-		<label><input type="checkbox" id="ch_tum" onchange="tog_tum()"> Whole</label>
+		<label>Ext</label>
+		<input type="checkbox" id="ch_exi" onchange="tog_exi()">
+		<label>All</label>
+		<input type="checkbox" id="ch_tum" onchange="tog_tum()">
 		<input type="text" id="tx_src" onkeydown="handleKeyPress(event)">
 		<button id="bt_src" onclick="subSearch()"></button>
+		<button id="bt_list" onclick="subList()"></button>
+		<button id="bt_cik" onclick="subCik()">X</button>
   </div>
   <table id="tblGist"></table>
 </div>
@@ -381,20 +384,20 @@
 	<br>
 	<div id="yatay">
 	<label class="lb_sabit" for="complainInput">&nbsp;Şikayet:</label>
-	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti / ∅"/>
+	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti"/>
 	<label> ⏎</label></div>
 	<br>
 	<div id="yatay">
 	<label class="lb_sabit" for="eventInput">&nbsp;Öykü:</label>
-	<textarea id="eventInput" class="tx_sevk" spellcheck="false" placeholder="olay / ∅" rows="1"></textarea>
+	<textarea id="eventInput" class="tx_sevk" spellcheck="false" placeholder="olay" rows="1"></textarea>
 	<label> ⏎</label></div>
 	<br>
 	
 	<div id="yatay">
 	<label class="lb_sabit" for="taniInput">&nbsp;Ön TANI:</label>
-	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı_semptom / ∅"/>
+	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı_semptom / X"/>
 	<label class="lb_sabit2" for="gerekceInput">&nbsp;Gerekçe :</label>
-	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe, branş KOD / ∅"/>
+	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe, branş KOD / X"/>
 	<label> ⏎</label></div>
 	<br>
 	<div id="div_depo3"></div><br>
@@ -429,6 +432,7 @@
 	<input type="checkbox" id="ch_tedSil"/>
 	<button id="bt_sevk" onclick="sevkBilgileri()">Değişimi Uygula</button></div>
 	</div>
+	<button id="bt_hide" onclick="ext_Sevk()">X</button>
 </div>
 
 </body>
