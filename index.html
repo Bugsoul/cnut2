@@ -16,7 +16,7 @@
 <div id="main">
 	<div class="form_row">
 		<label for="tx_name" id="lb_has"></label>
-		<input type="text" id="tx_name" spellcheck="false">
+		<input type="text" id="tx_name" spellcheck="false" autocomplete="off">
 		<img id="im_sevk" style="cursor: pointer;" onclick="document.getElementById('ch_sevk').click()">
 		<input type="checkbox" id="ch_sevk" onclick="tog_Sevk()">
 		<label for="ch_ozg" id="lb_ozg"></label>
@@ -139,7 +139,7 @@
 		<input type="checkbox" id="ch_akg" onchange="tog_akg()">
 		<input type="text" id="tx_akg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
-	<div class="form_row">                                                       <!--  ICD - Lab - BT - Kons      -->
+	<div class="form_row">                                                         <!--  ICD - Lab - BT - Kons      -->
 			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
 			<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
