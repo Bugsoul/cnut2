@@ -25,7 +25,6 @@
 		<label for="ch_ilac" id="lb_ilac"></label>
 		<input type="checkbox" id="ch_ilac" onchange="tog_ilac()">
 		<input type="text" id="tx_ilac" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
-		<label id="lb_i" onclick="subTik()">(i)</label>
 	</div>
 	
 <div class="form_row">
@@ -203,6 +202,7 @@
 	</div>
 		
 	<div class="form_row">
+		<label id="lb_i" onclick="subTik()">(i)</label>
 		<input type="checkbox" id="ch_pc" onchange="tog_pc()" class="iphone_switch">
 		<label id="lb_pc" for="ch_pc" class="swtc_pc"></label>
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
@@ -211,10 +211,9 @@
 		<button type="end" id="bt_new" onclick="subNew()"></button>
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
-		
 		<button id="bt_blur" onclick="subBlur()"></button>		
 		<button type="end"  id="bt_kons" onclick="sub_Kons()"></button>	
-		
+		<input type="checkbox" id="ch_xr2" onchange="tog_xr()">
 		<button type="end"  id="bt_krr" onclick="sub_PCNot()"></button>
 	</div>
 
