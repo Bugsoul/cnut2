@@ -366,7 +366,7 @@
 		<input id="bt_exl" type="file" accept=".xlsx" onchange="addExl(event)">
 		<label id="custom_exl" for="bt_exl">Excel</label>
     </div>
-<div id="yatay">
+<div class="yatay">
 	<div id="hg_div" style="margin-top: 10px;"></div>
 	<div id="bk_div" style="margin-top: 10px;"></div>
 	<div id="ke_div" style="margin-top: 10px;"></div>
@@ -379,47 +379,48 @@
 <div class="form_dik">
 	<br>
 	<div class="form_dik" id="j_border">
-	<div id="yatay">
+	<div class="yatay">
 	<label class="lb_sabit" for="complainInput">&nbsp;Şikayet:</label>
 	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti"/>
 	<label> ⏎</label></div>
 	<br>
-	<div id="yatay">
+	<div class="yatay">
 	<label class="lb_sabit" for="eventInput">&nbsp;Öykü:</label>
 	<textarea id="eventInput" class="tx_sevk" spellcheck="false" placeholder="olay" rows="1"></textarea>
 	<label> ⏎</label></div>
 	<br>
-	<div id="yatay">
+	<div class="yatay">
 	<label id="lb_vitn" for="ch_vitn">Normal</label>
 	<input type="checkbox" id="ch_vitn"/>
 	<div id="div_depo3"></div><br>
 	</div><br>
 	
-	<div id="yatay">
+	<div class="yatay">
 	<label class="lb_sabit" for="verililac">&nbsp;İlaç verildimi:</label>
 	<input type="text" id="verililac" class="tx_sevk" spellcheck="false" placeholder="ilaç"/>
 	<label> ⏎</label></div>
 	</div>
 	<br>
-        <div id="div_tetk" class="form_row">
+        <div class="yatay" id="div_tetk">
             <label id="lb_lab" for="ch_tetkik">Laboratuar</label>
             <input type="checkbox" id="ch_tetkik"/>
             <label id="lb_xr" for="ch_tetkik2">X-Ray</label>
             <input type="checkbox" id="ch_tetkik2"/>
             <label id="lb_bt" for="ch_tetkik3">Tomografi</label>
             <input type="checkbox" id="ch_tetkik3"/>
+			<input type="text" id="sonucInput" class="tx_sevk" spellcheck="false" placeholder="sonuçlar / x"/>
         </div>
 	<br>
 	
-	<div id="yatay">
+	<div class="yatay">
 	<label class="lb_sabit" for="taniInput">&nbsp;Ön TANI:</label>
-	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı / X"/>
+	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı / x"/>
 	<label class="lb_sabit2" for="gerekceInput">&nbsp;Gerekçe :</label>
-	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe / X"/>
+	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe / x"/>
 	<label> ⏎</label></div>
 	<br>
 	
-	<div id="yatay">
+	<div class="yatay">
 	<label class="lb_sabit" for="hospInput">Hastane:</label>
 	<input type="text" id="hospInput" class="tx_sevk" spellcheck="false" placeholder="* hastane"/>
 				<label class="lb_sabit2" for="bransInput"> ——>> </label>
@@ -427,15 +428,15 @@
 
 	<label> ⏎</label></div>
 	<br>	
-	<div id="yatay">
+	<div class="yatay">
 		<div id="div_onay" class="form_row">
 			<label for="doktorInput">&nbsp;Gönderen:</label>
 			<input type="text" id="doktorInput" class="tx_sevk" spellcheck="false" placeholder="acil hekimi"/>
 			<input type="checkbox" id="ch_onay"/>
 			<label id="lb_onay" class="lb_sabit" for="ch_onay">ONAY!</label>
 		</div>
-		<div id="div_tedD" class="form_row"><label  id="lb_sted" class="lb_sabit" for="ch_tedSil">Takip/Ted. Sil</label>
-		<input type="checkbox" id="ch_tedSil"/>
+		<div id="div_tedD" class="form_row"><label  id="lb_sted" class="lb_sabit" for="ch_tedSil">Takip/Ted ✓</label>
+		<input type="checkbox" id="ch_tedSil">
 		<button id="bt_sevk" onclick="bt_sevk()">AKTAR</button></div>
 	</div>
 	<button id="bt_hide" onclick="ext_Sevk()">Esc</button>
