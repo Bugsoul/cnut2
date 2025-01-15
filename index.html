@@ -74,14 +74,14 @@
 	<div class="form_dik" id="sag_pad">	
 		<div class="form_row">
 			<img id="im_trv" alt="x">
-			<label id="lb_trv"></label>
+			<label id="lb_trv" for="ch_trv"></label>
 			<input type="checkbox" id="ch_trv" onchange="tog_trv()">
 			<img id="im_adl" alt="x">
 			<input type="checkbox" id="ch_adli" onchange="tog_adli()">
 		</div>
 		<div class="form_row">
 			<img id="im_xry" alt="x">
-			<label for="ch_akc"  id="lb_akc"></label>
+			<label for="ch_akc" id="lb_akc"></label>
 			<input type="checkbox" id="ch_akc" onchange="tog_akc()">
 			<label for="ch_plus" id="lb_plus"></label>
 			<input type="checkbox" id="ch_plus" class="iphone_switch" onchange="tog_plus()">
@@ -91,7 +91,7 @@
 	</div>	
 		
 		<div class="form_top" style="display:none;">
-			<label id="lb_trm" class="sol_fix"></label>
+			<img id="im_tr_exm"  style="cursor: pointer;" onclick="togExam()">
 			<textarea type="text" id="ta_trv" class="gru_tbox" spellcheck="false" oninput="handleChange(this)"></textarea>
 		</div>
 		
@@ -173,6 +173,10 @@
 				<div id="div_res" class="form_row">
 					<label id="lb_ext2">Results ✓</label>
 					<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
+				</div>
+				<div class="form_row">
+					<label id="lb_ext4">Hosp ✓</label>
+					<input type="checkbox" id="ch_hos" onchange="togHosp()">
 				</div>
 				<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
 			</div>
@@ -310,32 +314,31 @@
 </div>
 
 <div class="cons_box">
+<button id="bt_yaz" onclick="consbox_Close()">Esc</button>
 <div class="sat1">
-<label><span style="color: lime;">K: </span><input type="checkbox" data-key="k"></label>
-<label><span style="color: lime;">N: </span><input type="checkbox" data-key="n"></label>
-<label><span style="color: lime;">G: </span><input type="checkbox" data-key="g"></label>
-<label><span style="color: lime;">D: </span><input type="checkbox" data-key="d"></label>
-<label>G<span style="color: lime; font-weight: bold;">t</span>: <input type="checkbox" data-key="t"></label>
-<label>N<span style="color: lime; font-weight: bold;">f</span>: <input type="checkbox" data-key="f"></label>
-<label><span style="color: lime;">A: </span><input type="checkbox" data-key="a"></label>
-<label><span style="color: lime;">İ: </span><input type="checkbox" data-key="i"></label>
+    <label class="lb_key"><span style="color: #39c0fa;">K: </span></label><input id="chlb_K" type="checkbox" data-key="k">
+    <label class="lb_key"><span style="color: #39c0fa;">N: </span></label><input id="chlb_N" type="checkbox" data-key="n">
+    <label class="lb_key"><span style="color: #39c0fa;">G: </span></label><input id="chlb_G" type="checkbox" data-key="g">
+    <label class="lb_key"><span style="color: #39c0fa;">D: </span></label><input id="chlb_D" type="checkbox" data-key="d">
+    <label class="lb_key">G<span style="color: #39c0fa; font-weight: bold;">t</span>:</label><input id="chlb_Gt" type="checkbox" data-key="t">
+    <label class="lb_key">N<span style="color: #39c0fa; font-weight: bold;">f</span>:</label><input id="chlb_Nf" type="checkbox" data-key="f">
+    <label class="lb_key"><span style="color: #39c0fa;">A: </span></label><input id="chlb_A" type="checkbox" data-key="a">
+    <label class="lb_key"><span style="color: #39c0fa;">İ: </span></label><input id="chlb_İ" type="checkbox" data-key="i">
 </div>
 <div class="sat2">
-<label>G<span style="color: lime; font-weight: bold;">c</span>: <input type="checkbox" data-key="c"></label>
-<label><span style="color: lime; font-weight: bold;">Ğ</span>c: <input type="checkbox" data-key="ğ"></label>
-<label><span style="color: lime;">Bc: </span><input type="checkbox" data-key="b"></label>
-<label><span style="color: lime;">O: </span><input type="checkbox" data-key="o"></label>
-<label>Çc: <input type="checkbox"></label>
+    <label class="lb_key">G<span style="color: #39c0fa; font-weight: bold;">c</span>:</label><input id="chlb_Gc" type="checkbox" data-key="c">
+    <label class="lb_key"><span style="color: #39c0fa; font-weight: bold;">Ğ</span>c:</label><input id="chlb_Ğc" type="checkbox" data-key="ğ">
+    <label class="lb_key"><span style="color: #39c0fa;">Bc: </span></label><input id="chlb_Bc" type="checkbox" data-key="b">
+    <label class="lb_key"><span style="color: #39c0fa;">O: </span></label><input id="chlb_O" type="checkbox" data-key="o">
+    <label class="lb_key">Çc:</label><input id="chlb_Çc" type="checkbox">
 </div>
 <div class="sat3">
-<label>Pc: <input type="checkbox"></label>
-<label>Kv: <input type="checkbox"></label>
-<label>Kb: <input type="checkbox"></label>
-<label>Gz: <input type="checkbox"></label>
-<label>Kh: <input type="checkbox"></label>
+    <label class="lb_key">Pc:</label><input id="chlb_Pc" type="checkbox">
+    <label class="lb_key">Kv:</label><input id="chlb_Kv" type="checkbox">
+    <label class="lb_key">Kb:</label><input id="chlb_Kb" type="checkbox">
+    <label class="lb_key">Gz:</label><input id="chlb_Gz" type="checkbox">
+    <label class="lb_key">Kh:</label><input id="chlb_Kh" type="checkbox">
 </div>
-
-<button id="bt_yaz" onclick="subYaz()">Write[⏎]</button>
 </div>
 
 <div id="alert_pop" style>
@@ -444,6 +447,9 @@
 	<button id="bt_hide" onclick="ext_Sevk()">Esc</button>
 	<button id="bt_delsvk" onclick="del_Sevk()">Del</button>
 </div></div>
+
+<div id="div_TrvExam" style="display:none;"></div>
+
 </body>
 </html>
 
