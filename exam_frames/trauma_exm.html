@@ -58,7 +58,6 @@ body {
 
     td {
 		background-color: #373b3d;
-      padding: 6px;
       text-align: center;
       border: 1px solid #ddd;
       cursor: pointer;
@@ -261,45 +260,52 @@ label {
 
   <div class="yatay">
     <div id="tb_titles">
-    <table id="image-select-table">
+    <table id="img_selectTb">
+    <tr>
+	    <td data-image="im_region\man_f.png">
+		<img src="im_region/man_f2.png" alt="Face" width="30" height="29">
+    </tr>
       <tr>
-        <td data-image="im_region\man_f.png">🧔🏻</td>
+        <td data-image="im_region\man_b.png" height="29">🔙</td>
+      </tr>
+    <tr>
+	    <td data-image="im_region\woman_f.png">
+		<img src="im_region/woman_f2.png" alt="Face" width="30" height="29">
+    </tr>
+      <tr>
+        <td data-image="im_region\woman_b.png" height="29">🔙</td>
+      </tr>
+    <tr>
+	    <td data-image="im_region\01_head_fr.png">
+		<img src="im_region/01_head_fr.png" alt="Face" width="30" height="29">
+    </tr>
+    <tr>
+	    <td data-image="im_region\02_head_left.png">
+		<img src="im_region/02_head_left.png" alt="Face" width="30" height="29">
+    </tr>
+    <tr>
+	    <td data-image="im_region\03_head_right.png">
+		<img src="im_region/03_head_right.png" alt="Face" width="30" height="29">
+    </tr>
+    <tr>
+	    <td data-image="im_region\04_head_back.png">
+		<img src="im_region/04_head_back.png" alt="Face" width="30" height="29">
+    </tr>
+    <tr>
+	    <td data-image="im_region\05_head_top.png">
+		<img src="im_region/05_head_top.png" alt="Face" width="30" height="29">
+    </tr>
+      <tr>
+        <td data-image="im_region\right_hand_p.png" height="29">R✋</td>
       </tr>
       <tr>
-        <td data-image="im_region\man_b.png">🔙</td>
+        <td data-image="im_region\right_hand_d.png" height="29">🔙</td>
       </tr>
       <tr>
-        <td data-image="im_region\woman_f.png">👩</td>
+        <td data-image="im_region\left_hand_p.png" height="29">L✋</td>
       </tr>
       <tr>
-        <td data-image="im_region\woman_b.png">🔙</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\01_head_fr.png">F🤢</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\02_head_left.png">L🤢</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\03_head_right.png">R🤢</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\04_head_back.png">🤢🔙</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\05_head_top.png">🤢🔝</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\right_hand_p.png">R✋</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\right_hand_d.png">🔙</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\left_hand_p.png">L✋</td>
-      </tr>
-      <tr>
-        <td data-image="im_region\left_hand_d.png">🔙</td>
+        <td data-image="im_region\left_hand_d.png" height="29">🔙</td>
       </tr>
     </table>
   </div>
@@ -367,7 +373,7 @@ label {
     	<button id="bt_posta" onclick="postaBolge()">Post</button>
   </div>
   </div>
-  <script src="textAreas.js"></script>
+  <script src="body_points.js"></script>
 
 <script>
   let textAreas = textAreas2; // Her resim için ayrı dizi
@@ -377,7 +383,7 @@ label {
   const recordModeCheckbox = document.getElementById('record_mode');
 
   // Tablodaki hücreye tıklanarak resim değiştirme
-  document.querySelectorAll('#image-select-table td').forEach(cell => {
+  document.querySelectorAll('#img_selectTb td').forEach(cell => {
     cell.addEventListener('click', function () {
       const newImageSrc = this.getAttribute('data-image');
       image.src = newImageSrc;
