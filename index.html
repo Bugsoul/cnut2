@@ -207,15 +207,17 @@
 		
 	<div class="form_row">
 		<label id="lb_i" onclick="subTik()">(i)</label>
-		<input type="checkbox" id="ch_pc" onchange="tog_pc()" class="iphone_switch">
-		<label id="lb_pc" for="ch_pc" class="swtc_pc"></label>
-		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
-		<input type="checkbox" id="ch_xr" onchange="tog_xr()">
-		<button type="button" id="bt_rest" onclick="sYukle()"></input>
+
 		<button type="end" id="bt_new" onclick="subNew()"></button>
 		<button type="end" id="bt_del" onclick="subDel()"></button>
 		<button type="end" id="bt_res" onclick="subRes()"></button>
-		<button id="bt_blur" onclick="subBlur()"></button>		
+
+		<button id="bt_blur" onclick="subBlur()"></button>			
+		<input type="checkbox" id="ch_xr" onchange="tog_xr()">		
+		<input type="checkbox" id="ch_pc" onchange="tog_pc()" class="iphone_switch">
+		<label id="lb_pc" for="ch_pc" class="swtc_pc"></label>
+		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
+				
 		<button type="end"  id="bt_kons" onclick="sub_Kons()"></button>	
 		<input type="checkbox" id="ch_xr2" onchange="tog_xr()">
 		<button type="end"  id="bt_krr" onclick="sub_PCNot()"></button>
@@ -303,9 +305,11 @@
 <div id="popGist" class="pop-up">
   <div id="ch_pop" class="form_row">
 		<label>Ext</label>
-		<input type="checkbox" id="ch_exi" onchange="tog_exi()">
+		<input type="checkbox" id="ch_exi" onchange="popGists()">
 		<label>All</label>
-		<input type="checkbox" id="ch_tum" onchange="tog_tum()">
+		<input type="checkbox" id="ch_tum" onchange="popGists()">
+		<label>Time</label>
+		<input type="checkbox" id="ch_time" onchange="popGists()">
 		<input type="text" id="tx_src" onkeydown="handleKeyPress(event)">
 		<button id="bt_src" onclick="subSearch()"></button>
 		<button id="bt_list" onclick="subList()"></button>
