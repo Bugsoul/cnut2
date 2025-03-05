@@ -182,23 +182,24 @@
 			</div>
 			<textarea id="ta_pro" class="gru_tbox" spellcheck="false"></textarea><!--  ondblclick=      -->
 		<div class="form_dik">
-			<img id="im_sis" style="cursor: pointer;" onclick="tog_Sis()">
-			<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">		
-		</div>
-		<div class="form_dik">
-			<div class="form_row">
+			<div class="form_duz">
+				<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
+				<img id="im_sis" style="cursor: pointer;" onclick="tog_Sis()">
+				<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
+			</div>
+			<div>
+				<label id="lb_ext3" class="sol_fix"></label>
+				<input type="text" id="tx_kons2" class="gru_tbox" spellcheck="false">
 				<label for="ch_ext" id="lb_ext"></label>
 				<input type="checkbox" id="ch_ext" onchange="ch_ext()">
-			</div>	
-			<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
-		</div>			
+			</div>
+		</div>
+	
 		</div>
 
 			<div class="cls_ext" style="display:none;">		
 				<textarea id="ta_ext" class="gru_tbox" spellcheck="false"></textarea>
 				<div class="form_dik">
-					<label id="lb_ext3" class="sol_fix"></label>
-					<input type="text" id="tx_kons2" class="gru_tbox" spellcheck="false">
 					<img id="im_copy2" style="cursor: pointer;" onclick="subCopy()">
 				</div>
 			</div>
