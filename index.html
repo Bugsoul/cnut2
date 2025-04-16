@@ -147,13 +147,17 @@
 			<img id="im_urine" style="cursor: pointer;" onclick="tog_Ure()">
 			<img id="im_trx" style="cursor: pointer;" onclick="tog_Akc()">
 			<img id="im_bt" style="cursor: pointer;" onclick="tog_Bt()">			
-			<input type="text" id="tx_kons" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()">
+			<input type="hidden" id="tx_kons" class="gru_tbox" spellcheck="false">
+			<div id="tb_kons" contenteditable="true" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()"></div>
 			<img id="im_cok" style="cursor: pointer;" onclick="tog_ConsOk()">
 	</div>
                                                                                 <!--   Progres     -->
 	<div class="form_row"> 
 		<div class="sol_fix">
+		<div class="form_dik">
 		<label for="ch_ted" id="lb_ted"></label>
+		<img id="im_cure">
+		</div>
 		<input type="checkbox" id="ch_ted" onchange="tog_ted()">
 		</div>
 		<textarea type="text" id="ta_ted" class="gru_tbox" spellcheck="false"></textarea>
@@ -169,26 +173,42 @@
 	
 		<div class="form_row"> 
 			<div class="form_dik" class="sol_fix">
-				<div id="div_res" class="form_row">
-					<label id="lb_ext2">Results ✓</label>
-					<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
+				<div id="div_acilir" class="div_folding">
+				  <button id="bt_set" onclick="toggleFolding()">Discharge 🡺</button>
+				  <div id="div_cont" style="display: none;">
+				  
+					<div class="form_row">
+						<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
+						<label id="lb_ext2" for="ch_nrm">Results ✅</label>
+					</div>
+					<div class="form_row">
+						<input type="checkbox" id="ch_hos" onchange="togHosp()">
+						<label id="lb_ext4" for="ch_hos">Hospitalized ✓</label>
+					</div>
+					<div class="form_row">
+						<input type="checkbox" id="ch_sgec" onchange="togSikgecti()">
+						<label id="lb_ext5" for="ch_sgec">Şikayet Ø</label>
+					</div>
+					<div class="form_row">
+						<input type="checkbox" id="ch_yedi" onchange="togYedicti()">
+						<label id="lb_ext6" for="ch_yedi">Yedi-İçti ✅</label>
+					</div>					
+				  </div>
 				</div>
-				<div class="form_row">
-					<label id="lb_ext4">Hosp ✓</label>
-					<input type="checkbox" id="ch_hos" onchange="togHosp()">
-				</div>
+			
+
 				<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
 			</div>
 			<textarea id="ta_pro" class="gru_tbox" spellcheck="false"></textarea><!--  ondblclick=      -->
 		<div class="form_dik">
 			<div class="form_duz">
-				<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
 				<img id="im_sis" style="cursor: pointer;" onclick="tog_Sis()">
+				<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
 				<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
 			</div>
 			<div>
-				<label id="lb_ext3" class="sol_fix"></label>
-				<input type="text" id="tx_kons2" class="gru_tbox" spellcheck="false" ondblclick="txKons2Double()">
+
+				<input type="text" id="tx_kons2" class="gru_tbox" spellcheck="false" ondblclick="txKons2Double()" placeholder="Check-up">
 				<label for="ch_ext" id="lb_ext"></label>
 				<input type="checkbox" id="ch_ext" onchange="togExt()">
 			</div>
