@@ -52,18 +52,18 @@
 </div>
 	<div class="form_row">                                                                                 <!--  Vitaller      -->
 		<label for="tx_TA" id="lb_ta"></label>
-		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" spellcheck="false" maxlength="7">
+		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" spellcheck="false" maxlength="7" autocomplete="off">
 		<label for="tx_NB" id="lb_NB"></label>
-		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Nb_Change(this)" maxlength="3">
+		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Nb_Change(this)" maxlength="3" autocomplete="off">
 		<label for="tx_SS" id="lb_SS"></label>
-		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Ss_Change(this)" maxlength="2">
+		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Ss_Change(this)" maxlength="2" autocomplete="off">
 		<label for="tx_SAT" id="lb_SAT"></label>
-		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Sat_Change(this)" maxlength="3">
+		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Sat_Change(this)" maxlength="3" autocomplete="off">
 		<label for="tx_ates" id="lb_ates"></label>
-		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4">		
+		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4" autocomplete="off">		
 		<label for="tx_ks" id="lb_ks"></label>
-		<input type="text" id="tx_ks" onfocus="this.select()" class="vit_box" spellcheck="false" maxlength="4">
-		<img id="im_vit" style="cursor: pointer;" onclick="tog_Vit()">
+		<input type="text" id="tx_ks" onfocus="this.select()" class="vit_box" spellcheck="false" maxlength="4" autocomplete="off">
+		<img id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
 		<select id="slc_gks" onchange="selecGKS()"></select>
 		<input type="text" id="tx_gks" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">		
 	</div>
@@ -146,7 +146,10 @@
 			<img id="im_blood" style="cursor: pointer;" onclick="tog_Blood()">
 			<img id="im_urine" style="cursor: pointer;" onclick="tog_Ure()">
 			<img id="im_trx" style="cursor: pointer;" onclick="tog_Akc()">
-			<img id="im_bt" style="cursor: pointer;" onclick="tog_Bt()">			
+			<div class="div_folding2">
+			  <img id="im_bt" style="cursor: pointer;" onclick="showBtMenu()">
+			  <div id="bt_menu_cont" style="display: none;"></div>
+			</div>		
 			<div id="tx_kons" contenteditable="true" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()"></div>
 			<img id="im_cok" style="cursor: pointer;" onclick="tog_ConsOk()">
 	</div>
@@ -174,15 +177,10 @@
 			<div class="form_dik" class="sol_fix">
 				<div id="div_acilir" class="div_folding">
 				  <button id="bt_set" onclick="toggleFolding()">Discharge 🡺</button>
-				  <div id="div_cont" style="display: none;">
-				  
+				  <div id="div_cont" style="display: none;">				  
 					<div class="form_row">
 						<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
 						<label id="lb_ext2" for="ch_nrm">Results ✅</label>
-					</div>
-					<div class="form_row">
-						<input type="checkbox" id="ch_hos" onchange="togHosp()">
-						<label id="lb_ext4" for="ch_hos">Hospitalized ✓</label>
 					</div>
 					<div class="form_row">
 						<input type="checkbox" id="ch_sgec" onchange="togSikgecti()">
@@ -190,11 +188,14 @@
 					</div>
 					<div class="form_row">
 						<input type="checkbox" id="ch_yedi" onchange="togYedicti()">
-						<label id="lb_ext6" for="ch_yedi">Yedi-İçti ✅</label>
+						<label id="lb_ext6" for="ch_yedi">Walk Talk Eat ✅</label>
+					</div>	
+					<div class="form_row">
+						<input type="checkbox" id="ch_hos" onchange="togHosp()">
+						<label id="lb_ext4" for="ch_hos">Hospitalized ✓</label>
 					</div>					
 				  </div>
-				</div>
-			
+				</div>		
 
 				<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
 			</div>
