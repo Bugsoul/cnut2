@@ -141,13 +141,21 @@
 	<div class="form_row">                                                         <!--  ICD - Lab - BT - Kons      -->
 			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
-			<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
+			
 			<img id="im_blood" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
 			<img id="im_urine" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
 			<img id="im_trx" style="cursor: pointer;"class="grayscale" onclick="tog_Labaratuvar(this)">
 			<img id="im_bt" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
 			<img id="im_mr" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
-			
+
+<div class="div_folding">
+  <button id="bt_iki" onclick="togFolding()">🟫</button>
+  <div id="div_cont" style="display: none;">
+		<label id="lb_pln">tx_plan</label>
+		<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
+  </div>
+</div>
+
 			<div id="tx_kons" contenteditable="true" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()"></div>
 			<img id="im_cok" style="cursor: pointer;" onclick="tog_ConsOk()">
 			<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
@@ -190,9 +198,13 @@
 						<label id="lb_ext6" for="ch_yedi">Walk Talk Eat ✅</label>
 					</div>	
 					<div class="form_row">
-						<input type="checkbox" id="ch_hos" onchange="togHosp()">
-						<label id="lb_ext4" for="ch_hos">Hospitalized ✓</label>
-					</div>					
+						<input type="checkbox" id="ch_hos" onchange="togHosp(this)">
+						<label id="lb_ext4" for="ch_hos">had Hospitalized ✓</label>
+					</div>
+					<div class="form_row">
+						<input type="checkbox" id="ch_hos2" onchange="togHosp(this)">
+						<label id="lb_ext7" for="ch_hos2">Hospitalized ✓</label>
+					</div>						
 				  </div>
 				</div>
 				<div class="form_row">
