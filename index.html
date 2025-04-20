@@ -141,17 +141,16 @@
 	<div class="form_row">                                                         <!--  ICD - Lab - BT - Kons      -->
 			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
-			<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
 			<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
-			<img id="im_blood" style="cursor: pointer;" onclick="tog_Blood()">
-			<img id="im_urine" style="cursor: pointer;" onclick="tog_Ure()">
-			<img id="im_trx" style="cursor: pointer;" onclick="tog_Akc()">
-			<div class="div_folding2">
-			  <img id="im_bt" style="cursor: pointer;" onclick="showBtMenu()">
-			  <div id="bt_menu_cont" style="display: none;"></div>
-			</div>		
+			<img id="im_blood" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_urine" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_trx" style="cursor: pointer;"class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_bt" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_mr" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			
 			<div id="tx_kons" contenteditable="true" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()"></div>
 			<img id="im_cok" style="cursor: pointer;" onclick="tog_ConsOk()">
+			<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
 	</div>
                                                                                 <!--   Progres     -->
 	<div class="form_row"> 
@@ -195,22 +194,19 @@
 						<label id="lb_ext4" for="ch_hos">Hospitalized ✓</label>
 					</div>					
 				  </div>
-				</div>		
-
-				<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
+				</div>
+				<div class="form_row">
+					<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
+					<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
+				</div>
 			</div>
 			<textarea id="ta_pro" class="gru_tbox" spellcheck="false"></textarea><!--  ondblclick=      -->
 		<div class="form_dik">
+			<input type="text" id="tx_polk" class="gru_tbox" spellcheck="false" ondblclick="txKons2Double()" placeholder="Check-up">
 			<div class="form_duz">
 				<img id="im_sis" style="cursor: pointer;" onclick="tog_Sis()">
-				<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
-				<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
-			</div>
-			<div>
-
-				<input type="text" id="tx_polk" class="gru_tbox" spellcheck="false" ondblclick="txKons2Double()" placeholder="Check-up">
 				<label for="ch_ext" id="lb_ext"></label>
-				<input type="checkbox" id="ch_ext" onchange="togExt()">
+				<input type="checkbox" id="ch_ext" onchange="togExt()">				
 			</div>
 		</div>
 	
@@ -244,6 +240,7 @@
 		<button type="end"  id="bt_kons" onclick="sub_Kons()"></button>	
 		<input type="checkbox" id="ch_xr2" onchange="tog_xr()">
 		<button type="end"  id="bt_krr" onclick="sub_PCNot()"></button>
+		<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
 	</div>
 
 	<div class="div_pcDen" >                                                                                 <!--  Backup - Kons - Not      -->
