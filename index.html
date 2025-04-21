@@ -148,9 +148,9 @@
 			<img id="im_bt" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
 			<img id="im_mr" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
 
-<div class="div_folding">
-  <button id="bt_iki" onclick="togFolding()">🟫</button>
-  <div id="div_cont" style="display: none;">
+<div class="div_folding2">
+  <button id="bt_iki" onclick="togFolding('div_cont2')">🟫</button>
+  <div id="div_cont2" style="display: none;">
 		<label id="lb_pln">tx_plan</label>
 		<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
   </div>
@@ -183,7 +183,7 @@
 		<div class="form_row"> 
 			<div class="form_dik" class="sol_fix">
 				<div id="div_acilir" class="div_folding">
-				  <button id="bt_set" onclick="toggleFolding()">Discharge 🡺</button>
+				  <button id="bt_set" onclick="togFolding('div_cont')">Discharge 🡺</button>
 				  <div id="div_cont" style="display: none;">				  
 					<div class="form_row">
 						<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
