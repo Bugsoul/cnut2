@@ -52,18 +52,18 @@
 </div>
 	<div class="form_row">                                                                                 <!--  Vitaller      -->
 		<label for="tx_TA" id="lb_ta"></label>
-		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" spellcheck="false" maxlength="7">
+		<input type="text" id="tx_TA" onfocus="this.select()" oninput="addSlash(this)" class="vit_box" spellcheck="false" maxlength="7" autocomplete="off">
 		<label for="tx_NB" id="lb_NB"></label>
-		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Nb_Change(this)" maxlength="3">
+		<input type="text" id="tx_NB" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Nb_Change(this)" maxlength="3" autocomplete="off">
 		<label for="tx_SS" id="lb_SS"></label>
-		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Ss_Change(this)" maxlength="2">
+		<input type="text" id="tx_SS" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Ss_Change(this)" maxlength="2" autocomplete="off">
 		<label for="tx_SAT" id="lb_SAT"></label>
-		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Sat_Change(this)" maxlength="3">
+		<input type="text" id="tx_SAT" onClick="this.select()" class="vit_box" spellcheck="false" oninput="Sat_Change(this)" maxlength="3" autocomplete="off">
 		<label for="tx_ates" id="lb_ates"></label>
-		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4">		
+		<input type="text" id="tx_ates" onfocus="this.select()" class="vit_box" spellcheck="false" oninput="Ates_Change(this)" maxlength="4" autocomplete="off">		
 		<label for="tx_ks" id="lb_ks"></label>
-		<input type="text" id="tx_ks" onfocus="this.select()" class="vit_box" spellcheck="false" maxlength="4">
-		<img id="im_vit" style="cursor: pointer;" onclick="tog_Vit()">
+		<input type="text" id="tx_ks" onfocus="this.select()" class="vit_box" spellcheck="false" maxlength="4" autocomplete="off">
+		<img id="im_vit" style="cursor: pointer;" onclick="toggleVit()">
 		<select id="slc_gks" onchange="selecGKS()"></select>
 		<input type="text" id="tx_gks" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">		
 	</div>
@@ -141,14 +141,24 @@
 	<div class="form_row">                                                         <!--  ICD - Lab - BT - Kons      -->
 			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
-			<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
-			<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
-			<img id="im_blood" style="cursor: pointer;" onclick="tog_Blood()">
-			<img id="im_urine" style="cursor: pointer;" onclick="tog_Ure()">
-			<img id="im_trx" style="cursor: pointer;" onclick="tog_Akc()">
-			<img id="im_bt" style="cursor: pointer;" onclick="tog_Bt()">			
-			<input type="text" id="tx_kons" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()">
+			
+			<img id="im_blood" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_urine" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_trx" style="cursor: pointer;"class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_bt" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+			<img id="im_mr" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
+
+<div class="div_folding2">
+  <button id="bt_iki" onclick="togFolding('div_cont2')">🟫</button>
+  <div id="div_cont2" style="display: none;">
+		<label id="lb_pln">tx_plan</label>
+		<input type="text" id="tx_plan" class="gru_tbox" spellcheck="false">
+  </div>
+</div>
+
+			<div id="tx_kons" contenteditable="true" class="gru_tbox" spellcheck="false" ondblclick="txKons1Double()"></div>
 			<img id="im_cok" style="cursor: pointer;" onclick="tog_ConsOk()">
+			<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
 	</div>
                                                                                 <!--   Progres     -->
 	<div class="form_row"> 
@@ -173,16 +183,11 @@
 		<div class="form_row"> 
 			<div class="form_dik" class="sol_fix">
 				<div id="div_acilir" class="div_folding">
-				  <button id="bt_set" onclick="toggleFolding()">Discharge 🡺</button>
-				  <div id="div_cont" style="display: none;">
-				  
+				  <button id="bt_set" onclick="togFolding('div_cont')">Discharge 🡺</button>
+				  <div id="div_cont" style="display: none;">				  
 					<div class="form_row">
 						<input type="checkbox" id="ch_nrm" onchange="togRapNrm()">
 						<label id="lb_ext2" for="ch_nrm">Results ✅</label>
-					</div>
-					<div class="form_row">
-						<input type="checkbox" id="ch_hos" onchange="togHosp()">
-						<label id="lb_ext4" for="ch_hos">Hospitalized ✓</label>
 					</div>
 					<div class="form_row">
 						<input type="checkbox" id="ch_sgec" onchange="togSikgecti()">
@@ -190,26 +195,30 @@
 					</div>
 					<div class="form_row">
 						<input type="checkbox" id="ch_yedi" onchange="togYedicti()">
-						<label id="lb_ext6" for="ch_yedi">Yedi-İçti ✅</label>
-					</div>					
+						<label id="lb_ext6" for="ch_yedi">Walk Talk Eat ✅</label>
+					</div>	
+					<div class="form_row">
+						<input type="checkbox" id="ch_hos" onchange="togHosp(this)">
+						<label id="lb_ext4" for="ch_hos">had Hospitalized ✓</label>
+					</div>
+					<div class="form_row">
+						<input type="checkbox" id="ch_hos2" onchange="togHosp(this)">
+						<label id="lb_ext7" for="ch_hos2">Hospitalized ✓</label>
+					</div>						
 				  </div>
 				</div>
-			
-
-				<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
+				<div class="form_row">
+					<img id="im_copy" style="cursor: pointer;" onclick="subCopy2()">
+					<img id="im_plan" style="cursor: pointer;" onclick="tog_Plan()">
+				</div>
 			</div>
 			<textarea id="ta_pro" class="gru_tbox" spellcheck="false"></textarea><!--  ondblclick=      -->
 		<div class="form_dik">
+			<input type="text" id="tx_polk" class="gru_tbox" spellcheck="false" ondblclick="txKons2Double()" placeholder="Check-up">
 			<div class="form_duz">
 				<img id="im_sis" style="cursor: pointer;" onclick="tog_Sis()">
-				<img id="im_easy" style="cursor: pointer;" onclick="tog_Easy()">
-				<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
-			</div>
-			<div>
-
-				<input type="text" id="tx_kons2" class="gru_tbox" spellcheck="false" ondblclick="txKons2Double()" placeholder="Check-up">
 				<label for="ch_ext" id="lb_ext"></label>
-				<input type="checkbox" id="ch_ext" onchange="togExt()">
+				<input type="checkbox" id="ch_ext" onchange="togExt()">				
 			</div>
 		</div>
 	
@@ -243,6 +252,7 @@
 		<button type="end"  id="bt_kons" onclick="sub_Kons()"></button>	
 		<input type="checkbox" id="ch_xr2" onchange="tog_xr()">
 		<button type="end"  id="bt_krr" onclick="sub_PCNot()"></button>
+		<img id="im_ext" style="cursor: pointer;" onclick="togbt_Ext()">
 	</div>
 
 	<div class="div_pcDen" >                                                                                 <!--  Backup - Kons - Not      -->
@@ -347,7 +357,7 @@
         <label class="lb_key" for="chlb_N">Nöroloji</label><input id="chlb_N" type="checkbox" data-key="n" data-info="N">
         <label class="lb_key" for="chlb_G">Göğ.Hst</label><input id="chlb_G" type="checkbox" data-key="g" data-info="G">
         <label class="lb_key" for="chlb_D">Dahiliye</label><input id="chlb_D" type="checkbox" data-key="d" data-info="D">
-        <label class="lb_key" for="chlb_Gt">Gastro</label><input id="chlb_Gt" type="checkbox" data-key="t" data-info="Gt">
+        <label class="lb_key" for="chlb_Gt">Gastroent.</label><input id="chlb_Gt" type="checkbox" data-key="t" data-info="Gt">
         <label class="lb_key" for="chlb_Nf">Nefroloji</label><input id="chlb_Nf" type="checkbox" data-key="f" data-info="Nf">
         <label class="lb_key" for="chlb_A">Anestezi</label><input id="chlb_A" type="checkbox" data-key="a" data-info="A">
         <label class="lb_key" for="chlb_İ">İntaniye</label><input id="chlb_İ" type="checkbox" data-key="i" data-info="İ">
@@ -405,11 +415,29 @@
 
 <div id="pop_sevk">
 <div class="form_dik">
+	<br><br>
+
+	<div class="yatay">
+	<label class="lb_sabit" for="hospInput">Hastane:</label>
+	<input type="text" id="hospInput" class="tx_sevk" spellcheck="false" placeholder="* hastane"/>
+	<div id="div_sanalBox" class="sanal_box" style="display: none;"></div>
+	<label class="lb_sabit2" for="bransInput"> ——>> </label>
+	<input type="text" id="bransInput" class="tx_sevk" placeholder="* branş / x" autocomplete="off" ondblclick="sevkKlinigiEkle()"/>	
+	<label> ⏎</label></div>	
+	
 	<br>
+	<div class="yatay">
+	<label class="lb_sabit" for="taniInput">&nbsp;Ön TANI:</label>
+	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı / x"/>
+	<label class="lb_sabit2" for="gerekceInput">&nbsp;Gerekçe :</label>
+	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe / x"/>
+	<label> ⏎</label></div>
+	<br>
+	
 	<div class="form_dik" id="j_border">
 	<div class="yatay">
 	<label class="lb_sabit" for="complainInput">&nbsp;Şikayet:</label>
-	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti"/>
+	<input type="text" id="complainInput" class="tx_sevk" spellcheck="false" placeholder="şikayeti" />
 	<label> ⏎</label></div>
 	<br>
 	<div class="yatay">
@@ -440,24 +468,9 @@
             <input type="checkbox" id="ch_tetkik4"/>
 			<input type="text" id="sonucInput" class="tx_sevk" spellcheck="false" placeholder="sonuçlar / x"/>
         </div>
-	<br>
+	<br><br><br>
 	
-	<div class="yatay">
-	<label class="lb_sabit" for="taniInput">&nbsp;Ön TANI:</label>
-	<input type="text" id="taniInput" class="tx_sevk" spellcheck="false" placeholder="tanı / x"/>
-	<label class="lb_sabit2" for="gerekceInput">&nbsp;Gerekçe :</label>
-	<input type="text" id="gerekceInput" class="tx_sevk" spellcheck="false" placeholder="gerekçe / x"/>
-	<label> ⏎</label></div>
-	<br>
-	
-	<div class="yatay">
-	<label class="lb_sabit" for="hospInput">Hastane:</label>
-	<input type="text" id="hospInput" class="tx_sevk" spellcheck="false" placeholder="* hastane"/>
-				<label class="lb_sabit2" for="bransInput"> ——>> </label>
-			<input type="text" id="bransInput" class="tx_sevk" spellcheck="false" placeholder="* branş / x"/>	
-
-	<label> ⏎</label></div>
-	<br>	
+		
 	<div class="yatay">
 		<div id="div_onay" class="form_row">
 			<label for="doktorInput">&nbsp;Gönderen:</label>
