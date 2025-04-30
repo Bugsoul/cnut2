@@ -69,7 +69,13 @@
 	</div>
 	
 	<div class="form_row">                                                                                 <!--  Travma - Adli - Saat      -->
-		<label id="lb_sik" class="sol_fix"></label>
+		<div class="form_dik">
+			<label id="lb_sik" class="sol_fix"></label>
+			<div id="div_yBut">
+			  <div id="bt_oki" onclick="timeJob(this)">OK</div>
+			  <div id="bt_edit" onclick="timeJob(this)">Edit</div>
+			</div>
+		</div>
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik" id="sag_pad">	
 		<div class="form_row">
@@ -139,7 +145,8 @@
 		<input type="text" id="tx_akg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
 	<div class="form_row">                                                         <!--  ICD - Lab - BT - Kons      -->
-			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
+			<label for="tx_icd" id="lb_icd"></label>
+			<button id="bt_clr" onclick="refreshICD()">↻</button>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
 			
 			<img id="im_blood" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
@@ -452,7 +459,7 @@
 	
 	<div class="yatay">
 	<label class="lb_sabit" for="verililac">&nbsp;İlaç verildimi:</label>
-	<input type="text" id="verililac" class="tx_sevk" spellcheck="false" placeholder="ilaç"/>
+	<input type="text" id="verililac" class="tx_sevk" spellcheck="false" placeholder="ilaç / x"/>
 	<label> ⏎</label></div>
 	</div>
 	<br>
