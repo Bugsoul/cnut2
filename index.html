@@ -71,10 +71,7 @@
 	<div class="form_row">                                                                                 <!--  Travma - Adli - Saat      -->
 		<div class="form_dik">
 			<label id="lb_sik" class="sol_fix"></label>
-			<div id="div_yBut">
-			  <div id="bt_oki" onclick="timeJob(this)">OK</div>
-			  <div id="bt_edit" onclick="timeJob(this)">Edit</div>
-			</div>
+
 		</div>
 		<textarea id="ta_sik" name="message" class="gru_tbox" spellcheck="false"></textarea>		
 	<div class="form_dik" id="sag_pad">	
@@ -145,8 +142,7 @@
 		<input type="text" id="tx_akg" class="gru_tbox" spellcheck="false" oninput="handleChange(this)">
 	</div>
 	<div class="form_row">                                                         <!--  ICD - Lab - BT - Kons      -->
-			<label for="tx_icd" id="lb_icd"></label>
-			<button id="bt_clr" onclick="refreshICD()">↻</button>
+			<label for="tx_icd" id="lb_icd" class="sol_fix"></label>
 			<input type="text" id="tx_icd" class="gru_tbox" spellcheck="false">
 			
 			<img id="im_blood" style="cursor: pointer;" class="grayscale" onclick="tog_Labaratuvar(this)">
@@ -254,6 +250,11 @@
 		<input type="checkbox" id="ch_pc" onchange="tog_pc()" class="iphone_switch">
 		<label id="lb_pc" for="ch_pc" class="swtc_pc"></label>
 		<button type="button" class="cencan" id="bt_bck" onclick="sKaydet()"></button>
+		
+			<div id="div_yBut">
+			  <div id="bt_oki" onclick="timeJob(this)">OK</div>
+			  <div id="bt_edit" onclick="timeJob(this)">Edit</div>
+			</div>
 				
 		<button type="end"  id="bt_kons" onclick="sub_Kons()"></button>	
 		<input type="checkbox" id="ch_xr2" onchange="tog_xr()">
