@@ -257,7 +257,6 @@
 		<label id="lb_pc" for="ch_pc" class="swtc_pc"></label>
 		<button type="button" class="cencan" id="bt_bck" onclick="uptCloud_newGist()"></button>
 		<img id="bt_Cloud" class="grayscale"  onclick="uptCloud_popGist()"></img>
-
 		
 			<div id="div_yBut">
 			  <div id="bt_oki" onclick="timeJob(this)">OK</div>
@@ -356,11 +355,11 @@
 <div id="popGist" class="pop-up">
   <div id="ch_pop" class="form_row">
 		<label>Ext</label>
-		<input type="checkbox" id="ch_exi" onchange="popGists()">
+		<input type="checkbox" id="ch_exi" onchange="popGists(true)">
 		<label>All</label>
 		<input type="checkbox" id="ch_tum" onchange="popGists()">
 		<label>Time</label>
-		<input type="checkbox" id="ch_time" onchange="popGists()">
+		<input type="checkbox" id="ch_time" onchange="popGists(true)">
 		<input type="text" id="tx_src" onkeydown="handleKeyPress(event)">
 		<button id="bt_src" onclick="subSearch()"></button>
 		<button id="bt_list" onclick="subList()"></button>
@@ -404,12 +403,16 @@
 <div id="alert_pop" style>
     <p id="alr_pop">x</p>
 </div>
-<div id="alert_pop2" style>
+<div id="alert_pop2">
     <p id="alr_pop2">x</p>
 	<div class="cls_ext">
 		<button id="bt_ava"></button>
-		<input type="text" id="tx_hour" onfocus="this.select()" maxlength="2">
-		<input type="text" id="tx_min" onfocus="this.select()" maxlength="2">
+		<div id="div_time" style="display: none;">
+			<input type="text" id="tx_hour" onfocus="this.select()" maxlength="2">
+			<input type="text" id="tx_min" onfocus="this.select()" maxlength="2">
+			<img id="bt_1dusur" style="cursor: pointer;" onclick="gelis_saati_yuvarla()">
+			<img id="bt_5ekle" onclick="taburcu_saati_yuvarla()">
+		</div>
 	</div>
 </div>
 
@@ -518,7 +521,6 @@
     <pre id="dosOutput"></pre>
   </div>
 </div>
-
 
 </body>
 </html>
